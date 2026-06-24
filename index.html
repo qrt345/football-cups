@@ -31,7 +31,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border:none;border-ra
 .note{font-size:12px;color:var(--mut);margin-top:8px;line-height:1.5}
 .foot{font-size:11px;color:var(--dim);text-align:center;margin:18px 0 4px}
 </style></head><body><div class="wrap">
-<div class="row"><div style="font-size:18px;font-weight:700">🏆 世界杯预测看板</div><div style="display:flex;gap:6px"><span class="chip mc">数据 06-24 15:32</span><span class="chip warn">赔率 2026-06-24 12:10 北京时间</span></div></div>
+<div class="row"><div style="font-size:18px;font-weight:700">🏆 世界杯预测看板</div><div style="display:flex;gap:6px"><span class="chip mc">数据 06-24 15:39</span><span class="chip warn">赔率 2026-06-24 12:10 北京时间</span></div></div>
 <div class="dim" style="font-size:12px;margin-top:5px">数据源：实时刷新 · 本次新结算 0 场 · 北京时间</div>
 <div class="sec" style="margin-bottom:8px">2026-06-25 · 全天 6 场</div>
 <div class="card" style="border:2px solid var(--info-tx)">
@@ -80,8 +80,7 @@ var sld=document.getElementById('sld'),out=document.getElementById('out'),
 function draw(){var t=parseInt(sld.value);out.textContent=t+'%';
  var rows=R.filter(function(o){return o.p>=t;});
  list.innerHTML=rows.map(function(o){
-  var right=(o.ev!=null)?('<span style="font-size:12px;font-weight:600;color:'+evcss(o.ev)+'">EV '+(o.ev>0?'+':'')+o.ev+'%</span>')
-            :'<span class="mut" style="font-size:11px">赔率待更新</span>';
+  var right='<span style="font-size:12px;font-weight:600;color:'+evcss(o.ev)+'">EV '+(o.ev>0?'+':'')+o.ev+'%</span>';
   return '<div class="vrow"><span class="pp">'+o.p+'%</span>'+
    '<span class="dot" style="background:'+dotc(o.p)+'"></span>'+
    '<span style="flex:1;font-size:13px">'+o.l+' <span class="dim" style="font-size:11px">'+o.m+'</span></span>'+right+'</div>';
