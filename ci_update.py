@@ -21,7 +21,7 @@ import subprocess, os, sys, json, shutil, datetime as dt
 BASE = os.path.dirname(os.path.abspath(__file__))
 os.chdir(BASE)
 
-CONTENT_FILES = ["predictions_log.json", "fixtures_online_latest.json", "odds_snapshot.json"]
+CONTENT_FILES = ["predictions_log.json", "fixtures_online_latest.json"]
 
 
 def sh(*args):
