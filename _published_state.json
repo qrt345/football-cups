@@ -36,6 +36,7 @@
     "Netherlands|Japan",
     "Netherlands|Sweden",
     "New Zealand|Egypt",
+    "Norway|France",
     "Norway|Senegal",
     "Panama|Croatia",
     "Paraguay|Australia",
@@ -45,6 +46,7 @@
     "Saudi Arabia|Uruguay",
     "Scotland|Brazil",
     "Scotland|Morocco",
+    "Senegal|Iraq",
     "South Africa|South Korea",
     "South Korea|Czech Republic",
     "Spain|Cape Verde",
@@ -61,5 +63,5 @@
     "Uruguay|Cape Verde",
     "Uzbekistan|Colombia"
   ],
-  "updated_at": "2026-06-26T11:50:22.007460+00:00"
+  "updated_at": "2026-06-26T22:48:17.668925+00:00"
 }
