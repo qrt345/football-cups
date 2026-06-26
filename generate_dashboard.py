@@ -337,7 +337,7 @@ sld.addEventListener('input',draw);draw();
 
 
 def render(rows, src, upd):
-    now = dt.datetime.now().astimezone()
+    now = dt.datetime.now(dt.timezone(dt.timedelta(hours=8)))  # 固定北京时间(UTC+8)，云端 runner 是 UTC
     bt = backtest(rows)
     n = max(1, bt['n'])
     snap = {}
