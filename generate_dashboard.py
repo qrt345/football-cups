@@ -315,6 +315,23 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border:none;border-ra
 </style></head><body><div class="wrap">"""
 
 
+RADAR_JS = r"""
+function dotc(p){return 'var(--'+(p>=70?'ok-tx':(p>=60?'info-tx':'warn-tx'))+')';}
+R.sort(function(a,b){return b.p-a.p;});
+var sld=document.getElementById('sld'),out=document.getElementById('out'),
+    list=document.getElementById('list'),cnt=document.getElementById('cnt');
+function draw(){var t=parseInt(sld.value);out.textContent=t+'%';
+ var rows=R.filter(function(o){return o.p>=t;});
+ list.innerHTML=rows.map(function(o){
+  return '<div class="vrow"><span class="pp">'+o.p+'%</span>'+
+   '<span class="dot" style="background:'+dotc(o.p)+'"></span>'+
+   '<span style="flex:1;font-size:13px">'+o.l+' <span class="dim" style="font-size:11px">'+o.m+' · '+o.t+'</span></span></div>';
+ }).join('')||'<div class="dim" style="padding:10px 0;font-size:12px">该阈值下无买法</div>';
+ cnt.textContent=rows.length+' 项 / 共 '+R.length;}
+sld.addEventListener('input',draw);draw();
+"""
+
+
 def render(rows, src, upd):
     now = dt.datetime.now(dt.timezone(dt.timedelta(hours=8)))  # 固定北京时间(UTC+8)，云端 runner 是 UTC
     bt = backtest(rows)
@@ -338,6 +355,32 @@ def render(rows, src, upd):
         return ('<div class="wdl"><span style="width:%.0f%%;background:var(--home)"></span>'
                 '<span style="width:%.0f%%;background:var(--draw)"></span>'
                 '<span style="width:%.0f%%;background:var(--away)"></span></div>') % (pw*100, pd*100, pl*100)
+
+    # ---- 概率雷达：纯模型概率，无盘口。对当天每场算各类买法概率，保留 ≥50% 的，按概率降序 ----
+    radar = []
+    for r in daybatch:
+        g, hx, ax = grid(r['home'], r['away'])
+        pw, pd, pl = wdl(g)
+        hn, an = cn(r['home']['name']), cn(r['away']['name']); mt = f"{hn} vs {an}"
+        cand = []  # (label, prob)
+        # 胜平负
+        cand.append((f"{hn} 胜", pw))
+        cand.append(("平局", pd))
+        cand.append((f"{an} 胜", pl))
+        # 不败（让+0.5，含平局）
+        cand.append((f"{hn} 不败", pw + pd))
+        cand.append((f"{an} 不败", pl + pd))
+        # 大小球 2.5
+        o25, _ = tot(g, 2.5, True); u25, _ = tot(g, 2.5, False)
+        cand.append(("大 2.5 球", o25))
+        cand.append(("小 2.5 球", u25))
+        # 双方进球（BTTS）
+        btts = sum(p for (x, y), p in g.items() if x >= 1 and y >= 1)
+        cand.append(("双方进球", btts))
+        for lbl, prob in cand:
+            if prob >= 0.50:
+                radar.append({"m": mt, "l": lbl, "p": round(prob * 100), "t": r['kickoff'][11:16]})
+    radar.sort(key=lambda x: -x['p'])
 
     H = [CSS_HEAD]
     # 顶栏
@@ -421,6 +464,23 @@ def render(rows, src, upd):
     H.append(f'<div class="tile"><div class="tnum" style="color:var(--warn-tx)">{bt["draws"]/n*100:.0f}%</div>'
              f'<div class="mut" style="font-size:11px;margin-top:2px">实际平局率</div></div>')
     H.append('</div>')
+
+    # ④ 概率雷达（纯模型概率，滑块按概率筛选）
+    H.append('<div class="sec">概率雷达 · 拖动按概率筛选</div><div class="card">')
+    if radar:
+        H.append('<div style="display:flex;align-items:center;gap:12px;margin-bottom:6px">'
+                 '<label class="mut" style="font-size:13px;white-space:nowrap">模型概率 ≥</label>'
+                 '<input type="range" min="50" max="90" value="50" step="5" id="sld" style="flex:1">'
+                 '<span style="font-size:15px;font-weight:700;min-width:42px" id="out">50%</span></div>')
+        H.append(f'<div class="row" style="margin-bottom:4px"><span class="dim" style="font-size:11px" id="cnt"></span>'
+                 f'<span class="dim" style="font-size:11px">{next_date or ""} · 各买法</span></div>')
+        H.append('<div id="list"></div>')
+        H.append('<div class="note">基于模型比分概率分布算出的各类买法（胜平负 / 不败 / 大小球 / 双方进球），'
+                 '只列出模型概率 ≥50% 的项，按概率降序。这是模型「信心排序」，概率高不等于有投注价值。</div></div>')
+        radar_json = json.dumps(radar, ensure_ascii=False)
+        H.append('<script>var R=%s;\n%s</script>' % (radar_json, RADAR_JS))
+    else:
+        H.append('<div class="mut">当前没有即将开赛的场次，暂无概率买法。</div></div>')
 
     H.append('<div class="foot">数据：openfootball + World Football Elo Ratings。'
              '本页脚本自动生成，比赛结束后逐场更新。</div></div>')
