@@ -1,69 +1,114 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""临时探测：GitHub Actions runner 能否访问韦德 BetVictor。跑完会被还原成正常 ci_update.py。"""
-import urllib.request, ssl, json, socket
+"""
+GitHub Actions 云端自动更新（替代本地 cron + auto_update.py）。
 
-ctx = ssl.create_default_context(); ctx.check_hostname=False; ctx.verify_mode=ssl.CERT_NONE
-UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
+在 GitHub 数据中心内运行，不依赖用户本地电脑开机：
+  1. generate_dashboard.main()：联网抓赛果 → 锁存预测 → 回测 → 渲染 dist/index.html
+     （同时更新状态文件 fixtures_online_latest / predictions_log / _published_state）
+  2. 实质变化检测（防止每30分钟空提交刷屏）：
+       · 内容文件（predictions_log / fixtures_online_latest / odds_snapshot）git 有真实 diff → 视为有变化
+       · played 集合变化（有新完赛）→ 有变化
+       · 有变化时才把 dist/index.html 拷到根 index.html 并提交，连同状态文件一起 push
+       · 啥都没变 → 不提交（index.html 里的时间戳不会进 commit）
+  3. git commit & push 回 main（Pages 自动服务新页面）
 
-def fetch(url, timeout=25):
-    req = urllib.request.Request(url, headers={
-        "User-Agent": UA,
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-        "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
-    })
+认证：依赖 actions/checkout 持久化的 GITHUB_TOKEN，无需 .env.github。
+本地演练：git 命令失败不崩，仅打印将提交的文件清单，方便验证 generate 链路。
+"""
+import subprocess, os, sys, json, shutil, datetime as dt
+
+BASE = os.path.dirname(os.path.abspath(__file__))
+os.chdir(BASE)
+
+CONTENT_FILES = ["predictions_log.json", "fixtures_online_latest.json", "odds_snapshot.json"]
+
+
+def sh(*args):
     try:
-        with urllib.request.urlopen(req, timeout=timeout, context=ctx) as r:
-            body = r.read(8000).decode("utf-8", "replace")
-            return {"status": r.status, "final_url": r.geturl(),
-                    "server": r.headers.get("Server"), "cf_ray": r.headers.get("CF-RAY"),
-                    "cf_mitigated": r.headers.get("cf-mitigated"),
-                    "set_cookie": (r.headers.get("Set-Cookie") or "")[:80],
-                    "snippet": body[:400].replace("\n", " ")}
-    except urllib.error.HTTPError as e:
-        body = e.read(4000).decode("utf-8", "replace")
-        return {"status": e.code, "final_url": url, "server": e.headers.get("Server"),
-                "cf_ray": e.headers.get("CF-RAY"), "cf_mitigated": e.headers.get("cf-mitigated"),
-                "snippet": body[:400].replace("\n", " ")}
+        return subprocess.run(args, capture_output=True, text=True)
     except Exception as ex:
-        return {"error": type(ex).__name__ + ": " + str(ex)[:200]}
+        class R:  # 本地无 git 时的兜底
+            returncode = -1; stdout = ""; stderr = str(ex)
+        return R()
+
+
+def git_dirty(path):
+    r = sh("git", "status", "--porcelain", "--", path)
+    return bool(r.stdout.strip())
+
+
+def load_played():
+    sp = os.path.join(BASE, "_published_state.json")
+    if os.path.exists(sp):
+        try:
+            return set(json.load(open(sp, encoding="utf-8")).get("played", []))
+        except Exception:
+            pass
+    return set()
+
 
 def main():
-    print("=" * 60)
-    print("PROBE: BetVictor 云端可达性探测")
-    print("=" * 60)
+    prev = load_played()
 
-    # 1) runner 公网 IP + 地理位置
-    try:
-        with urllib.request.urlopen("https://ipinfo.io/json", timeout=20, context=ctx) as r:
-            info = json.loads(r.read().decode())
-        print(f"[runner IP] {info.get('ip')}  地区={info.get('country')}/{info.get('region')}/{info.get('city')}  org={info.get('org')}")
-    except Exception as e:
-        print(f"[runner IP] 查询失败: {e}")
+    import generate_dashboard as gen
+    gen.main()
 
-    # 2) 各域名探测
-    targets = [
-        "https://www.betvictor281.com/zh-cn",
-        "https://www.betvictor281.com/zh-cn/search",
-        "https://www.betvictor.com/",
-        "https://www.betvictor281.com/",
-    ]
-    for url in targets:
-        try:
-            host = url.split("/")[2]
-            ip = socket.gethostbyname(host)
-        except Exception as e:
-            ip = f"DNS失败({e})"
-        print("\n" + "-" * 50)
-        print(f"URL: {url}")
-        print(f"DNS: {ip}")
-        res = fetch(url)
-        for k, v in res.items():
-            if v:
-                print(f"  {k}: {v}")
+    now = load_played()
+    new_played = now - prev
+    played_changed = (now != prev)
 
-    print("\n" + "=" * 60)
-    print("PROBE END")
+    stamp = dt.datetime.now(dt.timezone(dt.timedelta(hours=8))).strftime("%Y-%m-%d %H:%M")
+
+    # 1) 内容文件的真实变化
+    to_add = [f for f in CONTENT_FILES if os.path.exists(f) and git_dirty(f)]
+    content_changed = bool(to_add)
+
+    # 2) 是否需要刷新页面 = 有任何实质变化 / 完赛集合变化 / 首次发布
+    refresh_page = content_changed or played_changed or (not prev)
+
+    if refresh_page:
+        src = os.path.join(BASE, "dist", "index.html")
+        if os.path.exists(src):
+            shutil.copy(src, os.path.join(BASE, "index.html"))
+            to_add.append("index.html")
+        # _published_state 只随页面一起提交，避免 updated_at 时间戳单独刷屏
+        if os.path.exists(os.path.join(BASE, "_published_state.json")):
+            to_add.append("_published_state.json")
+
+    # 去重 + 仅保留确实存在且 git 认为有改动的
+    seen, final = set(), []
+    for f in to_add:
+        if f in seen or not os.path.exists(f):
+            continue
+        seen.add(f)
+        if git_dirty(f):
+            final.append(f)
+
+    if not final:
+        print(f"[{stamp}] 无实质变化，跳过提交。已完赛 {len(now)} 场。")
+        return 0
+
+    sh("git", "config", "user.name", "github-actions[bot]")
+    sh("git", "config", "user.email", "github-actions[bot]@users.noreply.github.com")
+    sh("git", "add", "--", *final)
+    if new_played:
+        msg = f"auto: {stamp} (+{len(new_played)} 新完赛, 共 {len(now)} 场)"
+    elif "index.html" in final:
+        msg = f"auto: {stamp} 页面/预测刷新 (共 {len(now)} 场)"
+    else:
+        msg = f"auto: {stamp} 状态更新"
+    c = sh("git", "commit", "-m", msg)
+    if c.returncode != 0:
+        print(f"[{stamp}] commit 跳过/失败: {c.stdout} {c.stderr}".strip())
+        return 0
+    p = sh("git", "push", "origin", "HEAD:main")
+    if p.returncode == 0:
+        print(f"[{stamp}] 已提交并推送: {final}")
+    else:
+        print(f"[{stamp}] commit 完成但 push 失败(本地演练正常): {p.stderr[-300:]}")
+    return 0
+
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
