@@ -4,14 +4,13 @@
 世界杯预测看板 — HTML 生成器（自动更新用）
 
 生成 dist/index.html，含三大板块：
-  ① 历史预测准确度（KPI看板 + 比例条）
-  ② 最新比分 / 昨日预测vs实际差异 / 接下来预测
-  ③ 我的预测方向 × 韦德盘口 EV 对比（基于 odds_snapshot.json，标注赔率时间）
+  ① 接下来 · 当天整批预测（hero 卡 + 当天其余场次）
+  ② 上一批战绩（预测比分 → 实际比分）
+  ③ 模型战绩（方向命中 / Top1精确 / Top2任一 / 实际平局率）
 
 数据：
   - openfootball worldcup.json（赛果，多镜像重试）
   - fixtures_online_latest.json（赛程+Elo+攻防+近期进失球缓存）
-  - odds_snapshot.json（韦德赔率快照，赛前更新）
 独立可运行：python generate_dashboard.py
 """
 from __future__ import annotations
@@ -316,34 +315,10 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border:none;border-ra
 </style></head><body><div class="wrap">"""
 
 
-RADAR_JS = r"""
-function evcss(e){return e>0?'var(--ok-tx)':'var(--bad-tx)';}
-function dotc(p){return 'var(--'+(p>=70?'ok-tx':(p>=50?'info-tx':'warn-tx'))+')';}
-R.sort(function(a,b){var pa=(a.ev!=null&&a.ev>0),pb=(b.ev!=null&&b.ev>0);
- if(pa!=pb)return pa?-1:1; if(pa&&pb)return b.ev-a.ev; return b.p-a.p;});
-var sld=document.getElementById('sld'),out=document.getElementById('out'),
-    list=document.getElementById('list'),cnt=document.getElementById('cnt');
-function draw(){var t=parseInt(sld.value);out.textContent=t+'%';
- var rows=R.filter(function(o){return o.p>=t;});
- list.innerHTML=rows.map(function(o){
-  var right='<span style="font-size:12px;font-weight:600;color:'+evcss(o.ev)+'">EV '+(o.ev>0?'+':'')+o.ev+'%</span>';
-  return '<div class="vrow"><span class="pp">'+o.p+'%</span>'+
-   '<span class="dot" style="background:'+dotc(o.p)+'"></span>'+
-   '<span style="flex:1;font-size:13px">'+o.l+' <span class="dim" style="font-size:11px">'+o.m+'</span></span>'+right+'</div>';
- }).join('')||'<div class="dim" style="padding:10px 0;font-size:12px">该阈值下无买法</div>';
- cnt.textContent=rows.length+' 项 / 共 '+R.length;}
-sld.addEventListener('input',draw);draw();
-"""
-
-
 def render(rows, src, upd):
     now = dt.datetime.now(dt.timezone(dt.timedelta(hours=8)))  # 固定北京时间(UTC+8)，云端 runner 是 UTC
     bt = backtest(rows)
     n = max(1, bt['n'])
-    snap = {}
-    try: snap = json.load(open('odds_snapshot.json', encoding='utf-8'))
-    except Exception: pass
-    odds = snap.get('odds', {}); odds_time = snap.get('updated_at', '未知')
 
     # featured day = 最早还有未开赛场次的那天（剔除已开球但结果未落库的场，避免把进行中的比赛当未来场）
     def _kdt(r):
@@ -364,47 +339,11 @@ def render(rows, src, upd):
                 '<span style="width:%.0f%%;background:var(--draw)"></span>'
                 '<span style="width:%.0f%%;background:var(--away)"></span></div>') % (pw*100, pd*100, pl*100)
 
-    # ---- 价值雷达：只遍历韦德实际有的让分线+大小线，每条算模型概率，保留模型看好(≥50%)的那一边 ----
-    # 这样每一行都必然有盘口赔率+EV，不再凭空生成无赔率的买法。
-    radar = []
-    for r in daybatch:
-        key = f"{r['home']['source_name']}|{r['away']['source_name']}"
-        o = odds.get(key)
-        g, hx, ax = grid(r['home'], r['away'])
-        hn, an = cn(r['home']['name']), cn(r['away']['name']); mt = f"{hn} vs {an}"
-        if not o:
-            continue  # 没盘口的场次直接跳过（不显示"赔率待更新"）
-        def add(lbl, prob, oddval, push=0.0, integer=True):
-            if prob < 0.50 or not oddval:
-                return  # 只收录：模型概率≥50% 且 有真实赔率
-            e = ev(prob, push, oddval, integer)
-            radar.append({"m": mt, "l": lbl, "p": round(prob*100),
-                          "ev": round(e*1000)/10})
-        # 让分盘：主客两边都算，保留模型概率≥50%那边
-        for sidekey, side, nm in [('home', 'home', hn), ('away', 'away', an)]:
-            for ln, od in o.get('ah', {}).get(sidekey, []):
-                line = parse_line(ln)
-                if abs(line*4-round(line*4)) < 1e-9 and abs(line*2-round(line*2)) > 1e-9:
-                    w, p = ah_quarter(g, line, side); integer = False
-                else:
-                    w, p = ah(g, line, side); integer = abs(line-round(line)) < 1e-9
-                add(f"{nm} 让{ln}", w, od, p, integer)
-        # 大小盘：大/小两边都算，保留模型概率≥50%那边
-        for ln, od in o.get('totals', {}).get('over', []):
-            L = parse_line(ln); w, p = tot(g, L, True)
-            add(f"大{ln}球", w, od, p, abs(L-round(L)) < 1e-9)
-        for ln, od in o.get('totals', {}).get('under', []):
-            L = parse_line(ln); w, p = tot(g, L, False)
-            add(f"小{ln}球", w, od, p, abs(L-round(L)) < 1e-9)
-    radar.sort(key=lambda x: -x['ev'])
-    radar_json = json.dumps(radar, ensure_ascii=False)
-
     H = [CSS_HEAD]
     # 顶栏
     H.append(f'<div class="row"><div style="font-size:18px;font-weight:700">🏆 世界杯预测看板</div>'
              f'<div style="display:flex;gap:6px">'
-             f'<span class="chip mc">数据 {now.strftime("%m-%d %H:%M")}</span>'
-             f'<span class="chip warn">赔率 {odds_time}</span></div></div>')
+             f'<span class="chip mc">数据 {now.strftime("%m-%d %H:%M")}</span></div></div>')
     H.append(f'<div class="dim" style="font-size:12px;margin-top:5px">数据源：{src} · 本次新结算 {upd} 场 · 北京时间</div>')
 
     # ① 接下来 · 当天整批
@@ -414,18 +353,6 @@ def render(rows, src, upd):
         top = sorted(g.items(), key=lambda x: x[1], reverse=True)[0]
         sh, sa, sp, skind = pick_secondary(g, pw, pd, pl)
         hn, an = cn(hero['home']['name']), cn(hero['away']['name'])
-        sig = [x for x in radar if x['m'] == f"{hn} vs {an}" and x['ev'] is not None]
-        if sig:
-            best = max(sig, key=lambda x: x['ev'])
-            if best['ev'] > 0:
-                sigchip = f'<span class="chip ok">有价值 · {best["l"]}</span>'
-                signote = f'最优 {best["l"]}：EV <b style="color:var(--ok-tx)">+{best["ev"]:.1f}%</b>'
-            else:
-                sigchip = '<span class="chip warn">无价值 · 观望</span>'
-                signote = f'最优 {best["l"]}：EV <b style="color:var(--bad-tx)">{best["ev"]:.1f}%</b>，被盘口压价'
-        else:
-            sigchip = '<span class="chip mc">赔率待更新</span>'
-            signote = '暂无该场韦德盘口，刷新后给出 EV 判定'
         H.append(f'<div class="sec" style="margin-bottom:8px">{next_date} · 全天 {len(daybatch)} 场</div>')
         H.append('<div class="card" style="border:2px solid var(--info-tx)">')
         H.append(f'<div class="row"><span class="chip info">下一场 · {hero["kickoff"][11:16]}</span>'
@@ -444,8 +371,6 @@ def render(rows, src, upd):
                  f'<div class="mut" style="font-size:12px;margin-top:1px">{top[1]*100:.0f}% · 次选 {sh}-{sa} '
                  f'<span class="chip warn">{skind}</span></div></div>')
         H.append('</div>')
-        H.append(f'<div class="row" style="margin-top:12px;padding-top:11px;border-top:1px solid var(--bd)">'
-                 f'<span style="font-size:12px"><span class="mut">盘口信号</span> {signote}</span>{sigchip}</div>')
         H.append('</div>')
         if rest:
             H.append('<div class="sec">当天其余 %d 场</div><div class="card" style="padding:2px 17px">' % len(rest))
@@ -497,33 +422,16 @@ def render(rows, src, upd):
              f'<div class="mut" style="font-size:11px;margin-top:2px">实际平局率</div></div>')
     H.append('</div>')
 
-    # ④ 价值雷达（滑块按概率筛选）
-    H.append('<div class="sec">价值雷达 · 拖动按概率筛选</div><div class="card">')
-    H.append('<div style="display:flex;align-items:center;gap:12px;margin-bottom:6px">'
-             '<label class="mut" style="font-size:13px;white-space:nowrap">模型概率 ≥</label>'
-             '<input type="range" min="50" max="90" value="50" step="5" id="sld" style="flex:1">'
-             '<span style="font-size:15px;font-weight:700;min-width:42px" id="out">50%</span></div>')
-    H.append(f'<div class="row" style="margin-bottom:4px"><span class="dim" style="font-size:11px" id="cnt"></span>'
-             f'<span class="dim" style="font-size:11px">{next_date or ""} · 各买法</span></div>')
-    H.append('<div id="list"></div>')
-    H.append(f'<div class="note">只列出「模型概率≥50% 且 韦德有对应让分/大小盘」的买法，每条都带 EV，正EV置顶。'
-             f'概率高 ≠ 有价值：高概率项常被盘口压价，乘上赔率算出正EV 才叫有价值。赔率快照 {odds_time}。</div></div>')
-    H.append('<div class="foot">数据：openfootball + World Football Elo Ratings；赔率：BetVictor 快照。'
+    H.append('<div class="foot">数据：openfootball + World Football Elo Ratings。'
              '本页脚本自动生成，比赛结束后逐场更新。</div></div>')
-    H.append('<script>var R=%s;\n%s</script></body></html>' % (radar_json, RADAR_JS))
+    H.append('</body></html>')
     return "\n".join(H)
 
 
 def main():
     rows = json.load(open('fixtures_online_latest.json', encoding='utf-8'))
-    # 载入韦德让分盘快照，构造带赔率的预测函数
-    odds = {}
-    try:
-        odds = json.load(open('odds_snapshot.json', encoding='utf-8')).get('odds', {})
-    except Exception:
-        pass
     def predict_fn(r):
-        return build_prediction(r)  # 预测方向=模型胜平负，不依赖盘口
+        return build_prediction(r)  # 预测方向=模型胜平负
     # 1) 先冻结：对当前所有"未完赛"比赛锁存预测（赛前快照，retro=False）。
     #    必须在合并新比分之前做，确保刚结束的比赛用的是赛前冻结的预测。
     locked = pstore.freeze_pending(rows, predict_fn, retro_played=False)
