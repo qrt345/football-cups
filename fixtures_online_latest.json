@@ -2507,7 +2507,17 @@
       "elo_rank": 65,
       "form_note": "近8场"
     },
-    "source": "openfootball/worldcup.json + World Football Elo Ratings"
+    "source": "openfootball/worldcup.json + World Football Elo Ratings",
+    "score": {
+      "ft": [
+        0,
+        0
+      ],
+      "ht": [
+        0,
+        0
+      ]
+    }
   },
   {
     "kickoff": "2026-06-27T08:00:00+08:00",
@@ -2537,7 +2547,17 @@
       "elo_rank": 2,
       "form_note": "近8场"
     },
-    "source": "openfootball/worldcup.json + World Football Elo Ratings"
+    "source": "openfootball/worldcup.json + World Football Elo Ratings",
+    "score": {
+      "ft": [
+        0,
+        1
+      ],
+      "ht": [
+        0,
+        1
+      ]
+    }
   },
   {
     "kickoff": "2026-06-27T11:00:00+08:00",
@@ -2567,7 +2587,17 @@
       "elo_rank": 31,
       "form_note": "近8场"
     },
-    "source": "openfootball/worldcup.json + World Football Elo Ratings"
+    "source": "openfootball/worldcup.json + World Football Elo Ratings",
+    "score": {
+      "ft": [
+        1,
+        1
+      ],
+      "ht": [
+        1,
+        1
+      ]
+    }
   },
   {
     "kickoff": "2026-06-27T11:00:00+08:00",
@@ -2597,7 +2627,17 @@
       "elo_rank": 17,
       "form_note": "近8场"
     },
-    "source": "openfootball/worldcup.json + World Football Elo Ratings"
+    "source": "openfootball/worldcup.json + World Football Elo Ratings",
+    "score": {
+      "ft": [
+        1,
+        5
+      ],
+      "ht": [
+        0,
+        1
+      ]
+    }
   },
   {
     "kickoff": "2026-06-28T05:00:00+08:00",

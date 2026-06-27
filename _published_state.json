@@ -11,12 +11,14 @@
     "Brazil|Morocco",
     "Canada|Bosnia & Herzegovina",
     "Canada|Qatar",
+    "Cape Verde|Saudi Arabia",
     "Colombia|DR Congo",
     "Curaçao|Ivory Coast",
     "Czech Republic|Mexico",
     "Czech Republic|South Africa",
     "Ecuador|Curaçao",
     "Ecuador|Germany",
+    "Egypt|Iran",
     "England|Croatia",
     "England|Ghana",
     "France|Iraq",
@@ -35,6 +37,7 @@
     "Morocco|Haiti",
     "Netherlands|Japan",
     "Netherlands|Sweden",
+    "New Zealand|Belgium",
     "New Zealand|Egypt",
     "Norway|France",
     "Norway|Senegal",
@@ -61,7 +64,8 @@
     "USA|Australia",
     "USA|Paraguay",
     "Uruguay|Cape Verde",
+    "Uruguay|Spain",
     "Uzbekistan|Colombia"
   ],
-  "updated_at": "2026-06-26T22:48:17.668925+00:00"
+  "updated_at": "2026-06-27T05:15:37.419171+00:00"
 }
