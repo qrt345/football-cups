@@ -885,7 +885,7 @@
     "venue": "Toronto",
     "home": {
       "name": "加纳",
-      "rating": 1575.0,
+      "rating": 1570.0,
       "attack": 0.825,
       "defense": 1.102,
       "recent_goals_for": 0.625,
@@ -937,7 +937,7 @@
     },
     "away": {
       "name": "哥伦比亚",
-      "rating": 2004.0,
+      "rating": 2009.0,
       "attack": 1.086,
       "defense": 0.976,
       "recent_goals_for": 1.875,
@@ -1817,7 +1817,7 @@
     },
     "away": {
       "name": "加纳",
-      "rating": 1575.0,
+      "rating": 1570.0,
       "attack": 0.78,
       "defense": 1.102,
       "recent_goals_for": 0.5,
@@ -1885,7 +1885,7 @@
     "venue": "Guadalajara (Zapopan)",
     "home": {
       "name": "哥伦比亚",
-      "rating": 2004.0,
+      "rating": 2009.0,
       "attack": 1.103,
       "defense": 0.976,
       "recent_goals_for": 2.0,
@@ -2697,7 +2697,7 @@
     },
     "away": {
       "name": "加纳",
-      "rating": 1575.0,
+      "rating": 1570.0,
       "attack": 0.825,
       "defense": 1.102,
       "recent_goals_for": 0.625,
@@ -2725,7 +2725,7 @@
     "venue": "Miami (Miami Gardens)",
     "home": {
       "name": "哥伦比亚",
-      "rating": 2004.0,
+      "rating": 2009.0,
       "attack": 1.067,
       "defense": 0.944,
       "recent_goals_for": 1.75,
@@ -3517,10 +3517,10 @@
     "venue": "Kansas City",
     "home": {
       "name": "哥伦比亚",
-      "rating": 2004.0,
-      "attack": 1.067,
+      "rating": 2009.0,
+      "attack": 1.027,
       "defense": 0.944,
-      "recent_goals_for": 1.75,
+      "recent_goals_for": 1.5,
       "recent_goals_against": 0.875,
       "source_name": "Colombia",
       "elo_code": "CO",
@@ -3529,7 +3529,7 @@
     },
     "away": {
       "name": "加纳",
-      "rating": 1575.0,
+      "rating": 1570.0,
       "attack": 0.825,
       "defense": 1.102,
       "recent_goals_for": 0.625,
@@ -3736,28 +3736,28 @@
     "competition": "世界杯 2026 Round of 16",
     "venue": "Atlanta",
     "home": {
-      "name": "W86",
-      "rating": 1500.0,
-      "attack": 0.963,
-      "defense": 1.054,
-      "recent_goals_for": 1.161,
-      "recent_goals_against": 1.357,
-      "source_name": "W86",
-      "elo_code": "",
-      "elo_rank": 0,
-      "form_note": "历史均值估计（Elo 未匹配到球队：W86）"
+      "name": "阿根廷",
+      "rating": 2151.0,
+      "attack": 1.208,
+      "defense": 0.821,
+      "recent_goals_for": 2.875,
+      "recent_goals_against": 0.5,
+      "source_name": "Argentina",
+      "elo_code": "AR",
+      "elo_rank": 2,
+      "form_note": "近8场"
     },
     "away": {
-      "name": "W88",
-      "rating": 1500.0,
-      "attack": 0.963,
-      "defense": 1.054,
-      "recent_goals_for": 1.161,
-      "recent_goals_against": 1.357,
-      "source_name": "W88",
-      "elo_code": "",
-      "elo_rank": 0,
-      "form_note": "历史均值估计（Elo 未匹配到球队：W88）"
+      "name": "埃及",
+      "rating": 1747.0,
+      "attack": 1.027,
+      "defense": 0.909,
+      "recent_goals_for": 1.5,
+      "recent_goals_against": 0.75,
+      "source_name": "Egypt",
+      "elo_code": "EG",
+      "elo_rank": 33,
+      "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings"
   },
@@ -3778,16 +3778,16 @@
       "form_note": "近8场"
     },
     "away": {
-      "name": "W87",
-      "rating": 1500.0,
-      "attack": 0.963,
-      "defense": 1.054,
-      "recent_goals_for": 1.161,
-      "recent_goals_against": 1.357,
-      "source_name": "W87",
-      "elo_code": "",
-      "elo_rank": 0,
-      "form_note": "历史均值估计（Elo 未匹配到球队：W87）"
+      "name": "哥伦比亚",
+      "rating": 2009.0,
+      "attack": 1.027,
+      "defense": 0.944,
+      "recent_goals_for": 1.5,
+      "recent_goals_against": 0.875,
+      "source_name": "Colombia",
+      "elo_code": "CO",
+      "elo_rank": 7,
+      "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings"
   },
