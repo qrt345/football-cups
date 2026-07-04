@@ -15,13 +15,71 @@ GitHub Actions 云端自动更新（替代本地 cron + auto_update.py）。
 
 认证：依赖 actions/checkout 持久化的 GITHUB_TOKEN，无需 .env.github。
 本地演练：git 命令失败不崩，仅打印将提交的文件清单，方便验证 generate 链路。
+
+赛程自动刷新（解决淘汰赛占位符 W89/2F 不更新问题）：
+  每次运行检查距上次重抓赛程是否超过 REFRESH_HOURS，超过则先跑 fetch_online_fixtures
+  重抓对阵+Elo+近期进失球（合并时保留已有赛果），再走正常生成。
+  时间戳记录在 _last_fetch.json 并提交回仓库，让节流跨云端运行生效。
+  fetch 失败时优雅降级：保留现有缓存，继续赛果更新，不中断。
 """
-import subprocess, os, sys, json, shutil, datetime as dt
+import subprocess, os, sys, json, shutil, datetime as dt, re
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 os.chdir(BASE)
 
 CONTENT_FILES = ["predictions_log.json", "fixtures_online_latest.json"]
+
+REFRESH_HOURS = 6                       # 每隔多少小时重抓一次赛程+Elo
+FETCH_STAMP = "_last_fetch.json"        # 记录上次重抓时间（提交回仓库以跨云端运行生效）
+FIXTURES = "fixtures_online_latest.json"
+
+
+def _has_score(r):
+    return bool(r.get("score") and r["score"].get("ft"))
+
+
+def _fkey(r):
+    return f"{r['home']['source_name']}|{r['away']['source_name']}|{r['kickoff'][:10]}"
+
+
+def _should_refresh():
+    p = os.path.join(BASE, FETCH_STAMP)
+    if not os.path.exists(p):
+        return True
+    try:
+        last = dt.datetime.fromisoformat(json.load(open(p, encoding="utf-8"))["at"])
+    except Exception:
+        return True
+    return (dt.datetime.now(dt.timezone.utc) - last).total_seconds() >= REFRESH_HOURS * 3600
+
+
+def refresh_fixtures(stamp):
+    """重抓赛程+Elo，合并保留赛果。成功返回 True，失败降级返回 False。"""
+    try:
+        import fetch_online_fixtures as fof
+        fresh = fof.build_fixtures(fof.WORLDCUP_URL, 8)  # 联网抓对阵+Elo+近期进失球
+        if not fresh or len(fresh) < 32:
+            print(f"[{stamp}] 赛程刷新：抓到 {len(fresh) if fresh else 0} 场，数据异常，跳过。")
+            return False
+        old = json.load(open(os.path.join(BASE, FIXTURES), encoding="utf-8"))
+        oldmap = {_fkey(r): r for r in old}
+        for r in fresh:                 # 保险：新数据缺赛果时用旧的补回
+            k = _fkey(r)
+            if not _has_score(r) and k in oldmap and _has_score(oldmap[k]):
+                r["score"] = oldmap[k]["score"]
+        json.dump(fresh, open(os.path.join(BASE, FIXTURES), "w", encoding="utf-8"),
+                  ensure_ascii=False, indent=2)
+        # 记录本次重抓时间
+        json.dump({"at": dt.datetime.now(dt.timezone.utc).isoformat()},
+                  open(os.path.join(BASE, FETCH_STAMP), "w", encoding="utf-8"))
+        ph = sum(1 for r in fresh
+                 if re.match(r'^(Winner|Loser|[12][A-L]|[WL]\d)', str(r['home']['source_name']))
+                 or re.match(r'^(Winner|Loser|[12][A-L]|[WL]\d)', str(r['away']['source_name'])))
+        print(f"[{stamp}] 赛程刷新成功：{len(fresh)} 场，剩余占位符 {ph}（未打出的轮次，正常）。")
+        return True
+    except Exception as e:
+        print(f"[{stamp}] 赛程刷新失败(降级，保留现有缓存): {type(e).__name__}: {e}")
+        return False
 
 
 def sh(*args):
@@ -51,6 +109,13 @@ def load_played():
 def main():
     prev = load_played()
 
+    stamp = dt.datetime.now(dt.timezone(dt.timedelta(hours=8))).strftime("%Y-%m-%d %H:%M")
+
+    # 0) 低频重抓赛程+Elo（解决淘汰赛占位符不更新）；失败降级不影响赛果流程
+    fetched = False
+    if _should_refresh():
+        fetched = refresh_fixtures(stamp)
+
     import generate_dashboard as gen
     gen.main()
 
@@ -58,14 +123,12 @@ def main():
     new_played = now - prev
     played_changed = (now != prev)
 
-    stamp = dt.datetime.now(dt.timezone(dt.timedelta(hours=8))).strftime("%Y-%m-%d %H:%M")
-
     # 1) 内容文件的真实变化
     to_add = [f for f in CONTENT_FILES if os.path.exists(f) and git_dirty(f)]
     content_changed = bool(to_add)
 
-    # 2) 是否需要刷新页面 = 有任何实质变化 / 完赛集合变化 / 首次发布
-    refresh_page = content_changed or played_changed or (not prev)
+    # 2) 是否需要刷新页面 = 有任何实质变化 / 完赛集合变化 / 首次发布 / 刚重抓过赛程
+    refresh_page = content_changed or played_changed or fetched or (not prev)
 
     if refresh_page:
         src = os.path.join(BASE, "dist", "index.html")
@@ -75,6 +138,10 @@ def main():
         # _published_state 只随页面一起提交，避免 updated_at 时间戳单独刷屏
         if os.path.exists(os.path.join(BASE, "_published_state.json")):
             to_add.append("_published_state.json")
+
+    # _last_fetch.json：刚重抓过就提交，让 6h 节流跨云端运行生效
+    if fetched and os.path.exists(os.path.join(BASE, FETCH_STAMP)):
+        to_add.append(FETCH_STAMP)
 
     # 去重 + 仅保留确实存在且 git 认为有改动的
     seen, final = set(), []
