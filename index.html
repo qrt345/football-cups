@@ -31,15 +31,15 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border:none;border-ra
 .note{font-size:12px;color:var(--mut);margin-top:8px;line-height:1.5}
 .foot{font-size:11px;color:var(--dim);text-align:center;margin:18px 0 4px}
 </style></head><body><div class="wrap">
-<div class="row"><div style="font-size:18px;font-weight:700">🏆 世界杯预测看板</div><div style="display:flex;gap:6px"><span class="chip mc">数据 07-05 03:30</span></div></div>
-<div class="dim" style="font-size:12px;margin-top:5px">数据源：实时刷新 · 本次新结算 1 场 · 北京时间</div>
+<div class="row"><div style="font-size:18px;font-weight:700">🏆 世界杯预测看板</div><div style="display:flex;gap:6px"><span class="chip mc">数据 07-05 04:00</span></div></div>
+<div class="dim" style="font-size:12px;margin-top:5px">数据源：实时刷新 · 本次新结算 0 场 · 北京时间</div>
 <div class="sec" style="margin-bottom:8px">2026-07-04 · 全天 1 场</div>
 <div class="card" style="border:2px solid var(--info-tx)">
 <div class="row"><span class="chip info">下一场 · 21:00</span><span class="mut" style="font-size:12px">本日第 1 / 1 场</span></div>
 <div style="font-size:21px;font-weight:700;margin:8px 0 2px">巴拉圭 <span class="dim" style="font-size:15px">vs</span> 法国</div>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:11px;align-items:center">
-<div><div class="mut" style="font-size:12px;margin-bottom:4px">预期进球 xG</div><div style="font-size:19px;font-weight:600">0.92 <span class="dim" style="font-size:13px">—</span> 2.33</div><div style="margin-top:9px"><div class="wdl"><span style="width:14%;background:var(--home)"></span><span style="width:18%;background:var(--draw)"></span><span style="width:68%;background:var(--away)"></span></div></div><div class="row" style="margin-top:4px;font-size:11px"><span style="color:var(--info-tx)">主胜 14</span><span style="color:var(--warn-tx)">平 18</span><span class="mut">客胜 68</span></div></div>
-<div style="border-left:1px solid var(--bd);padding-left:15px"><div class="mut" style="font-size:12px">模型首选比分</div><div style="font-size:29px;font-weight:700;line-height:1.1">0-2</div><div class="mut" style="font-size:12px;margin-top:1px">10% · 次选 0-1 <span class="chip warn">次概率</span></div></div>
+<div><div class="mut" style="font-size:12px;margin-bottom:4px">预期进球 xG</div><div style="font-size:19px;font-weight:600">1.36 <span class="dim" style="font-size:13px">—</span> 1.31</div><div style="margin-top:9px"><div class="wdl"><span style="width:38%;background:var(--home)"></span><span style="width:26%;background:var(--draw)"></span><span style="width:36%;background:var(--away)"></span></div></div><div class="row" style="margin-top:4px;font-size:11px"><span style="color:var(--info-tx)">主胜 38</span><span style="color:var(--warn-tx)">平 26</span><span class="mut">客胜 36</span></div></div>
+<div style="border-left:1px solid var(--bd);padding-left:15px"><div class="mut" style="font-size:12px">模型首选比分</div><div style="font-size:29px;font-weight:700;line-height:1.1">1-1</div><div class="mut" style="font-size:12px;margin-top:1px">12% · 次选 0-0 <span class="chip warn">防冷</span></div></div>
 </div>
 </div>
 <div class="sec">上一批战绩 · 07-04</div><div class="card" style="padding:2px 17px">
@@ -58,7 +58,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border:none;border-ra
 <div class="row" style="margin-bottom:4px"><span class="dim" style="font-size:11px" id="cnt"></span><span class="dim" style="font-size:11px">2026-07-04 · 各买法</span></div>
 <div id="list"></div>
 <div class="note">基于模型比分概率分布算出的各类买法（胜平负 / 不败 / 大小球 / 双方进球），只列出模型概率 ≥50% 的项，按概率降序。这是模型「信心排序」，概率高不等于有投注价值。</div></div>
-<script>var R=[{"m": "巴拉圭 vs 法国", "l": "法国 不败", "p": 86, "t": "21:00"}, {"m": "巴拉圭 vs 法国", "l": "法国 胜", "p": 68, "t": "21:00"}, {"m": "巴拉圭 vs 法国", "l": "大 2.5 球", "p": 62, "t": "21:00"}, {"m": "巴拉圭 vs 法国", "l": "双方进球", "p": 53, "t": "21:00"}];
+<script>var R=[{"m": "巴拉圭 vs 法国", "l": "巴拉圭 不败", "p": 64, "t": "21:00"}, {"m": "巴拉圭 vs 法国", "l": "法国 不败", "p": 62, "t": "21:00"}, {"m": "巴拉圭 vs 法国", "l": "双方进球", "p": 53, "t": "21:00"}, {"m": "巴拉圭 vs 法国", "l": "小 2.5 球", "p": 51, "t": "21:00"}];
 
 function dotc(p){return 'var(--'+(p>=70?'ok-tx':(p>=60?'info-tx':'warn-tx'))+')';}
 R.sort(function(a,b){return b.p-a.p;});
