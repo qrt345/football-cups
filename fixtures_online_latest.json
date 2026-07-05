@@ -3659,7 +3659,17 @@
       "elo_rank": 0,
       "form_note": "历史均值估计（Elo 未匹配到球队：Norway）"
     },
-    "source": "openfootball/worldcup.json + World Football Elo Ratings"
+    "source": "openfootball/worldcup.json + World Football Elo Ratings",
+    "score": {
+      "ft": [
+        1,
+        2
+      ],
+      "ht": [
+        0,
+        0
+      ]
+    }
   },
   {
     "kickoff": "2026-07-06T00:00:00+00:00",
