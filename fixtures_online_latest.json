@@ -3816,28 +3816,28 @@
     "competition": "世界杯 2026 Quarter-final",
     "venue": "Boston (Foxborough)",
     "home": {
-      "name": "W89",
+      "name": "法国",
       "rating": 1500.0,
       "attack": 0.963,
       "defense": 1.054,
       "recent_goals_for": 1.161,
       "recent_goals_against": 1.357,
-      "source_name": "W89",
+      "source_name": "France",
       "elo_code": "",
       "elo_rank": 0,
-      "form_note": "历史均值估计（Elo 未匹配到球队：W89）"
+      "form_note": "历史均值估计（Elo 未匹配到球队：France）"
     },
     "away": {
-      "name": "W90",
+      "name": "摩洛哥",
       "rating": 1500.0,
       "attack": 0.963,
       "defense": 1.054,
       "recent_goals_for": 1.161,
       "recent_goals_against": 1.357,
-      "source_name": "W90",
+      "source_name": "Morocco",
       "elo_code": "",
       "elo_rank": 0,
-      "form_note": "历史均值估计（Elo 未匹配到球队：W90）"
+      "form_note": "历史均值估计（Elo 未匹配到球队：Morocco）"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings"
   },
