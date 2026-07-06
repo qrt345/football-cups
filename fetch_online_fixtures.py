@@ -185,7 +185,8 @@ def parse_kickoff(match: Dict[str, Any]) -> dt.datetime:
     hour, minute, offset = int(m.group(1)), int(m.group(2)), int(m.group(3))
     tz = dt.timezone(dt.timedelta(hours=offset))
     y, mo, d = [int(x) for x in str(match["date"]).split("-")]
-    return dt.datetime(y, mo, d, hour, minute, tzinfo=tz).astimezone()
+    # 统一转北京时间(UTC+8)，不依赖运行环境时区（云端 runner 是 UTC，否则会显示成 UTC）
+    return dt.datetime(y, mo, d, hour, minute, tzinfo=tz).astimezone(dt.timezone(dt.timedelta(hours=8)))
 
 
 def find_code(name: str, alias_to_code: Dict[str, str]) -> Optional[str]:
