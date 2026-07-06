@@ -1,6 +1,6 @@
 [
   {
-    "kickoff": "2026-06-11T19:00:00+00:00",
+    "kickoff": "2026-06-12T03:00:00+08:00",
     "competition": "世界杯 2026 Group A Matchday 1",
     "venue": "Mexico City",
     "home": {
@@ -12,7 +12,7 @@
       "recent_goals_against": 0.25,
       "source_name": "Mexico",
       "elo_code": "MX",
-      "elo_rank": 10,
+      "elo_rank": 9,
       "form_note": "近8场"
     },
     "away": {
@@ -40,7 +40,7 @@
     }
   },
   {
-    "kickoff": "2026-06-12T02:00:00+00:00",
+    "kickoff": "2026-06-12T10:00:00+08:00",
     "competition": "世界杯 2026 Group A Matchday 1",
     "venue": "Guadalajara (Zapopan)",
     "home": {
@@ -80,19 +80,19 @@
     }
   },
   {
-    "kickoff": "2026-06-12T19:00:00+00:00",
+    "kickoff": "2026-06-13T03:00:00+08:00",
     "competition": "世界杯 2026 Group B Matchday 2",
     "venue": "Toronto",
     "home": {
       "name": "加拿大",
-      "rating": 1729.0,
+      "rating": 1764.0,
       "attack": 0.955,
       "defense": 0.821,
       "recent_goals_for": 1.125,
       "recent_goals_against": 0.5,
       "source_name": "Canada",
       "elo_code": "CA",
-      "elo_rank": 38,
+      "elo_rank": 30,
       "form_note": "近8场"
     },
     "away": {
@@ -120,7 +120,7 @@
     }
   },
   {
-    "kickoff": "2026-06-13T01:00:00+00:00",
+    "kickoff": "2026-06-13T09:00:00+08:00",
     "competition": "世界杯 2026 Group D Matchday 2",
     "venue": "Los Angeles (Inglewood)",
     "home": {
@@ -137,14 +137,14 @@
     },
     "away": {
       "name": "巴拉圭",
-      "rating": 1814.0,
+      "rating": 1823.0,
       "attack": 1.027,
       "defense": 1.102,
       "recent_goals_for": 1.5,
       "recent_goals_against": 1.625,
       "source_name": "Paraguay",
       "elo_code": "PY",
-      "elo_rank": 24,
+      "elo_rank": 22,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -160,7 +160,7 @@
     }
   },
   {
-    "kickoff": "2026-06-13T19:00:00+00:00",
+    "kickoff": "2026-06-14T03:00:00+08:00",
     "competition": "世界杯 2026 Group B Matchday 3",
     "venue": "San Francisco Bay Area (Santa Clara)",
     "home": {
@@ -184,7 +184,7 @@
       "recent_goals_against": 1.125,
       "source_name": "Switzerland",
       "elo_code": "CH",
-      "elo_rank": 10,
+      "elo_rank": 9,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -200,31 +200,31 @@
     }
   },
   {
-    "kickoff": "2026-06-13T22:00:00+00:00",
+    "kickoff": "2026-06-14T06:00:00+08:00",
     "competition": "世界杯 2026 Group C Matchday 3",
     "venue": "New York/New Jersey (East Rutherford)",
     "home": {
       "name": "巴西",
-      "rating": 1993.0,
+      "rating": 2031.0,
       "attack": 1.136,
       "defense": 1.057,
       "recent_goals_for": 2.25,
       "recent_goals_against": 1.375,
       "source_name": "Brazil",
       "elo_code": "BR",
-      "elo_rank": 7,
+      "elo_rank": 5,
       "form_note": "近8场"
     },
     "away": {
       "name": "摩洛哥",
-      "rating": 1921.0,
+      "rating": 1886.0,
       "attack": 1.067,
       "defense": 0.868,
       "recent_goals_for": 1.75,
       "recent_goals_against": 0.625,
       "source_name": "Morocco",
       "elo_code": "MA",
-      "elo_rank": 12,
+      "elo_rank": 15,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -240,7 +240,7 @@
     }
   },
   {
-    "kickoff": "2026-06-14T01:00:00+00:00",
+    "kickoff": "2026-06-14T09:00:00+08:00",
     "competition": "世界杯 2026 Group C Matchday 3",
     "venue": "Boston (Foxborough)",
     "home": {
@@ -264,7 +264,7 @@
       "recent_goals_against": 1.125,
       "source_name": "Scotland",
       "elo_code": "SQ",
-      "elo_rank": 33,
+      "elo_rank": 34,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -280,7 +280,7 @@
     }
   },
   {
-    "kickoff": "2026-06-14T04:00:00+00:00",
+    "kickoff": "2026-06-14T12:00:00+08:00",
     "competition": "世界杯 2026 Group D Matchday 3",
     "venue": "Vancouver",
     "home": {
@@ -320,7 +320,7 @@
     }
   },
   {
-    "kickoff": "2026-06-14T17:00:00+00:00",
+    "kickoff": "2026-06-15T01:00:00+08:00",
     "competition": "世界杯 2026 Group E Matchday 4",
     "venue": "Houston",
     "home": {
@@ -332,7 +332,7 @@
       "recent_goals_against": 0.75,
       "source_name": "Germany",
       "elo_code": "DE",
-      "elo_rank": 14,
+      "elo_rank": 13,
       "form_note": "近8场"
     },
     "away": {
@@ -360,7 +360,7 @@
     }
   },
   {
-    "kickoff": "2026-06-14T20:00:00+00:00",
+    "kickoff": "2026-06-15T04:00:00+08:00",
     "competition": "世界杯 2026 Group F Matchday 4",
     "venue": "Dallas (Arlington)",
     "home": {
@@ -372,7 +372,7 @@
       "recent_goals_against": 0.875,
       "source_name": "Netherlands",
       "elo_code": "NL",
-      "elo_rank": 9,
+      "elo_rank": 8,
       "form_note": "近8场"
     },
     "away": {
@@ -384,7 +384,7 @@
       "recent_goals_against": 0.75,
       "source_name": "Japan",
       "elo_code": "JP",
-      "elo_rank": 15,
+      "elo_rank": 14,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -400,7 +400,7 @@
     }
   },
   {
-    "kickoff": "2026-06-14T23:00:00+00:00",
+    "kickoff": "2026-06-15T07:00:00+08:00",
     "competition": "世界杯 2026 Group E Matchday 4",
     "venue": "Philadelphia",
     "home": {
@@ -440,7 +440,7 @@
     }
   },
   {
-    "kickoff": "2026-06-15T02:00:00+00:00",
+    "kickoff": "2026-06-15T10:00:00+08:00",
     "competition": "世界杯 2026 Group F Matchday 4",
     "venue": "Monterrey (Guadalupe)",
     "home": {
@@ -452,7 +452,7 @@
       "recent_goals_against": 1.875,
       "source_name": "Sweden",
       "elo_code": "SE",
-      "elo_rank": 37,
+      "elo_rank": 38,
       "form_note": "近8场"
     },
     "away": {
@@ -480,7 +480,7 @@
     }
   },
   {
-    "kickoff": "2026-06-15T16:00:00+00:00",
+    "kickoff": "2026-06-16T00:00:00+08:00",
     "competition": "世界杯 2026 Group H Matchday 5",
     "venue": "Atlanta",
     "home": {
@@ -520,7 +520,7 @@
     }
   },
   {
-    "kickoff": "2026-06-15T19:00:00+00:00",
+    "kickoff": "2026-06-16T03:00:00+08:00",
     "competition": "世界杯 2026 Group G Matchday 5",
     "venue": "Seattle",
     "home": {
@@ -532,7 +532,7 @@
       "recent_goals_against": 0.875,
       "source_name": "Belgium",
       "elo_code": "BE",
-      "elo_rank": 13,
+      "elo_rank": 12,
       "form_note": "近8场"
     },
     "away": {
@@ -544,7 +544,7 @@
       "recent_goals_against": 0.75,
       "source_name": "Egypt",
       "elo_code": "EG",
-      "elo_rank": 32,
+      "elo_rank": 33,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -560,7 +560,7 @@
     }
   },
   {
-    "kickoff": "2026-06-15T22:00:00+00:00",
+    "kickoff": "2026-06-16T06:00:00+08:00",
     "competition": "世界杯 2026 Group H Matchday 5",
     "venue": "Miami (Miami Gardens)",
     "home": {
@@ -600,7 +600,7 @@
     }
   },
   {
-    "kickoff": "2026-06-16T01:00:00+00:00",
+    "kickoff": "2026-06-16T09:00:00+08:00",
     "competition": "世界杯 2026 Group G Matchday 5",
     "venue": "Los Angeles (Inglewood)",
     "home": {
@@ -640,12 +640,12 @@
     }
   },
   {
-    "kickoff": "2026-06-16T19:00:00+00:00",
+    "kickoff": "2026-06-17T03:00:00+08:00",
     "competition": "世界杯 2026 Group I Matchday 6",
     "venue": "New York/New Jersey (East Rutherford)",
     "home": {
       "name": "法国",
-      "rating": 2143.0,
+      "rating": 2134.0,
       "attack": 1.181,
       "defense": 1.006,
       "recent_goals_for": 2.625,
@@ -664,7 +664,7 @@
       "recent_goals_against": 0.875,
       "source_name": "Senegal",
       "elo_code": "SN",
-      "elo_rank": 23,
+      "elo_rank": 24,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -680,7 +680,7 @@
     }
   },
   {
-    "kickoff": "2026-06-16T22:00:00+00:00",
+    "kickoff": "2026-06-17T06:00:00+08:00",
     "competition": "世界杯 2026 Group I Matchday 6",
     "venue": "Boston (Foxborough)",
     "home": {
@@ -697,14 +697,14 @@
     },
     "away": {
       "name": "挪威",
-      "rating": 1972.0,
+      "rating": 1934.0,
       "attack": 1.136,
       "defense": 0.976,
       "recent_goals_for": 2.25,
       "recent_goals_against": 1.0,
       "source_name": "Norway",
       "elo_code": "NO",
-      "elo_rank": 8,
+      "elo_rank": 11,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -720,7 +720,7 @@
     }
   },
   {
-    "kickoff": "2026-06-17T01:00:00+00:00",
+    "kickoff": "2026-06-17T09:00:00+08:00",
     "competition": "世界杯 2026 Group J Matchday 6",
     "venue": "Kansas City",
     "home": {
@@ -744,7 +744,7 @@
       "recent_goals_against": 0.75,
       "source_name": "Algeria",
       "elo_code": "DZ",
-      "elo_rank": 31,
+      "elo_rank": 32,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -760,7 +760,7 @@
     }
   },
   {
-    "kickoff": "2026-06-17T04:00:00+00:00",
+    "kickoff": "2026-06-17T12:00:00+08:00",
     "competition": "世界杯 2026 Group J Matchday 6",
     "venue": "San Francisco Bay Area (Santa Clara)",
     "home": {
@@ -772,7 +772,7 @@
       "recent_goals_against": 0.5,
       "source_name": "Austria",
       "elo_code": "AT",
-      "elo_rank": 22,
+      "elo_rank": 23,
       "form_note": "近8场"
     },
     "away": {
@@ -800,7 +800,7 @@
     }
   },
   {
-    "kickoff": "2026-06-17T17:00:00+00:00",
+    "kickoff": "2026-06-18T01:00:00+08:00",
     "competition": "世界杯 2026 Group K Matchday 7",
     "venue": "Houston",
     "home": {
@@ -812,7 +812,7 @@
       "recent_goals_against": 1.0,
       "source_name": "Portugal",
       "elo_code": "PT",
-      "elo_rank": 5,
+      "elo_rank": 6,
       "form_note": "近8场"
     },
     "away": {
@@ -840,7 +840,7 @@
     }
   },
   {
-    "kickoff": "2026-06-17T20:00:00+00:00",
+    "kickoff": "2026-06-18T04:00:00+08:00",
     "competition": "世界杯 2026 Group L Matchday 7",
     "venue": "Dallas (Arlington)",
     "home": {
@@ -880,12 +880,12 @@
     }
   },
   {
-    "kickoff": "2026-06-17T23:00:00+00:00",
+    "kickoff": "2026-06-18T07:00:00+08:00",
     "competition": "世界杯 2026 Group L Matchday 7",
     "venue": "Toronto",
     "home": {
       "name": "加纳",
-      "rating": 1570.0,
+      "rating": 1575.0,
       "attack": 0.825,
       "defense": 1.102,
       "recent_goals_for": 0.625,
@@ -920,7 +920,7 @@
     }
   },
   {
-    "kickoff": "2026-06-18T02:00:00+00:00",
+    "kickoff": "2026-06-18T10:00:00+08:00",
     "competition": "世界杯 2026 Group K Matchday 7",
     "venue": "Mexico City",
     "home": {
@@ -937,14 +937,14 @@
     },
     "away": {
       "name": "哥伦比亚",
-      "rating": 2009.0,
+      "rating": 2004.0,
       "attack": 1.086,
       "defense": 0.976,
       "recent_goals_for": 1.875,
       "recent_goals_against": 1.0,
       "source_name": "Colombia",
       "elo_code": "CO",
-      "elo_rank": 6,
+      "elo_rank": 7,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -960,7 +960,7 @@
     }
   },
   {
-    "kickoff": "2026-06-18T16:00:00+00:00",
+    "kickoff": "2026-06-19T00:00:00+08:00",
     "competition": "世界杯 2026 Group A Matchday 8",
     "venue": "Atlanta",
     "home": {
@@ -1000,7 +1000,7 @@
     }
   },
   {
-    "kickoff": "2026-06-18T19:00:00+00:00",
+    "kickoff": "2026-06-19T03:00:00+08:00",
     "competition": "世界杯 2026 Group B Matchday 8",
     "venue": "Los Angeles (Inglewood)",
     "home": {
@@ -1012,7 +1012,7 @@
       "recent_goals_against": 1.25,
       "source_name": "Switzerland",
       "elo_code": "CH",
-      "elo_rank": 10,
+      "elo_rank": 9,
       "form_note": "近8场"
     },
     "away": {
@@ -1040,19 +1040,19 @@
     }
   },
   {
-    "kickoff": "2026-06-18T22:00:00+00:00",
+    "kickoff": "2026-06-19T06:00:00+08:00",
     "competition": "世界杯 2026 Group B Matchday 8",
     "venue": "Vancouver",
     "home": {
       "name": "加拿大",
-      "rating": 1729.0,
+      "rating": 1764.0,
       "attack": 1.086,
       "defense": 0.821,
       "recent_goals_for": 1.875,
       "recent_goals_against": 0.5,
       "source_name": "Canada",
       "elo_code": "CA",
-      "elo_rank": 38,
+      "elo_rank": 30,
       "form_note": "近8场"
     },
     "away": {
@@ -1080,7 +1080,7 @@
     }
   },
   {
-    "kickoff": "2026-06-19T01:00:00+00:00",
+    "kickoff": "2026-06-19T09:00:00+08:00",
     "competition": "世界杯 2026 Group A Matchday 8",
     "venue": "Guadalajara (Zapopan)",
     "home": {
@@ -1092,7 +1092,7 @@
       "recent_goals_against": 0.25,
       "source_name": "Mexico",
       "elo_code": "MX",
-      "elo_rank": 10,
+      "elo_rank": 9,
       "form_note": "近8场"
     },
     "away": {
@@ -1120,7 +1120,7 @@
     }
   },
   {
-    "kickoff": "2026-06-19T19:00:00+00:00",
+    "kickoff": "2026-06-20T03:00:00+08:00",
     "competition": "世界杯 2026 Group D Matchday 9",
     "venue": "Seattle",
     "home": {
@@ -1160,7 +1160,7 @@
     }
   },
   {
-    "kickoff": "2026-06-19T22:00:00+00:00",
+    "kickoff": "2026-06-20T06:00:00+08:00",
     "competition": "世界杯 2026 Group C Matchday 9",
     "venue": "Boston (Foxborough)",
     "home": {
@@ -1172,19 +1172,19 @@
       "recent_goals_against": 1.125,
       "source_name": "Scotland",
       "elo_code": "SQ",
-      "elo_rank": 33,
+      "elo_rank": 34,
       "form_note": "近8场"
     },
     "away": {
       "name": "摩洛哥",
-      "rating": 1921.0,
+      "rating": 1886.0,
       "attack": 1.086,
       "defense": 0.868,
       "recent_goals_for": 1.875,
       "recent_goals_against": 0.625,
       "source_name": "Morocco",
       "elo_code": "MA",
-      "elo_rank": 12,
+      "elo_rank": 15,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -1200,19 +1200,19 @@
     }
   },
   {
-    "kickoff": "2026-06-20T00:30:00+00:00",
+    "kickoff": "2026-06-20T08:30:00+08:00",
     "competition": "世界杯 2026 Group C Matchday 9",
     "venue": "Philadelphia",
     "home": {
       "name": "巴西",
-      "rating": 1993.0,
+      "rating": 2031.0,
       "attack": 1.152,
       "defense": 0.976,
       "recent_goals_for": 2.375,
       "recent_goals_against": 1.0,
       "source_name": "Brazil",
       "elo_code": "BR",
-      "elo_rank": 7,
+      "elo_rank": 5,
       "form_note": "近8场"
     },
     "away": {
@@ -1240,7 +1240,7 @@
     }
   },
   {
-    "kickoff": "2026-06-20T03:00:00+00:00",
+    "kickoff": "2026-06-20T11:00:00+08:00",
     "competition": "世界杯 2026 Group D Matchday 9",
     "venue": "San Francisco Bay Area (Santa Clara)",
     "home": {
@@ -1257,14 +1257,14 @@
     },
     "away": {
       "name": "巴拉圭",
-      "rating": 1814.0,
+      "rating": 1823.0,
       "attack": 1.005,
       "defense": 1.057,
       "recent_goals_for": 1.375,
       "recent_goals_against": 1.375,
       "source_name": "Paraguay",
       "elo_code": "PY",
-      "elo_rank": 24,
+      "elo_rank": 22,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -1280,7 +1280,7 @@
     }
   },
   {
-    "kickoff": "2026-06-20T17:00:00+00:00",
+    "kickoff": "2026-06-21T01:00:00+08:00",
     "competition": "世界杯 2026 Group F Matchday 10",
     "venue": "Houston",
     "home": {
@@ -1292,7 +1292,7 @@
       "recent_goals_against": 1.0,
       "source_name": "Netherlands",
       "elo_code": "NL",
-      "elo_rank": 9,
+      "elo_rank": 8,
       "form_note": "近8场"
     },
     "away": {
@@ -1304,7 +1304,7 @@
       "recent_goals_against": 2.375,
       "source_name": "Sweden",
       "elo_code": "SE",
-      "elo_rank": 37,
+      "elo_rank": 38,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -1320,7 +1320,7 @@
     }
   },
   {
-    "kickoff": "2026-06-20T20:00:00+00:00",
+    "kickoff": "2026-06-21T04:00:00+08:00",
     "competition": "世界杯 2026 Group E Matchday 10",
     "venue": "Toronto",
     "home": {
@@ -1332,7 +1332,7 @@
       "recent_goals_against": 0.875,
       "source_name": "Germany",
       "elo_code": "DE",
-      "elo_rank": 14,
+      "elo_rank": 13,
       "form_note": "近8场"
     },
     "away": {
@@ -1360,7 +1360,7 @@
     }
   },
   {
-    "kickoff": "2026-06-21T00:00:00+00:00",
+    "kickoff": "2026-06-21T08:00:00+08:00",
     "competition": "世界杯 2026 Group E Matchday 10",
     "venue": "Kansas City",
     "home": {
@@ -1400,7 +1400,7 @@
     }
   },
   {
-    "kickoff": "2026-06-21T04:00:00+00:00",
+    "kickoff": "2026-06-21T12:00:00+08:00",
     "competition": "世界杯 2026 Group F Matchday 10",
     "venue": "Monterrey (Guadalupe)",
     "home": {
@@ -1424,7 +1424,7 @@
       "recent_goals_against": 0.5,
       "source_name": "Japan",
       "elo_code": "JP",
-      "elo_rank": 15,
+      "elo_rank": 14,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -1440,7 +1440,7 @@
     }
   },
   {
-    "kickoff": "2026-06-21T16:00:00+00:00",
+    "kickoff": "2026-06-22T00:00:00+08:00",
     "competition": "世界杯 2026 Group H Matchday 11",
     "venue": "Atlanta",
     "home": {
@@ -1480,7 +1480,7 @@
     }
   },
   {
-    "kickoff": "2026-06-21T19:00:00+00:00",
+    "kickoff": "2026-06-22T03:00:00+08:00",
     "competition": "世界杯 2026 Group G Matchday 11",
     "venue": "Los Angeles (Inglewood)",
     "home": {
@@ -1492,7 +1492,7 @@
       "recent_goals_against": 0.625,
       "source_name": "Belgium",
       "elo_code": "BE",
-      "elo_rank": 13,
+      "elo_rank": 12,
       "form_note": "近8场"
     },
     "away": {
@@ -1520,7 +1520,7 @@
     }
   },
   {
-    "kickoff": "2026-06-21T22:00:00+00:00",
+    "kickoff": "2026-06-22T06:00:00+08:00",
     "competition": "世界杯 2026 Group H Matchday 11",
     "venue": "Miami (Miami Gardens)",
     "home": {
@@ -1560,7 +1560,7 @@
     }
   },
   {
-    "kickoff": "2026-06-22T01:00:00+00:00",
+    "kickoff": "2026-06-22T09:00:00+08:00",
     "competition": "世界杯 2026 Group G Matchday 11",
     "venue": "Vancouver",
     "home": {
@@ -1584,7 +1584,7 @@
       "recent_goals_against": 0.625,
       "source_name": "Egypt",
       "elo_code": "EG",
-      "elo_rank": 32,
+      "elo_rank": 33,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -1600,7 +1600,7 @@
     }
   },
   {
-    "kickoff": "2026-06-22T17:00:00+00:00",
+    "kickoff": "2026-06-23T01:00:00+08:00",
     "competition": "世界杯 2026 Group J Matchday 12",
     "venue": "Dallas (Arlington)",
     "home": {
@@ -1624,7 +1624,7 @@
       "recent_goals_against": 0.75,
       "source_name": "Austria",
       "elo_code": "AT",
-      "elo_rank": 22,
+      "elo_rank": 23,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -1640,12 +1640,12 @@
     }
   },
   {
-    "kickoff": "2026-06-22T21:00:00+00:00",
+    "kickoff": "2026-06-23T05:00:00+08:00",
     "competition": "世界杯 2026 Group I Matchday 12",
     "venue": "Philadelphia",
     "home": {
       "name": "法国",
-      "rating": 2143.0,
+      "rating": 2134.0,
       "attack": 1.195,
       "defense": 0.944,
       "recent_goals_for": 2.75,
@@ -1680,19 +1680,19 @@
     }
   },
   {
-    "kickoff": "2026-06-23T00:00:00+00:00",
+    "kickoff": "2026-06-23T08:00:00+08:00",
     "competition": "世界杯 2026 Group I Matchday 12",
     "venue": "New York/New Jersey (East Rutherford)",
     "home": {
       "name": "挪威",
-      "rating": 1972.0,
+      "rating": 1934.0,
       "attack": 1.167,
       "defense": 1.006,
       "recent_goals_for": 2.5,
       "recent_goals_against": 1.125,
       "source_name": "Norway",
       "elo_code": "NO",
-      "elo_rank": 8,
+      "elo_rank": 11,
       "form_note": "近8场"
     },
     "away": {
@@ -1704,7 +1704,7 @@
       "recent_goals_against": 1.25,
       "source_name": "Senegal",
       "elo_code": "SN",
-      "elo_rank": 23,
+      "elo_rank": 24,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -1720,7 +1720,7 @@
     }
   },
   {
-    "kickoff": "2026-06-23T03:00:00+00:00",
+    "kickoff": "2026-06-23T11:00:00+08:00",
     "competition": "世界杯 2026 Group J Matchday 12",
     "venue": "San Francisco Bay Area (Santa Clara)",
     "home": {
@@ -1744,7 +1744,7 @@
       "recent_goals_against": 0.75,
       "source_name": "Algeria",
       "elo_code": "DZ",
-      "elo_rank": 31,
+      "elo_rank": 32,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -1760,7 +1760,7 @@
     }
   },
   {
-    "kickoff": "2026-06-23T17:00:00+00:00",
+    "kickoff": "2026-06-24T01:00:00+08:00",
     "competition": "世界杯 2026 Group K Matchday 13",
     "venue": "Houston",
     "home": {
@@ -1772,7 +1772,7 @@
       "recent_goals_against": 0.75,
       "source_name": "Portugal",
       "elo_code": "PT",
-      "elo_rank": 5,
+      "elo_rank": 6,
       "form_note": "近8场"
     },
     "away": {
@@ -1800,7 +1800,7 @@
     }
   },
   {
-    "kickoff": "2026-06-23T20:00:00+00:00",
+    "kickoff": "2026-06-24T04:00:00+08:00",
     "competition": "世界杯 2026 Group L Matchday 13",
     "venue": "Boston (Foxborough)",
     "home": {
@@ -1817,7 +1817,7 @@
     },
     "away": {
       "name": "加纳",
-      "rating": 1570.0,
+      "rating": 1575.0,
       "attack": 0.78,
       "defense": 1.102,
       "recent_goals_for": 0.5,
@@ -1840,7 +1840,7 @@
     }
   },
   {
-    "kickoff": "2026-06-23T23:00:00+00:00",
+    "kickoff": "2026-06-24T07:00:00+08:00",
     "competition": "世界杯 2026 Group L Matchday 13",
     "venue": "Toronto",
     "home": {
@@ -1880,19 +1880,19 @@
     }
   },
   {
-    "kickoff": "2026-06-24T02:00:00+00:00",
+    "kickoff": "2026-06-24T10:00:00+08:00",
     "competition": "世界杯 2026 Group K Matchday 13",
     "venue": "Guadalajara (Zapopan)",
     "home": {
       "name": "哥伦比亚",
-      "rating": 2009.0,
+      "rating": 2004.0,
       "attack": 1.103,
       "defense": 0.976,
       "recent_goals_for": 2.0,
       "recent_goals_against": 1.0,
       "source_name": "Colombia",
       "elo_code": "CO",
-      "elo_rank": 6,
+      "elo_rank": 7,
       "form_note": "近8场"
     },
     "away": {
@@ -1920,7 +1920,7 @@
     }
   },
   {
-    "kickoff": "2026-06-24T19:00:00+00:00",
+    "kickoff": "2026-06-25T03:00:00+08:00",
     "competition": "世界杯 2026 Group B Matchday 14",
     "venue": "Vancouver",
     "home": {
@@ -1932,19 +1932,19 @@
       "recent_goals_against": 1.25,
       "source_name": "Switzerland",
       "elo_code": "CH",
-      "elo_rank": 10,
+      "elo_rank": 9,
       "form_note": "近8场"
     },
     "away": {
       "name": "加拿大",
-      "rating": 1729.0,
+      "rating": 1764.0,
       "attack": 1.067,
       "defense": 0.909,
       "recent_goals_for": 1.75,
       "recent_goals_against": 0.75,
       "source_name": "Canada",
       "elo_code": "CA",
-      "elo_rank": 38,
+      "elo_rank": 30,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -1960,7 +1960,7 @@
     }
   },
   {
-    "kickoff": "2026-06-24T19:00:00+00:00",
+    "kickoff": "2026-06-25T03:00:00+08:00",
     "competition": "世界杯 2026 Group B Matchday 14",
     "venue": "Seattle",
     "home": {
@@ -2000,7 +2000,7 @@
     }
   },
   {
-    "kickoff": "2026-06-24T22:00:00+00:00",
+    "kickoff": "2026-06-25T06:00:00+08:00",
     "competition": "世界杯 2026 Group C Matchday 14",
     "venue": "Miami (Miami Gardens)",
     "home": {
@@ -2012,19 +2012,19 @@
       "recent_goals_against": 1.125,
       "source_name": "Scotland",
       "elo_code": "SQ",
-      "elo_rank": 33,
+      "elo_rank": 34,
       "form_note": "近8场"
     },
     "away": {
       "name": "巴西",
-      "rating": 1993.0,
+      "rating": 2031.0,
       "attack": 1.167,
       "defense": 0.976,
       "recent_goals_for": 2.5,
       "recent_goals_against": 1.0,
       "source_name": "Brazil",
       "elo_code": "BR",
-      "elo_rank": 7,
+      "elo_rank": 5,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -2040,19 +2040,19 @@
     }
   },
   {
-    "kickoff": "2026-06-24T22:00:00+00:00",
+    "kickoff": "2026-06-25T06:00:00+08:00",
     "competition": "世界杯 2026 Group C Matchday 14",
     "venue": "Atlanta",
     "home": {
       "name": "摩洛哥",
-      "rating": 1921.0,
+      "rating": 1886.0,
       "attack": 1.152,
       "defense": 0.909,
       "recent_goals_for": 2.375,
       "recent_goals_against": 0.75,
       "source_name": "Morocco",
       "elo_code": "MA",
-      "elo_rank": 12,
+      "elo_rank": 15,
       "form_note": "近8场"
     },
     "away": {
@@ -2080,7 +2080,7 @@
     }
   },
   {
-    "kickoff": "2026-06-25T01:00:00+00:00",
+    "kickoff": "2026-06-25T09:00:00+08:00",
     "competition": "世界杯 2026 Group A Matchday 14",
     "venue": "Mexico City",
     "home": {
@@ -2104,7 +2104,7 @@
       "recent_goals_against": 0.25,
       "source_name": "Mexico",
       "elo_code": "MX",
-      "elo_rank": 10,
+      "elo_rank": 9,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -2120,7 +2120,7 @@
     }
   },
   {
-    "kickoff": "2026-06-25T01:00:00+00:00",
+    "kickoff": "2026-06-25T09:00:00+08:00",
     "competition": "世界杯 2026 Group A Matchday 14",
     "venue": "Monterrey (Guadalupe)",
     "home": {
@@ -2160,7 +2160,7 @@
     }
   },
   {
-    "kickoff": "2026-06-25T20:00:00+00:00",
+    "kickoff": "2026-06-26T04:00:00+08:00",
     "competition": "世界杯 2026 Group E Matchday 15",
     "venue": "Philadelphia",
     "home": {
@@ -2200,7 +2200,7 @@
     }
   },
   {
-    "kickoff": "2026-06-25T20:00:00+00:00",
+    "kickoff": "2026-06-26T04:00:00+08:00",
     "competition": "世界杯 2026 Group E Matchday 15",
     "venue": "New York/New Jersey (East Rutherford)",
     "home": {
@@ -2224,7 +2224,7 @@
       "recent_goals_against": 1.125,
       "source_name": "Germany",
       "elo_code": "DE",
-      "elo_rank": 14,
+      "elo_rank": 13,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -2240,7 +2240,7 @@
     }
   },
   {
-    "kickoff": "2026-06-25T23:00:00+00:00",
+    "kickoff": "2026-06-26T07:00:00+08:00",
     "competition": "世界杯 2026 Group F Matchday 15",
     "venue": "Dallas (Arlington)",
     "home": {
@@ -2252,7 +2252,7 @@
       "recent_goals_against": 0.375,
       "source_name": "Japan",
       "elo_code": "JP",
-      "elo_rank": 15,
+      "elo_rank": 14,
       "form_note": "近8场"
     },
     "away": {
@@ -2264,7 +2264,7 @@
       "recent_goals_against": 2.0,
       "source_name": "Sweden",
       "elo_code": "SE",
-      "elo_rank": 37,
+      "elo_rank": 38,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -2280,7 +2280,7 @@
     }
   },
   {
-    "kickoff": "2026-06-25T23:00:00+00:00",
+    "kickoff": "2026-06-26T07:00:00+08:00",
     "competition": "世界杯 2026 Group F Matchday 15",
     "venue": "Kansas City",
     "home": {
@@ -2304,7 +2304,7 @@
       "recent_goals_against": 1.0,
       "source_name": "Netherlands",
       "elo_code": "NL",
-      "elo_rank": 9,
+      "elo_rank": 8,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -2320,7 +2320,7 @@
     }
   },
   {
-    "kickoff": "2026-06-26T02:00:00+00:00",
+    "kickoff": "2026-06-26T10:00:00+08:00",
     "competition": "世界杯 2026 Group D Matchday 15",
     "venue": "Los Angeles (Inglewood)",
     "home": {
@@ -2360,19 +2360,19 @@
     }
   },
   {
-    "kickoff": "2026-06-26T02:00:00+00:00",
+    "kickoff": "2026-06-26T10:00:00+08:00",
     "competition": "世界杯 2026 Group D Matchday 15",
     "venue": "San Francisco Bay Area (Santa Clara)",
     "home": {
       "name": "巴拉圭",
-      "rating": 1814.0,
+      "rating": 1823.0,
       "attack": 1.005,
       "defense": 1.006,
       "recent_goals_for": 1.375,
       "recent_goals_against": 1.125,
       "source_name": "Paraguay",
       "elo_code": "PY",
-      "elo_rank": 24,
+      "elo_rank": 22,
       "form_note": "近8场"
     },
     "away": {
@@ -2400,24 +2400,24 @@
     }
   },
   {
-    "kickoff": "2026-06-26T19:00:00+00:00",
+    "kickoff": "2026-06-27T03:00:00+08:00",
     "competition": "世界杯 2026 Group I Matchday 16",
     "venue": "Boston (Foxborough)",
     "home": {
       "name": "挪威",
-      "rating": 1972.0,
+      "rating": 1934.0,
       "attack": 1.12,
       "defense": 1.081,
       "recent_goals_for": 2.125,
       "recent_goals_against": 1.5,
       "source_name": "Norway",
       "elo_code": "NO",
-      "elo_rank": 8,
+      "elo_rank": 11,
       "form_note": "近8场"
     },
     "away": {
       "name": "法国",
-      "rating": 2143.0,
+      "rating": 2134.0,
       "attack": 1.195,
       "defense": 0.976,
       "recent_goals_for": 2.75,
@@ -2440,7 +2440,7 @@
     }
   },
   {
-    "kickoff": "2026-06-26T19:00:00+00:00",
+    "kickoff": "2026-06-27T03:00:00+08:00",
     "competition": "世界杯 2026 Group I Matchday 16",
     "venue": "Toronto",
     "home": {
@@ -2452,7 +2452,7 @@
       "recent_goals_against": 1.25,
       "source_name": "Senegal",
       "elo_code": "SN",
-      "elo_rank": 23,
+      "elo_rank": 24,
       "form_note": "近8场"
     },
     "away": {
@@ -2480,7 +2480,7 @@
     }
   },
   {
-    "kickoff": "2026-06-27T00:00:00+00:00",
+    "kickoff": "2026-06-27T08:00:00+08:00",
     "competition": "世界杯 2026 Group H Matchday 16",
     "venue": "Houston",
     "home": {
@@ -2520,7 +2520,7 @@
     }
   },
   {
-    "kickoff": "2026-06-27T00:00:00+00:00",
+    "kickoff": "2026-06-27T08:00:00+08:00",
     "competition": "世界杯 2026 Group H Matchday 16",
     "venue": "Guadalajara (Zapopan)",
     "home": {
@@ -2560,7 +2560,7 @@
     }
   },
   {
-    "kickoff": "2026-06-27T03:00:00+00:00",
+    "kickoff": "2026-06-27T11:00:00+08:00",
     "competition": "世界杯 2026 Group G Matchday 16",
     "venue": "Seattle",
     "home": {
@@ -2572,7 +2572,7 @@
       "recent_goals_against": 0.625,
       "source_name": "Egypt",
       "elo_code": "EG",
-      "elo_rank": 32,
+      "elo_rank": 33,
       "form_note": "近8场"
     },
     "away": {
@@ -2600,7 +2600,7 @@
     }
   },
   {
-    "kickoff": "2026-06-27T03:00:00+00:00",
+    "kickoff": "2026-06-27T11:00:00+08:00",
     "competition": "世界杯 2026 Group G Matchday 16",
     "venue": "Vancouver",
     "home": {
@@ -2624,7 +2624,7 @@
       "recent_goals_against": 0.625,
       "source_name": "Belgium",
       "elo_code": "BE",
-      "elo_rank": 13,
+      "elo_rank": 12,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -2640,7 +2640,7 @@
     }
   },
   {
-    "kickoff": "2026-06-27T21:00:00+00:00",
+    "kickoff": "2026-06-28T05:00:00+08:00",
     "competition": "世界杯 2026 Group L Matchday 17",
     "venue": "New York/New Jersey (East Rutherford)",
     "home": {
@@ -2680,7 +2680,7 @@
     }
   },
   {
-    "kickoff": "2026-06-27T21:00:00+00:00",
+    "kickoff": "2026-06-28T05:00:00+08:00",
     "competition": "世界杯 2026 Group L Matchday 17",
     "venue": "Philadelphia",
     "home": {
@@ -2697,7 +2697,7 @@
     },
     "away": {
       "name": "加纳",
-      "rating": 1570.0,
+      "rating": 1575.0,
       "attack": 0.825,
       "defense": 1.102,
       "recent_goals_for": 0.625,
@@ -2720,19 +2720,19 @@
     }
   },
   {
-    "kickoff": "2026-06-27T23:30:00+00:00",
+    "kickoff": "2026-06-28T07:30:00+08:00",
     "competition": "世界杯 2026 Group K Matchday 17",
     "venue": "Miami (Miami Gardens)",
     "home": {
       "name": "哥伦比亚",
-      "rating": 2009.0,
+      "rating": 2004.0,
       "attack": 1.067,
       "defense": 0.944,
       "recent_goals_for": 1.75,
       "recent_goals_against": 0.875,
       "source_name": "Colombia",
       "elo_code": "CO",
-      "elo_rank": 6,
+      "elo_rank": 7,
       "form_note": "近8场"
     },
     "away": {
@@ -2744,7 +2744,7 @@
       "recent_goals_against": 0.5,
       "source_name": "Portugal",
       "elo_code": "PT",
-      "elo_rank": 5,
+      "elo_rank": 6,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -2760,7 +2760,7 @@
     }
   },
   {
-    "kickoff": "2026-06-27T23:30:00+00:00",
+    "kickoff": "2026-06-28T07:30:00+08:00",
     "competition": "世界杯 2026 Group K Matchday 17",
     "venue": "Atlanta",
     "home": {
@@ -2800,7 +2800,7 @@
     }
   },
   {
-    "kickoff": "2026-06-28T02:00:00+00:00",
+    "kickoff": "2026-06-28T10:00:00+08:00",
     "competition": "世界杯 2026 Group J Matchday 17",
     "venue": "Kansas City",
     "home": {
@@ -2812,7 +2812,7 @@
       "recent_goals_against": 1.125,
       "source_name": "Algeria",
       "elo_code": "DZ",
-      "elo_rank": 31,
+      "elo_rank": 32,
       "form_note": "近8场"
     },
     "away": {
@@ -2824,7 +2824,7 @@
       "recent_goals_against": 1.0,
       "source_name": "Austria",
       "elo_code": "AT",
-      "elo_rank": 22,
+      "elo_rank": 23,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -2840,7 +2840,7 @@
     }
   },
   {
-    "kickoff": "2026-06-28T02:00:00+00:00",
+    "kickoff": "2026-06-28T10:00:00+08:00",
     "competition": "世界杯 2026 Group J Matchday 17",
     "venue": "Dallas (Arlington)",
     "home": {
@@ -2880,7 +2880,7 @@
     }
   },
   {
-    "kickoff": "2026-06-28T19:00:00+00:00",
+    "kickoff": "2026-06-29T03:00:00+08:00",
     "competition": "世界杯 2026 Round of 32",
     "venue": "Los Angeles (Inglewood)",
     "home": {
@@ -2897,14 +2897,14 @@
     },
     "away": {
       "name": "加拿大",
-      "rating": 1729.0,
+      "rating": 1764.0,
       "attack": 1.067,
       "defense": 0.909,
       "recent_goals_for": 1.75,
       "recent_goals_against": 0.75,
       "source_name": "Canada",
       "elo_code": "CA",
-      "elo_rank": 38,
+      "elo_rank": 30,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -2920,19 +2920,19 @@
     }
   },
   {
-    "kickoff": "2026-06-29T17:00:00+00:00",
+    "kickoff": "2026-06-30T01:00:00+08:00",
     "competition": "世界杯 2026 Round of 32",
     "venue": "Houston",
     "home": {
       "name": "巴西",
-      "rating": 1993.0,
+      "rating": 2031.0,
       "attack": 1.181,
       "defense": 0.976,
       "recent_goals_for": 2.625,
       "recent_goals_against": 1.0,
       "source_name": "Brazil",
       "elo_code": "BR",
-      "elo_rank": 7,
+      "elo_rank": 5,
       "form_note": "近8场"
     },
     "away": {
@@ -2944,7 +2944,7 @@
       "recent_goals_against": 0.625,
       "source_name": "Japan",
       "elo_code": "JP",
-      "elo_rank": 15,
+      "elo_rank": 14,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -2960,7 +2960,7 @@
     }
   },
   {
-    "kickoff": "2026-06-29T20:30:00+00:00",
+    "kickoff": "2026-06-30T04:30:00+08:00",
     "competition": "世界杯 2026 Round of 32",
     "venue": "Boston (Foxborough)",
     "home": {
@@ -2972,19 +2972,19 @@
       "recent_goals_against": 1.25,
       "source_name": "Germany",
       "elo_code": "DE",
-      "elo_rank": 14,
+      "elo_rank": 13,
       "form_note": "近8场"
     },
     "away": {
       "name": "巴拉圭",
-      "rating": 1814.0,
+      "rating": 1823.0,
       "attack": 1.005,
       "defense": 0.976,
       "recent_goals_for": 1.375,
       "recent_goals_against": 1.0,
       "source_name": "Paraguay",
       "elo_code": "PY",
-      "elo_rank": 24,
+      "elo_rank": 22,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -3008,7 +3008,7 @@
     }
   },
   {
-    "kickoff": "2026-06-30T01:00:00+00:00",
+    "kickoff": "2026-06-30T09:00:00+08:00",
     "competition": "世界杯 2026 Round of 32",
     "venue": "Monterrey (Guadalupe)",
     "home": {
@@ -3020,19 +3020,19 @@
       "recent_goals_against": 1.125,
       "source_name": "Netherlands",
       "elo_code": "NL",
-      "elo_rank": 9,
+      "elo_rank": 8,
       "form_note": "近8场"
     },
     "away": {
       "name": "摩洛哥",
-      "rating": 1921.0,
+      "rating": 1886.0,
       "attack": 1.152,
       "defense": 0.909,
       "recent_goals_for": 2.375,
       "recent_goals_against": 0.75,
       "source_name": "Morocco",
       "elo_code": "MA",
-      "elo_rank": 12,
+      "elo_rank": 15,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -3056,7 +3056,7 @@
     }
   },
   {
-    "kickoff": "2026-06-30T17:00:00+00:00",
+    "kickoff": "2026-07-01T01:00:00+08:00",
     "competition": "世界杯 2026 Round of 32",
     "venue": "Dallas (Arlington)",
     "home": {
@@ -3073,14 +3073,14 @@
     },
     "away": {
       "name": "挪威",
-      "rating": 1972.0,
+      "rating": 1934.0,
       "attack": 1.086,
       "defense": 1.081,
       "recent_goals_for": 1.875,
       "recent_goals_against": 1.5,
       "source_name": "Norway",
       "elo_code": "NO",
-      "elo_rank": 8,
+      "elo_rank": 11,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -3096,12 +3096,12 @@
     }
   },
   {
-    "kickoff": "2026-06-30T21:00:00+00:00",
+    "kickoff": "2026-07-01T05:00:00+08:00",
     "competition": "世界杯 2026 Round of 32",
     "venue": "New York/New Jersey (East Rutherford)",
     "home": {
       "name": "法国",
-      "rating": 2143.0,
+      "rating": 2134.0,
       "attack": 1.195,
       "defense": 0.944,
       "recent_goals_for": 2.75,
@@ -3120,7 +3120,7 @@
       "recent_goals_against": 2.25,
       "source_name": "Sweden",
       "elo_code": "SE",
-      "elo_rank": 37,
+      "elo_rank": 38,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -3136,7 +3136,7 @@
     }
   },
   {
-    "kickoff": "2026-07-01T01:00:00+00:00",
+    "kickoff": "2026-07-01T09:00:00+08:00",
     "competition": "世界杯 2026 Round of 32",
     "venue": "Mexico City",
     "home": {
@@ -3148,7 +3148,7 @@
       "recent_goals_against": 0.25,
       "source_name": "Mexico",
       "elo_code": "MX",
-      "elo_rank": 10,
+      "elo_rank": 9,
       "form_note": "近8场"
     },
     "away": {
@@ -3176,7 +3176,7 @@
     }
   },
   {
-    "kickoff": "2026-07-01T16:00:00+00:00",
+    "kickoff": "2026-07-02T00:00:00+08:00",
     "competition": "世界杯 2026 Round of 32",
     "venue": "Atlanta",
     "home": {
@@ -3216,7 +3216,7 @@
     }
   },
   {
-    "kickoff": "2026-07-01T20:00:00+00:00",
+    "kickoff": "2026-07-02T04:00:00+08:00",
     "competition": "世界杯 2026 Round of 32",
     "venue": "Seattle",
     "home": {
@@ -3228,7 +3228,7 @@
       "recent_goals_against": 0.875,
       "source_name": "Belgium",
       "elo_code": "BE",
-      "elo_rank": 13,
+      "elo_rank": 12,
       "form_note": "近8场"
     },
     "away": {
@@ -3240,7 +3240,7 @@
       "recent_goals_against": 1.625,
       "source_name": "Senegal",
       "elo_code": "SN",
-      "elo_rank": 23,
+      "elo_rank": 24,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -3260,7 +3260,7 @@
     }
   },
   {
-    "kickoff": "2026-07-02T00:00:00+00:00",
+    "kickoff": "2026-07-02T08:00:00+08:00",
     "competition": "世界杯 2026 Round of 32",
     "venue": "San Francisco Bay Area (Santa Clara)",
     "home": {
@@ -3300,7 +3300,7 @@
     }
   },
   {
-    "kickoff": "2026-07-02T19:00:00+00:00",
+    "kickoff": "2026-07-03T03:00:00+08:00",
     "competition": "世界杯 2026 Round of 32",
     "venue": "Los Angeles (Inglewood)",
     "home": {
@@ -3324,7 +3324,7 @@
       "recent_goals_against": 1.375,
       "source_name": "Austria",
       "elo_code": "AT",
-      "elo_rank": 22,
+      "elo_rank": 23,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -3340,7 +3340,7 @@
     }
   },
   {
-    "kickoff": "2026-07-02T23:00:00+00:00",
+    "kickoff": "2026-07-03T07:00:00+08:00",
     "competition": "世界杯 2026 Round of 32",
     "venue": "Toronto",
     "home": {
@@ -3352,7 +3352,7 @@
       "recent_goals_against": 0.5,
       "source_name": "Portugal",
       "elo_code": "PT",
-      "elo_rank": 5,
+      "elo_rank": 6,
       "form_note": "近8场"
     },
     "away": {
@@ -3380,7 +3380,7 @@
     }
   },
   {
-    "kickoff": "2026-07-03T03:00:00+00:00",
+    "kickoff": "2026-07-03T11:00:00+08:00",
     "competition": "世界杯 2026 Round of 32",
     "venue": "Vancouver",
     "home": {
@@ -3392,7 +3392,7 @@
       "recent_goals_against": 1.125,
       "source_name": "Switzerland",
       "elo_code": "CH",
-      "elo_rank": 10,
+      "elo_rank": 9,
       "form_note": "近8场"
     },
     "away": {
@@ -3404,7 +3404,7 @@
       "recent_goals_against": 1.125,
       "source_name": "Algeria",
       "elo_code": "DZ",
-      "elo_rank": 31,
+      "elo_rank": 32,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -3420,7 +3420,7 @@
     }
   },
   {
-    "kickoff": "2026-07-03T18:00:00+00:00",
+    "kickoff": "2026-07-04T02:00:00+08:00",
     "competition": "世界杯 2026 Round of 32",
     "venue": "Dallas (Arlington)",
     "home": {
@@ -3444,7 +3444,7 @@
       "recent_goals_against": 0.75,
       "source_name": "Egypt",
       "elo_code": "EG",
-      "elo_rank": 32,
+      "elo_rank": 33,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -3468,7 +3468,7 @@
     }
   },
   {
-    "kickoff": "2026-07-03T22:00:00+00:00",
+    "kickoff": "2026-07-04T06:00:00+08:00",
     "competition": "世界杯 2026 Round of 32",
     "venue": "Miami (Miami Gardens)",
     "home": {
@@ -3512,24 +3512,24 @@
     }
   },
   {
-    "kickoff": "2026-07-04T01:30:00+00:00",
+    "kickoff": "2026-07-04T09:30:00+08:00",
     "competition": "世界杯 2026 Round of 32",
     "venue": "Kansas City",
     "home": {
       "name": "哥伦比亚",
-      "rating": 2009.0,
-      "attack": 1.027,
+      "rating": 2004.0,
+      "attack": 1.067,
       "defense": 0.944,
-      "recent_goals_for": 1.5,
+      "recent_goals_for": 1.75,
       "recent_goals_against": 0.875,
       "source_name": "Colombia",
       "elo_code": "CO",
-      "elo_rank": 6,
+      "elo_rank": 7,
       "form_note": "近8场"
     },
     "away": {
       "name": "加纳",
-      "rating": 1570.0,
+      "rating": 1575.0,
       "attack": 0.825,
       "defense": 1.102,
       "recent_goals_for": 0.625,
@@ -3552,31 +3552,31 @@
     }
   },
   {
-    "kickoff": "2026-07-04T17:00:00+00:00",
+    "kickoff": "2026-07-05T01:00:00+08:00",
     "competition": "世界杯 2026 Round of 16",
     "venue": "Houston",
     "home": {
       "name": "加拿大",
-      "rating": 1729.0,
-      "attack": 1.027,
-      "defense": 0.944,
-      "recent_goals_for": 1.5,
-      "recent_goals_against": 0.875,
+      "rating": 1764.0,
+      "attack": 1.067,
+      "defense": 0.909,
+      "recent_goals_for": 1.75,
+      "recent_goals_against": 0.75,
       "source_name": "Canada",
       "elo_code": "CA",
-      "elo_rank": 38,
+      "elo_rank": 30,
       "form_note": "近8场"
     },
     "away": {
       "name": "摩洛哥",
-      "rating": 1921.0,
-      "attack": 1.167,
-      "defense": 0.868,
-      "recent_goals_for": 2.5,
-      "recent_goals_against": 0.625,
+      "rating": 1886.0,
+      "attack": 1.152,
+      "defense": 0.909,
+      "recent_goals_for": 2.375,
+      "recent_goals_against": 0.75,
       "source_name": "Morocco",
       "elo_code": "MA",
-      "elo_rank": 12,
+      "elo_rank": 15,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -3592,28 +3592,28 @@
     }
   },
   {
-    "kickoff": "2026-07-04T21:00:00+00:00",
+    "kickoff": "2026-07-05T05:00:00+08:00",
     "competition": "世界杯 2026 Round of 16",
     "venue": "Philadelphia",
     "home": {
       "name": "巴拉圭",
-      "rating": 1814.0,
-      "attack": 0.955,
+      "rating": 1823.0,
+      "attack": 1.005,
       "defense": 0.976,
-      "recent_goals_for": 1.125,
+      "recent_goals_for": 1.375,
       "recent_goals_against": 1.0,
       "source_name": "Paraguay",
       "elo_code": "PY",
-      "elo_rank": 24,
+      "elo_rank": 22,
       "form_note": "近8场"
     },
     "away": {
       "name": "法国",
-      "rating": 2143.0,
-      "attack": 1.181,
-      "defense": 0.909,
-      "recent_goals_for": 2.625,
-      "recent_goals_against": 0.75,
+      "rating": 2134.0,
+      "attack": 1.195,
+      "defense": 0.944,
+      "recent_goals_for": 2.75,
+      "recent_goals_against": 0.875,
       "source_name": "France",
       "elo_code": "FR",
       "elo_rank": 3,
@@ -3632,31 +3632,31 @@
     }
   },
   {
-    "kickoff": "2026-07-05T20:00:00+00:00",
+    "kickoff": "2026-07-06T04:00:00+08:00",
     "competition": "世界杯 2026 Round of 16",
     "venue": "New York/New Jersey (East Rutherford)",
     "home": {
       "name": "巴西",
-      "rating": 1993.0,
+      "rating": 2031.0,
       "attack": 1.181,
       "defense": 0.976,
       "recent_goals_for": 2.625,
       "recent_goals_against": 1.0,
       "source_name": "Brazil",
       "elo_code": "BR",
-      "elo_rank": 7,
+      "elo_rank": 5,
       "form_note": "近8场"
     },
     "away": {
       "name": "挪威",
-      "rating": 1972.0,
-      "attack": 1.103,
-      "defense": 1.057,
-      "recent_goals_for": 2.0,
-      "recent_goals_against": 1.375,
+      "rating": 1934.0,
+      "attack": 1.086,
+      "defense": 1.081,
+      "recent_goals_for": 1.875,
+      "recent_goals_against": 1.5,
       "source_name": "Norway",
       "elo_code": "NO",
-      "elo_rank": 8,
+      "elo_rank": 11,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -3672,7 +3672,7 @@
     }
   },
   {
-    "kickoff": "2026-07-06T00:00:00+00:00",
+    "kickoff": "2026-07-06T08:00:00+08:00",
     "competition": "世界杯 2026 Round of 16",
     "venue": "Mexico City",
     "home": {
@@ -3684,7 +3684,7 @@
       "recent_goals_against": 0.25,
       "source_name": "Mexico",
       "elo_code": "MX",
-      "elo_rank": 10,
+      "elo_rank": 9,
       "form_note": "近8场"
     },
     "away": {
@@ -3712,7 +3712,7 @@
     }
   },
   {
-    "kickoff": "2026-07-06T19:00:00+00:00",
+    "kickoff": "2026-07-07T03:00:00+08:00",
     "competition": "世界杯 2026 Round of 16",
     "venue": "Dallas (Arlington)",
     "home": {
@@ -3724,7 +3724,7 @@
       "recent_goals_against": 0.5,
       "source_name": "Portugal",
       "elo_code": "PT",
-      "elo_rank": 5,
+      "elo_rank": 6,
       "form_note": "近8场"
     },
     "away": {
@@ -3742,7 +3742,7 @@
     "source": "openfootball/worldcup.json + World Football Elo Ratings"
   },
   {
-    "kickoff": "2026-07-07T00:00:00+00:00",
+    "kickoff": "2026-07-07T08:00:00+08:00",
     "competition": "世界杯 2026 Round of 16",
     "venue": "Seattle",
     "home": {
@@ -3766,43 +3766,43 @@
       "recent_goals_against": 0.875,
       "source_name": "Belgium",
       "elo_code": "BE",
-      "elo_rank": 13,
+      "elo_rank": 12,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings"
   },
   {
-    "kickoff": "2026-07-07T16:00:00+00:00",
+    "kickoff": "2026-07-08T00:00:00+08:00",
     "competition": "世界杯 2026 Round of 16",
     "venue": "Atlanta",
     "home": {
-      "name": "阿根廷",
-      "rating": 2151.0,
-      "attack": 1.208,
-      "defense": 0.821,
-      "recent_goals_for": 2.875,
-      "recent_goals_against": 0.5,
-      "source_name": "Argentina",
-      "elo_code": "AR",
-      "elo_rank": 2,
-      "form_note": "近8场"
+      "name": "W86",
+      "rating": 1500.0,
+      "attack": 0.963,
+      "defense": 1.054,
+      "recent_goals_for": 1.161,
+      "recent_goals_against": 1.357,
+      "source_name": "W86",
+      "elo_code": "",
+      "elo_rank": 0,
+      "form_note": "历史均值估计（Elo 未匹配到球队：W86）"
     },
     "away": {
-      "name": "埃及",
-      "rating": 1747.0,
-      "attack": 1.027,
-      "defense": 0.909,
-      "recent_goals_for": 1.5,
-      "recent_goals_against": 0.75,
-      "source_name": "Egypt",
-      "elo_code": "EG",
-      "elo_rank": 32,
-      "form_note": "近8场"
+      "name": "W88",
+      "rating": 1500.0,
+      "attack": 0.963,
+      "defense": 1.054,
+      "recent_goals_for": 1.161,
+      "recent_goals_against": 1.357,
+      "source_name": "W88",
+      "elo_code": "",
+      "elo_rank": 0,
+      "form_note": "历史均值估计（Elo 未匹配到球队：W88）"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings"
   },
   {
-    "kickoff": "2026-07-07T20:00:00+00:00",
+    "kickoff": "2026-07-08T04:00:00+08:00",
     "competition": "世界杯 2026 Round of 16",
     "venue": "Vancouver",
     "home": {
@@ -3814,55 +3814,55 @@
       "recent_goals_against": 1.125,
       "source_name": "Switzerland",
       "elo_code": "CH",
-      "elo_rank": 10,
+      "elo_rank": 9,
       "form_note": "近8场"
     },
     "away": {
-      "name": "哥伦比亚",
-      "rating": 2009.0,
-      "attack": 1.027,
-      "defense": 0.944,
-      "recent_goals_for": 1.5,
-      "recent_goals_against": 0.875,
-      "source_name": "Colombia",
-      "elo_code": "CO",
-      "elo_rank": 6,
-      "form_note": "近8场"
+      "name": "W87",
+      "rating": 1500.0,
+      "attack": 0.963,
+      "defense": 1.054,
+      "recent_goals_for": 1.161,
+      "recent_goals_against": 1.357,
+      "source_name": "W87",
+      "elo_code": "",
+      "elo_rank": 0,
+      "form_note": "历史均值估计（Elo 未匹配到球队：W87）"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings"
   },
   {
-    "kickoff": "2026-07-09T20:00:00+00:00",
+    "kickoff": "2026-07-10T04:00:00+08:00",
     "competition": "世界杯 2026 Quarter-final",
     "venue": "Boston (Foxborough)",
     "home": {
-      "name": "法国",
-      "rating": 2143.0,
-      "attack": 1.181,
-      "defense": 0.909,
-      "recent_goals_for": 2.625,
-      "recent_goals_against": 0.75,
-      "source_name": "France",
-      "elo_code": "FR",
-      "elo_rank": 3,
-      "form_note": "近8场"
+      "name": "W89",
+      "rating": 1500.0,
+      "attack": 0.963,
+      "defense": 1.054,
+      "recent_goals_for": 1.161,
+      "recent_goals_against": 1.357,
+      "source_name": "W89",
+      "elo_code": "",
+      "elo_rank": 0,
+      "form_note": "历史均值估计（Elo 未匹配到球队：W89）"
     },
     "away": {
-      "name": "摩洛哥",
-      "rating": 1921.0,
-      "attack": 1.167,
-      "defense": 0.868,
-      "recent_goals_for": 2.5,
-      "recent_goals_against": 0.625,
-      "source_name": "Morocco",
-      "elo_code": "MA",
-      "elo_rank": 12,
-      "form_note": "近8场"
+      "name": "W90",
+      "rating": 1500.0,
+      "attack": 0.963,
+      "defense": 1.054,
+      "recent_goals_for": 1.161,
+      "recent_goals_against": 1.357,
+      "source_name": "W90",
+      "elo_code": "",
+      "elo_rank": 0,
+      "form_note": "历史均值估计（Elo 未匹配到球队：W90）"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings"
   },
   {
-    "kickoff": "2026-07-10T19:00:00+00:00",
+    "kickoff": "2026-07-11T03:00:00+08:00",
     "competition": "世界杯 2026 Quarter-final",
     "venue": "Los Angeles (Inglewood)",
     "home": {
@@ -3892,7 +3892,7 @@
     "source": "openfootball/worldcup.json + World Football Elo Ratings"
   },
   {
-    "kickoff": "2026-07-11T21:00:00+00:00",
+    "kickoff": "2026-07-12T05:00:00+08:00",
     "competition": "世界杯 2026 Quarter-final",
     "venue": "Miami (Miami Gardens)",
     "home": {
@@ -3922,7 +3922,7 @@
     "source": "openfootball/worldcup.json + World Football Elo Ratings"
   },
   {
-    "kickoff": "2026-07-12T01:00:00+00:00",
+    "kickoff": "2026-07-12T09:00:00+08:00",
     "competition": "世界杯 2026 Quarter-final",
     "venue": "Kansas City",
     "home": {
@@ -3952,7 +3952,7 @@
     "source": "openfootball/worldcup.json + World Football Elo Ratings"
   },
   {
-    "kickoff": "2026-07-14T19:00:00+00:00",
+    "kickoff": "2026-07-15T03:00:00+08:00",
     "competition": "世界杯 2026 Semi-final",
     "venue": "Dallas (Arlington)",
     "home": {
@@ -3982,7 +3982,7 @@
     "source": "openfootball/worldcup.json + World Football Elo Ratings"
   },
   {
-    "kickoff": "2026-07-15T19:00:00+00:00",
+    "kickoff": "2026-07-16T03:00:00+08:00",
     "competition": "世界杯 2026 Semi-final",
     "venue": "Atlanta",
     "home": {
@@ -4012,7 +4012,7 @@
     "source": "openfootball/worldcup.json + World Football Elo Ratings"
   },
   {
-    "kickoff": "2026-07-18T21:00:00+00:00",
+    "kickoff": "2026-07-19T05:00:00+08:00",
     "competition": "世界杯 2026 Match for third place",
     "venue": "Miami (Miami Gardens)",
     "home": {
@@ -4042,7 +4042,7 @@
     "source": "openfootball/worldcup.json + World Football Elo Ratings"
   },
   {
-    "kickoff": "2026-07-19T19:00:00+00:00",
+    "kickoff": "2026-07-20T03:00:00+08:00",
     "competition": "世界杯 2026 Final",
     "venue": "New York/New Jersey (East Rutherford)",
     "home": {
