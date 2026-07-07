@@ -30,6 +30,21 @@ NAME = {'Uzbekistan': '乌兹别克斯坦', 'Panama': '巴拿马', 'DR Congo': '
         'England': '英格兰', 'Colombia': '哥伦比亚'}
 def cn(x): return NAME.get(x, x)
 
+# ---- 北京时间辅助函数（云端 runner 可能是 UTC，所有时间计算必须显式指定）----
+BJT = dt.timezone(dt.timedelta(hours=8))
+
+def bj_now():
+    return dt.datetime.now(BJT)
+
+def bj_time(iso_str):
+    return dt.datetime.fromisoformat(iso_str).astimezone(BJT)
+
+def bj_date(iso_str):
+    return bj_time(iso_str).strftime('%Y-%m-%d')
+
+def bj_hhmm(iso_str):
+    return bj_time(iso_str).strftime('%H:%M')
+
 
 # ---------- 数据刷新 ----------
 def fetch_worldcup():
@@ -58,7 +73,7 @@ def merge_scores(rows, matches):
     upd = 0
     for r in rows:
         if r.get('score'): continue
-        hs, as_, d0 = r['home']['source_name'], r['away']['source_name'], r['kickoff'][:10]
+        hs, as_, d0 = r['home']['source_name'], r['away']['source_name'], bj_date(r['kickoff'])
         for d in [d0, (dt.date.fromisoformat(d0) - dt.timedelta(days=1)).isoformat()]:
             if (hs, as_, d) in wc:
                 r['score'] = wc[(hs, as_, d)]; upd += 1; break
@@ -333,18 +348,18 @@ sld.addEventListener('input',draw);draw();
 
 
 def render(rows, src, upd):
-    now = dt.datetime.now(dt.timezone(dt.timedelta(hours=8)))  # 固定北京时间(UTC+8)，云端 runner 是 UTC
+    now = bj_now()
     bt = backtest(rows)
     n = max(1, bt['n'])
 
     # featured day = 最早还有未开赛场次的那天（剔除已开球但结果未落库的场，避免把进行中的比赛当未来场）
     def _kdt(r):
-        try: return dt.datetime.fromisoformat(r['kickoff'])
+        try: return bj_time(r['kickoff'])
         except Exception: return None
     unp = sorted([r for r in rows if not r.get('score') and (_kdt(r) is None or _kdt(r) > now)],
                  key=lambda r: r['kickoff'])
-    next_date = unp[0]['kickoff'][:10] if unp else None
-    daybatch = [r for r in unp if r['kickoff'][:10] == next_date] if next_date else []
+    next_date = bj_date(unp[0]['kickoff']) if unp else None
+    daybatch = [r for r in unp if bj_date(r['kickoff']) == next_date] if next_date else []
 
     # 上一批战绩 = 最近一个有结果的日期的全部完赛场（从锁存回测取，含预测比分→实际）
     recent = bt['recent']
@@ -379,7 +394,7 @@ def render(rows, src, upd):
         cand.append(("双方进球", btts))
         for lbl, prob in cand:
             if prob >= 0.50:
-                radar.append({"m": mt, "l": lbl, "p": round(prob * 100), "t": r['kickoff'][11:16]})
+                radar.append({"m": mt, "l": lbl, "p": round(prob * 100), "t": bj_hhmm(r['kickoff'])})
     radar.sort(key=lambda x: -x['p'])
 
     H = [CSS_HEAD]
@@ -389,6 +404,16 @@ def render(rows, src, upd):
              f'<span class="chip mc">数据 {now.strftime("%m-%d %H:%M")}</span></div></div>')
     H.append(f'<div class="dim" style="font-size:12px;margin-top:5px">数据源：{src} · 本次新结算 {upd} 场 · 北京时间</div>')
 
+    # 预测方向文字 + 大小球推荐（2.5 球线，取概率较大一边）
+    def dir_text(hn, an, pw, pd, pl):
+        mx = max(pw, pd, pl)
+        if pw == mx: return f"{hn} 胜", pw
+        if pl == mx: return f"{an} 胜", pl
+        return "平局", pd
+    def ou_pick(g):
+        o25, _ = tot(g, 2.5, True); u25, _ = tot(g, 2.5, False)
+        return ("大 2.5", o25) if o25 >= u25 else ("小 2.5", u25)
+
     # ① 接下来 · 当天整批
     if daybatch:
         hero = daybatch[0]; rest = daybatch[1:]
@@ -396,9 +421,11 @@ def render(rows, src, upd):
         top = sorted(g.items(), key=lambda x: x[1], reverse=True)[0]
         sh, sa, sp, skind = pick_secondary(g, pw, pd, pl)
         hn, an = cn(hero['home']['name']), cn(hero['away']['name'])
+        dtxt, dprob = dir_text(hn, an, pw, pd, pl)
+        oul, oup = ou_pick(g)
         H.append(f'<div class="sec" style="margin-bottom:8px">{next_date} · 全天 {len(daybatch)} 场</div>')
         H.append('<div class="card" style="border:2px solid var(--info-tx)">')
-        H.append(f'<div class="row"><span class="chip info">下一场 · {hero["kickoff"][11:16]}</span>'
+        H.append(f'<div class="row"><span class="chip info">下一场 · {bj_hhmm(hero["kickoff"])}</span>'
                  f'<span class="mut" style="font-size:12px">本日第 1 / {len(daybatch)} 场</span></div>')
         H.append(f'<div style="font-size:21px;font-weight:700;margin:8px 0 2px">{hn} '
                  f'<span class="dim" style="font-size:15px">vs</span> {an}</div>')
@@ -414,6 +441,11 @@ def render(rows, src, upd):
                  f'<div class="mut" style="font-size:12px;margin-top:1px">{top[1]*100:.0f}% · 次选 {sh}-{sa} '
                  f'<span class="chip warn">{skind}</span></div></div>')
         H.append('</div>')
+        H.append(f'<div class="row" style="margin-top:11px;padding-top:10px;border-top:1px solid var(--bd);gap:8px">'
+                 f'<span style="font-size:12px"><span class="mut">预测方向</span> '
+                 f'<b style="color:var(--info-tx)">{dtxt}</b> <span class="dim">{dprob*100:.0f}%</span></span>'
+                 f'<span style="font-size:12px"><span class="mut">大小球</span> '
+                 f'<b style="color:var(--ok-tx)">{oul}</b> <span class="dim">{oup*100:.0f}%</span></span></div>')
         H.append('</div>')
         if rest:
             H.append('<div class="sec">当天其余 %d 场</div><div class="card" style="padding:2px 17px">' % len(rest))
@@ -424,9 +456,14 @@ def render(rows, src, upd):
                 hn2, an2 = cn(r['home']['name']), cn(r['away']['name'])
                 favp = max(pw2, pl2)
                 favchip = 'ok' if favp >= 0.60 else ('info' if favp >= 0.45 else 'mc')
-                H.append(f'<div class="slate"><span class="mut" style="width:42px;font-size:12px">{r["kickoff"][11:16]}</span>'
+                dtxt2, dprob2 = dir_text(hn2, an2, pw2, pd2, pl2)
+                oul2, oup2 = ou_pick(g2)
+                H.append(f'<div class="slate"><span class="mut" style="width:42px;font-size:12px">{bj_hhmm(r["kickoff"])}</span>'
                          f'<div style="flex:1"><div style="font-weight:600">{hn2} vs {an2}</div>'
-                         f'<div class="dim" style="font-size:11px">xG {hx2:.2f}-{ax2:.2f} · 次选 {sh2}-{sa2} {sk2}</div></div>'
+                         f'<div class="dim" style="font-size:11px">xG {hx2:.2f}-{ax2:.2f} · 次选 {sh2}-{sa2} {sk2}</div>'
+                         f'<div style="font-size:11px;margin-top:1px"><span class="mut">方向</span> '
+                         f'<b style="color:var(--info-tx)">{dtxt2}</b> {dprob2*100:.0f}% · '
+                         f'<span class="mut">大小</span> <b style="color:var(--ok-tx)">{oul2}</b> {oup2*100:.0f}%</div></div>'
                          f'<div style="width:80px">{wdlbar(pw2, pd2, pl2)}</div>'
                          f'<span class="chip {favchip}" style="width:52px;text-align:center">{top2[0][0]}-{top2[0][1]}</span></div>')
             H.append('</div>')
@@ -509,7 +546,7 @@ def main():
     # 记录已完赛集合（供变化检测）
     played_keys = sorted(f"{r['home']['source_name']}|{r['away']['source_name']}"
                          for r in rows if r.get('score') and r['score'].get('ft'))
-    json.dump({"played": played_keys, "updated_at": dt.datetime.now().astimezone().isoformat()},
+    json.dump({"played": played_keys, "updated_at": bj_now().isoformat()},
               open(os.path.join(BASE, "_published_state.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=2)
     print(f"[done] 已生成 {out} ({len(htmls)} 字节)，新结算 {upd} 场，已完赛 {len(played_keys)} 场")
     return out
