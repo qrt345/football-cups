@@ -264,7 +264,7 @@
       "recent_goals_against": 1.125,
       "source_name": "Scotland",
       "elo_code": "SQ",
-      "elo_rank": 33,
+      "elo_rank": 32,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -537,14 +537,14 @@
     },
     "away": {
       "name": "埃及",
-      "rating": 1747.0,
+      "rating": 1742.0,
       "attack": 0.981,
       "defense": 0.909,
       "recent_goals_for": 1.25,
       "recent_goals_against": 0.75,
       "source_name": "Egypt",
       "elo_code": "EG",
-      "elo_rank": 31,
+      "elo_rank": 34,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -725,7 +725,7 @@
     "venue": "Kansas City",
     "home": {
       "name": "阿根廷",
-      "rating": 2151.0,
+      "rating": 2156.0,
       "attack": 1.221,
       "defense": 0.76,
       "recent_goals_for": 3.0,
@@ -1172,7 +1172,7 @@
       "recent_goals_against": 1.125,
       "source_name": "Scotland",
       "elo_code": "SQ",
-      "elo_rank": 33,
+      "elo_rank": 32,
       "form_note": "近8场"
     },
     "away": {
@@ -1577,14 +1577,14 @@
     },
     "away": {
       "name": "埃及",
-      "rating": 1747.0,
+      "rating": 1742.0,
       "attack": 0.981,
       "defense": 0.868,
       "recent_goals_for": 1.25,
       "recent_goals_against": 0.625,
       "source_name": "Egypt",
       "elo_code": "EG",
-      "elo_rank": 31,
+      "elo_rank": 34,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -1605,7 +1605,7 @@
     "venue": "Dallas (Arlington)",
     "home": {
       "name": "阿根廷",
-      "rating": 2151.0,
+      "rating": 2156.0,
       "attack": 1.233,
       "defense": 0.76,
       "recent_goals_for": 3.125,
@@ -2012,7 +2012,7 @@
       "recent_goals_against": 1.125,
       "source_name": "Scotland",
       "elo_code": "SQ",
-      "elo_rank": 33,
+      "elo_rank": 32,
       "form_note": "近8场"
     },
     "away": {
@@ -2565,14 +2565,14 @@
     "venue": "Seattle",
     "home": {
       "name": "埃及",
-      "rating": 1747.0,
+      "rating": 1742.0,
       "attack": 1.005,
       "defense": 0.868,
       "recent_goals_for": 1.375,
       "recent_goals_against": 0.625,
       "source_name": "Egypt",
       "elo_code": "EG",
-      "elo_rank": 31,
+      "elo_rank": 34,
       "form_note": "近8场"
     },
     "away": {
@@ -2857,7 +2857,7 @@
     },
     "away": {
       "name": "阿根廷",
-      "rating": 2151.0,
+      "rating": 2156.0,
       "attack": 1.195,
       "defense": 0.76,
       "recent_goals_for": 2.75,
@@ -3437,14 +3437,14 @@
     },
     "away": {
       "name": "埃及",
-      "rating": 1747.0,
+      "rating": 1742.0,
       "attack": 1.027,
       "defense": 0.909,
       "recent_goals_for": 1.5,
       "recent_goals_against": 0.75,
       "source_name": "Egypt",
       "elo_code": "EG",
-      "elo_rank": 31,
+      "elo_rank": 34,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -3473,7 +3473,7 @@
     "venue": "Miami (Miami Gardens)",
     "home": {
       "name": "阿根廷",
-      "rating": 2151.0,
+      "rating": 2156.0,
       "attack": 1.208,
       "defense": 0.821,
       "recent_goals_for": 2.875,
@@ -3797,11 +3797,11 @@
     "venue": "Atlanta",
     "home": {
       "name": "阿根廷",
-      "rating": 2151.0,
-      "attack": 1.208,
-      "defense": 0.821,
-      "recent_goals_for": 2.875,
-      "recent_goals_against": 0.5,
+      "rating": 2156.0,
+      "attack": 1.221,
+      "defense": 0.868,
+      "recent_goals_for": 3.0,
+      "recent_goals_against": 0.625,
       "source_name": "Argentina",
       "elo_code": "AR",
       "elo_rank": 2,
@@ -3809,14 +3809,14 @@
     },
     "away": {
       "name": "埃及",
-      "rating": 1747.0,
-      "attack": 1.027,
-      "defense": 0.909,
-      "recent_goals_for": 1.5,
-      "recent_goals_against": 0.75,
+      "rating": 1742.0,
+      "attack": 0.981,
+      "defense": 1.006,
+      "recent_goals_for": 1.25,
+      "recent_goals_against": 1.125,
       "source_name": "Egypt",
       "elo_code": "EG",
-      "elo_rank": 31,
+      "elo_rank": 34,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
