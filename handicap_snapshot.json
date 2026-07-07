@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-07-07 12:11 北京时间",
+  "updated_at": "2026-07-07 18:31 北京时间",
   "source": "the-odds-api spreads",
   "count": 5,
   "handicap": {
     "argentina|egypt": {
       "home_team": "Argentina",
       "away_team": "Egypt",
-      "home_point": -1.25,
-      "away_point": 1.25,
+      "home_point": -1.5,
+      "away_point": 1.5,
       "book": "Pinnacle"
     },
     "switzerland|colombia": {
@@ -27,8 +27,8 @@
     "spain|belgium": {
       "home_team": "Spain",
       "away_team": "Belgium",
-      "home_point": -0.75,
-      "away_point": 0.75,
+      "home_point": -1.0,
+      "away_point": 1.0,
       "book": "Pinnacle"
     },
     "norway|england": {
