@@ -199,10 +199,29 @@ def model_ah_pick(g, ah):
         return ('away', lbl, away_cover)
 
 
+def _load_hcap_snapshot():
+    try:
+        return json.load(open('handicap_snapshot.json', encoding='utf-8')).get('handicap', {})
+    except Exception:
+        return {}
+
+
+def hcap_for(r, hcap=None):
+    """查该场让球盘线。返回 (home_point, away_point) 或 (None, None)。"""
+    if hcap is None:
+        hcap = _load_hcap_snapshot()
+    key = f"{re.sub(r'[^a-z]', '', str(r['home']['source_name']).lower())}|" \
+          f"{re.sub(r'[^a-z]', '', str(r['away']['source_name']).lower())}"
+    info = hcap.get(key)
+    if not info:
+        return None, None
+    return info.get('home_point'), info.get('away_point')
+
+
 def build_prediction(r, ah=None):
     """为单场比赛生成预测字典（用于锁存）。
     预测方向 = 模型自己的胜平负判断（独立预测，不看盘口）。
-    韦德赔率只用于赛后对照，不参与方向生成。"""
+    让球盘线只作赛后对照/回测，不参与方向生成。"""
     g, hx, ax = grid(r['home'], r['away'])
     top = sorted(g.items(), key=lambda x: x[1], reverse=True)[:2]
     pw, pd, pl = wdl(g)
@@ -213,10 +232,24 @@ def build_prediction(r, ah=None):
         dir_label = f"{cn(r['away']['name'])} 胜"
     else:
         dir_label = "平"
+    # 让球盘：冻结时记录模型方向对应的让球线（有盘口才存），供赛后回测让球命中
+    hp, ap = hcap_for(r)
+    hcap_side = hcap_line = None
+    if hp is not None:
+        if wdl_dir == 'H':
+            hcap_side, hcap_line = 'home', hp
+        elif wdl_dir == 'A':
+            hcap_side, hcap_line = 'away', (ap if ap is not None else -hp)
+        else:  # 模型看平：取盘口被让方（负分方）
+            if hp <= 0:
+                hcap_side, hcap_line = 'home', hp
+            else:
+                hcap_side, hcap_line = 'away', (ap if ap is not None else -hp)
     return dict(hxg=hx, axg=ax, pw=pw, pd=pd, pl=pl,
                 top1=[top[0][0][0], top[0][0][1], top[0][1]],
                 top2=[top[1][0][0], top[1][0][1], top[1][1]],
                 pred_dir=wdl_dir, dir_label=dir_label,
+                hcap_side=hcap_side, hcap_line=hcap_line,
                 cn_home=cn(r['home']['name']), cn_away=cn(r['away']['name']))
 
 
@@ -250,6 +283,7 @@ def backtest(rows):
     # 锁存命中率仅统计赛前冻结的（retro=False）；回溯补录的单独标注
     n = dirhit = e1 = eany = draws = dir_win = dir_settled = 0
     locked_n = locked_dir_win = locked_dir_settled = 0
+    hcap_win = hcap_settled = 0   # 让球盘命中（仅统计有冻结让球线的完赛场，走水不计入分母）
     recent = []
     for r in played:
         rec = pstore.get(r)
@@ -272,16 +306,24 @@ def backtest(rows):
                 locked_dir_settled += 1; locked_dir_win += dwin
         if not retro:
             locked_n += 1
+        # 让球盘命中：有冻结让球线才算（历史无盘口的自然排除），走水不计入分母
+        hcap_res = None
+        if rec.get('hcap_side') and rec.get('hcap_line') is not None:
+            hres = settle_handicap(rec['hcap_side'], rec['hcap_line'], fh, fa)
+            if hres != 'push':
+                hcap_settled += 1; hcap_win += (hres == 'win')
+            hcap_res = hres
         recent.append(dict(home=rec['home'], away=rec['away'],
                            date=rec['date'], fh=fh, fa=fa,
                            pred=f"{rec['top1'][0]}-{rec['top1'][1]}", p=rec['top1'][2],
                            dir_ok=dh, exact=ex1,
                            dir_label=rec.get('dir_label', ''),
-                           dres=dres, retro=retro))
+                           dres=dres, retro=retro, hcap_res=hcap_res))
     return dict(n=n, dirhit=dirhit, e1=e1, eany=eany, draws=draws,
                 dir_win=dir_win, dir_settled=dir_settled,
                 locked_n=locked_n, locked_dir_win=locked_dir_win,
                 locked_dir_settled=locked_dir_settled,
+                hcap_win=hcap_win, hcap_settled=hcap_settled,
                 recent=recent)
 
 
@@ -528,9 +570,14 @@ def render(rows, src, upd):
     # ③ 模型战绩
     H.append(f'<div class="sec">模型战绩 · 回测 {bt["n"]} 场</div>')
     ds = max(1, bt['dir_settled'])
-    H.append('<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:9px">')
+    hs = bt.get('hcap_settled', 0); hw = bt.get('hcap_win', 0)
+    hcap_pct = f'{hw/hs*100:.0f}%' if hs else '—'
+    hcap_sub = f'让球盘命中 {hw}/{hs}' if hs else '让球盘命中 暂无'
+    H.append('<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:9px">')
     H.append(f'<div class="tile"><div class="tnum" style="color:var(--info-tx)">{bt["dir_win"]/ds*100:.0f}%</div>'
              f'<div class="mut" style="font-size:11px;margin-top:2px">方向命中 {bt["dir_win"]}/{bt["dir_settled"]}</div></div>')
+    H.append(f'<div class="tile"><div class="tnum" style="color:var(--warn-tx)">{hcap_pct}</div>'
+             f'<div class="mut" style="font-size:11px;margin-top:2px">{hcap_sub}</div></div>')
     H.append(f'<div class="tile"><div class="tnum">{bt["e1"]/n*100:.0f}%</div>'
              f'<div class="mut" style="font-size:11px;margin-top:2px">Top1精确 {bt["e1"]}/{bt["n"]}</div></div>')
     H.append(f'<div class="tile"><div class="tnum">{bt["eany"]/n*100:.0f}%</div>'
