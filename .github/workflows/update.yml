@@ -28,4 +28,6 @@ jobs:
           python-version: "3.12"
 
       - name: 生成看板 + 回传状态
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: python ci_update.py
