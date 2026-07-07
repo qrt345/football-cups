@@ -3819,7 +3819,17 @@
       "elo_rank": 31,
       "form_note": "近8场"
     },
-    "source": "openfootball/worldcup.json + World Football Elo Ratings"
+    "source": "openfootball/worldcup.json + World Football Elo Ratings",
+    "score": {
+      "ft": [
+        3,
+        2
+      ],
+      "ht": [
+        0,
+        1
+      ]
+    }
   },
   {
     "kickoff": "2026-07-08T04:00:00+08:00",
