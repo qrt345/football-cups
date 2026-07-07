@@ -27,7 +27,7 @@ import subprocess, os, sys, json, shutil, datetime as dt, re
 BASE = os.path.dirname(os.path.abspath(__file__))
 os.chdir(BASE)
 
-CONTENT_FILES = ["predictions_log.json", "fixtures_online_latest.json"]
+CONTENT_FILES = ["predictions_log.json", "fixtures_online_latest.json", "handicap_snapshot.json"]
 
 REFRESH_HOURS = 6                       # 每隔多少小时重抓一次赛程+Elo
 FETCH_STAMP = "_last_fetch.json"        # 记录上次重抓时间（提交回仓库以跨云端运行生效）
@@ -38,8 +38,11 @@ def _has_score(r):
     return bool(r.get("score") and r["score"].get("ft"))
 
 
+def _bj_date(iso_str):
+    return dt.datetime.fromisoformat(iso_str).astimezone(dt.timezone(dt.timedelta(hours=8))).strftime('%Y-%m-%d')
+
 def _fkey(r):
-    return f"{r['home']['source_name']}|{r['away']['source_name']}|{r['kickoff'][:10]}"
+    return f"{r['home']['source_name']}|{r['away']['source_name']}|{_bj_date(r['kickoff'])}"
 
 
 def _should_refresh():
@@ -82,6 +85,33 @@ def refresh_fixtures(stamp):
         return False
 
 
+def refresh_handicap(stamp):
+    """抓 the-odds-api 让球盘快照。成功返回 True，失败/无 key 降级返回 False。"""
+    try:
+        import fetch_handicap as fh
+        if not fh.API_KEY:
+            print(f"[{stamp}] 让球盘：无 ODDS_API_KEY，跳过。")
+            return False
+        data, remaining = fh.fetch_spreads()
+        odds = {}
+        for ev in data:
+            line = fh.pick_line(ev)
+            if line:
+                odds[f"{fh._norm(line['home_team'])}|{fh._norm(line['away_team'])}"] = line
+        if not odds:
+            print(f"[{stamp}] 让球盘：无可用数据，跳过。")
+            return False
+        snap = {"updated_at": dt.datetime.now(dt.timezone(dt.timedelta(hours=8))).strftime("%Y-%m-%d %H:%M 北京时间"),
+                "source": "the-odds-api spreads", "count": len(odds), "handicap": odds}
+        json.dump(snap, open(os.path.join(BASE, "handicap_snapshot.json"), "w", encoding="utf-8"),
+                  ensure_ascii=False, indent=2)
+        print(f"[{stamp}] 让球盘刷新成功：{len(odds)} 场，API 剩余 {remaining}。")
+        return True
+    except Exception as e:
+        print(f"[{stamp}] 让球盘刷新失败(降级): {type(e).__name__}: {e}")
+        return False
+
+
 def sh(*args):
     try:
         return subprocess.run(args, capture_output=True, text=True)
@@ -111,10 +141,11 @@ def main():
 
     stamp = dt.datetime.now(dt.timezone(dt.timedelta(hours=8))).strftime("%Y-%m-%d %H:%M")
 
-    # 0) 低频重抓赛程+Elo（解决淘汰赛占位符不更新）；失败降级不影响赛果流程
+    # 0) 低频重抓赛程+Elo（解决淘汰赛占位符不更新）+ 让球盘；失败降级不影响赛果流程
     fetched = False
     if _should_refresh():
         fetched = refresh_fixtures(stamp)
+        refresh_handicap(stamp)   # 让球盘随赛程一起刷新（同 6h 节流）
 
     import generate_dashboard as gen
     gen.main()
