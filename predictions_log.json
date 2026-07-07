@@ -3347,7 +3347,9 @@
     ],
     "pred_dir": "H",
     "dir_label": "阿根廷 胜",
-    "retro": false
+    "retro": false,
+    "hcap_side": "home",
+    "hcap_line": -1.25
   },
   "Switzerland|Colombia|2026-07-08": {
     "home": "瑞士",
@@ -3372,7 +3374,9 @@
     ],
     "pred_dir": "A",
     "dir_label": "哥伦比亚 胜",
-    "retro": false
+    "retro": false,
+    "hcap_side": "away",
+    "hcap_line": -0.25
   },
   "France|Morocco|2026-07-10": {
     "home": "法国",
@@ -3397,7 +3401,9 @@
     ],
     "pred_dir": "H",
     "dir_label": "法国 胜",
-    "retro": false
+    "retro": false,
+    "hcap_side": "home",
+    "hcap_line": -1.0
   },
   "Norway|England|2026-07-12": {
     "home": "挪威",
@@ -3422,6 +3428,8 @@
     ],
     "pred_dir": "A",
     "dir_label": "英格兰 胜",
-    "retro": false
+    "retro": false,
+    "hcap_side": "away",
+    "hcap_line": -0.5
   }
 }
