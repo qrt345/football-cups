@@ -18,9 +18,17 @@ import json, os, datetime as dt
 BASE = os.path.dirname(os.path.abspath(__file__))
 LOG = os.path.join(BASE, "predictions_log.json")
 
+BJT = dt.timezone(dt.timedelta(hours=8))
+
+def bj_now():
+    return dt.datetime.now(BJT)
+
+def bj_date(iso_str):
+    return dt.datetime.fromisoformat(iso_str).astimezone(BJT).strftime('%Y-%m-%d')
+
 
 def _key(r):
-    return f"{r['home']['source_name']}|{r['away']['source_name']}|{r['kickoff'][:10]}"
+    return f"{r['home']['source_name']}|{r['away']['source_name']}|{bj_date(r['kickoff'])}"
 
 
 def load_log():
@@ -48,7 +56,7 @@ def freeze_pending(rows, predict_fn, retro_played=True):
     """
     log = load_log()
     added = 0
-    now = dt.datetime.now().astimezone().isoformat()
+    now = bj_now().isoformat()
     for r in rows:
         k = _key(r)
         if k in log:
@@ -66,6 +74,8 @@ def freeze_pending(rows, predict_fn, retro_played=True):
             "top1": p["top1"], "top2": p["top2"],
             "pred_dir": p["pred_dir"],
             "dir_label": p["dir_label"],
+            "hcap_side": p.get("hcap_side"),   # 让球盘：模型方向对应的让球方(home/away)
+            "hcap_line": p.get("hcap_line"),   # 让球线(负=让,正=受让)，无盘口则 None
             "retro": played,  # 已完赛才写=回溯补录
         }
         added += 1
