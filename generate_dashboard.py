@@ -14,7 +14,7 @@
 独立可运行：python generate_dashboard.py
 """
 from __future__ import annotations
-import json, os, sys, math, html, ssl, urllib.request, datetime as dt
+import json, os, sys, math, html, ssl, re, urllib.request, datetime as dt
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 os.chdir(BASE)
@@ -352,6 +352,36 @@ def render(rows, src, upd):
     bt = backtest(rows)
     n = max(1, bt['n'])
 
+    # 让球盘快照（the-odds-api spreads）：键=norm(home)|norm(away)，值含 home_point/away_point
+    hcap = {}
+    try:
+        hcap = json.load(open('handicap_snapshot.json', encoding='utf-8')).get('handicap', {})
+    except Exception:
+        pass
+    def _hnorm(s):
+        return re.sub(r'[^a-z]', '', str(s).lower())
+    def handicap_pick(r, pw, pd, pl, hn, an):
+        """返回让球盘推荐文字：结合模型方向 + 让球盘线。无盘口返回 None。"""
+        key = f"{_hnorm(r['home']['source_name'])}|{_hnorm(r['away']['source_name'])}"
+        info = hcap.get(key)
+        if not info:
+            return None
+        hp = info.get('home_point'); ap = info.get('away_point')
+        if hp is None:
+            return None
+        mx = max(pw, pd, pl)
+        # 模型方向那队 + 其让球线
+        if pw == mx:      # 模型看好主队
+            side, pt = hn, hp
+        elif pl == mx:    # 模型看好客队
+            side, pt = an, (ap if ap is not None else -hp)
+        else:             # 模型看平：给盘口被让方（负分方）作参考
+            if hp <= 0:
+                side, pt = hn, hp
+            else:
+                side, pt = an, (ap if ap is not None else -hp)
+        return f"{side} {pt:+g}"
+
     # featured day = 最早还有未开赛场次的那天（剔除已开球但结果未落库的场，避免把进行中的比赛当未来场）
     def _kdt(r):
         try: return bj_time(r['kickoff'])
@@ -423,6 +453,7 @@ def render(rows, src, upd):
         hn, an = cn(hero['home']['name']), cn(hero['away']['name'])
         dtxt, dprob = dir_text(hn, an, pw, pd, pl)
         oul, oup = ou_pick(g)
+        hpk = handicap_pick(hero, pw, pd, pl, hn, an)
         H.append(f'<div class="sec" style="margin-bottom:8px">{next_date} · 全天 {len(daybatch)} 场</div>')
         H.append('<div class="card" style="border:2px solid var(--info-tx)">')
         H.append(f'<div class="row"><span class="chip info">下一场 · {bj_hhmm(hero["kickoff"])}</span>'
@@ -441,11 +472,15 @@ def render(rows, src, upd):
                  f'<div class="mut" style="font-size:12px;margin-top:1px">{top[1]*100:.0f}% · 次选 {sh}-{sa} '
                  f'<span class="chip warn">{skind}</span></div></div>')
         H.append('</div>')
-        H.append(f'<div class="row" style="margin-top:11px;padding-top:10px;border-top:1px solid var(--bd);gap:8px">'
+        hpk_html = (f'<span style="font-size:12px"><span class="mut">让球盘</span> '
+                    f'<b style="color:var(--warn-tx)">{hpk} 胜</b></span>') if hpk else \
+                   '<span style="font-size:12px"><span class="mut">让球盘</span> <span class="dim">待更新</span></span>'
+        H.append(f'<div class="row" style="margin-top:11px;padding-top:10px;border-top:1px solid var(--bd);gap:8px;flex-wrap:wrap">'
                  f'<span style="font-size:12px"><span class="mut">预测方向</span> '
                  f'<b style="color:var(--info-tx)">{dtxt}</b> <span class="dim">{dprob*100:.0f}%</span></span>'
                  f'<span style="font-size:12px"><span class="mut">大小球</span> '
-                 f'<b style="color:var(--ok-tx)">{oul}</b> <span class="dim">{oup*100:.0f}%</span></span></div>')
+                 f'<b style="color:var(--ok-tx)">{oul}</b> <span class="dim">{oup*100:.0f}%</span></span>'
+                 f'{hpk_html}</div>')
         H.append('</div>')
         if rest:
             H.append('<div class="sec">当天其余 %d 场</div><div class="card" style="padding:2px 17px">' % len(rest))
@@ -458,12 +493,14 @@ def render(rows, src, upd):
                 favchip = 'ok' if favp >= 0.60 else ('info' if favp >= 0.45 else 'mc')
                 dtxt2, dprob2 = dir_text(hn2, an2, pw2, pd2, pl2)
                 oul2, oup2 = ou_pick(g2)
+                hpk2 = handicap_pick(r, pw2, pd2, pl2, hn2, an2)
+                hpk2_html = f' · <span class="mut">让球</span> <b style="color:var(--warn-tx)">{hpk2}</b>' if hpk2 else ''
                 H.append(f'<div class="slate"><span class="mut" style="width:42px;font-size:12px">{bj_hhmm(r["kickoff"])}</span>'
                          f'<div style="flex:1"><div style="font-weight:600">{hn2} vs {an2}</div>'
                          f'<div class="dim" style="font-size:11px">xG {hx2:.2f}-{ax2:.2f} · 次选 {sh2}-{sa2} {sk2}</div>'
                          f'<div style="font-size:11px;margin-top:1px"><span class="mut">方向</span> '
                          f'<b style="color:var(--info-tx)">{dtxt2}</b> {dprob2*100:.0f}% · '
-                         f'<span class="mut">大小</span> <b style="color:var(--ok-tx)">{oul2}</b> {oup2*100:.0f}%</div></div>'
+                         f'<span class="mut">大小</span> <b style="color:var(--ok-tx)">{oul2}</b> {oup2*100:.0f}%{hpk2_html}</div></div>'
                          f'<div style="width:80px">{wdlbar(pw2, pd2, pl2)}</div>'
                          f'<span class="chip {favchip}" style="width:52px;text-align:center">{top2[0][0]}-{top2[0][1]}</span></div>')
             H.append('</div>')
