@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-08 14:01 北京时间",
+  "updated_at": "2026-07-08 20:31 北京时间",
   "source": "the-odds-api spreads",
   "count": 4,
   "handicap": {
@@ -13,8 +13,8 @@
     "spain|belgium": {
       "home_team": "Spain",
       "away_team": "Belgium",
-      "home_point": -0.75,
-      "away_point": 0.75,
+      "home_point": -1.0,
+      "away_point": 1.0,
       "book": "Pinnacle"
     },
     "norway|england": {
