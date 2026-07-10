@@ -184,7 +184,7 @@
       "recent_goals_against": 1.125,
       "source_name": "Switzerland",
       "elo_code": "CH",
-      "elo_rank": 11,
+      "elo_rank": 10,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -485,7 +485,7 @@
     "venue": "Atlanta",
     "home": {
       "name": "西班牙",
-      "rating": 2177.0,
+      "rating": 2190.0,
       "attack": 1.12,
       "defense": 0.821,
       "recent_goals_for": 2.125,
@@ -525,14 +525,14 @@
     "venue": "Seattle",
     "home": {
       "name": "比利时",
-      "rating": 1961.0,
+      "rating": 1948.0,
       "attack": 1.246,
       "defense": 0.944,
       "recent_goals_for": 3.25,
       "recent_goals_against": 0.875,
       "source_name": "Belgium",
       "elo_code": "BE",
-      "elo_rank": 10,
+      "elo_rank": 11,
       "form_note": "近8场"
     },
     "away": {
@@ -1012,7 +1012,7 @@
       "recent_goals_against": 1.25,
       "source_name": "Switzerland",
       "elo_code": "CH",
-      "elo_rank": 11,
+      "elo_rank": 10,
       "form_note": "近8场"
     },
     "away": {
@@ -1445,7 +1445,7 @@
     "venue": "Atlanta",
     "home": {
       "name": "西班牙",
-      "rating": 2177.0,
+      "rating": 2190.0,
       "attack": 1.12,
       "defense": 0.821,
       "recent_goals_for": 2.125,
@@ -1485,14 +1485,14 @@
     "venue": "Los Angeles (Inglewood)",
     "home": {
       "name": "比利时",
-      "rating": 1961.0,
+      "rating": 1948.0,
       "attack": 1.195,
       "defense": 0.868,
       "recent_goals_for": 2.75,
       "recent_goals_against": 0.625,
       "source_name": "Belgium",
       "elo_code": "BE",
-      "elo_rank": 10,
+      "elo_rank": 11,
       "form_note": "近8场"
     },
     "away": {
@@ -1932,7 +1932,7 @@
       "recent_goals_against": 1.25,
       "source_name": "Switzerland",
       "elo_code": "CH",
-      "elo_rank": 11,
+      "elo_rank": 10,
       "form_note": "近8场"
     },
     "away": {
@@ -2537,7 +2537,7 @@
     },
     "away": {
       "name": "西班牙",
-      "rating": 2177.0,
+      "rating": 2190.0,
       "attack": 1.067,
       "defense": 0.821,
       "recent_goals_for": 1.75,
@@ -2617,14 +2617,14 @@
     },
     "away": {
       "name": "比利时",
-      "rating": 1961.0,
+      "rating": 1948.0,
       "attack": 1.246,
       "defense": 0.868,
       "recent_goals_for": 3.25,
       "recent_goals_against": 0.625,
       "source_name": "Belgium",
       "elo_code": "BE",
-      "elo_rank": 10,
+      "elo_rank": 11,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -3221,14 +3221,14 @@
     "venue": "Seattle",
     "home": {
       "name": "比利时",
-      "rating": 1961.0,
+      "rating": 1948.0,
       "attack": 1.195,
       "defense": 0.944,
       "recent_goals_for": 2.75,
       "recent_goals_against": 0.875,
       "source_name": "Belgium",
       "elo_code": "BE",
-      "elo_rank": 10,
+      "elo_rank": 11,
       "form_note": "近8场"
     },
     "away": {
@@ -3305,7 +3305,7 @@
     "venue": "Los Angeles (Inglewood)",
     "home": {
       "name": "西班牙",
-      "rating": 2177.0,
+      "rating": 2190.0,
       "attack": 1.086,
       "defense": 0.76,
       "recent_goals_for": 1.875,
@@ -3392,7 +3392,7 @@
       "recent_goals_against": 1.125,
       "source_name": "Switzerland",
       "elo_code": "CH",
-      "elo_rank": 11,
+      "elo_rank": 10,
       "form_note": "近8场"
     },
     "away": {
@@ -3729,7 +3729,7 @@
     },
     "away": {
       "name": "西班牙",
-      "rating": 2177.0,
+      "rating": 2190.0,
       "attack": 1.047,
       "defense": 0.76,
       "recent_goals_for": 1.625,
@@ -3769,14 +3769,14 @@
     },
     "away": {
       "name": "比利时",
-      "rating": 1961.0,
+      "rating": 1948.0,
       "attack": 1.181,
       "defense": 0.909,
       "recent_goals_for": 2.625,
       "recent_goals_against": 0.75,
       "source_name": "Belgium",
       "elo_code": "BE",
-      "elo_rank": 10,
+      "elo_rank": 11,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -3844,7 +3844,7 @@
       "recent_goals_against": 0.625,
       "source_name": "Switzerland",
       "elo_code": "CH",
-      "elo_rank": 11,
+      "elo_rank": 10,
       "form_note": "近8场"
     },
     "away": {
@@ -3925,11 +3925,11 @@
     "venue": "Los Angeles (Inglewood)",
     "home": {
       "name": "西班牙",
-      "rating": 2177.0,
-      "attack": 1.047,
-      "defense": 0.76,
-      "recent_goals_for": 1.625,
-      "recent_goals_against": 0.25,
+      "rating": 2190.0,
+      "attack": 1.086,
+      "defense": 0.764,
+      "recent_goals_for": 1.875,
+      "recent_goals_against": 0.375,
       "source_name": "Spain",
       "elo_code": "ES",
       "elo_rank": 1,
@@ -3937,14 +3937,14 @@
     },
     "away": {
       "name": "比利时",
-      "rating": 1961.0,
+      "rating": 1948.0,
       "attack": 1.181,
-      "defense": 0.909,
+      "defense": 0.944,
       "recent_goals_for": 2.625,
-      "recent_goals_against": 0.75,
+      "recent_goals_against": 0.875,
       "source_name": "Belgium",
       "elo_code": "BE",
-      "elo_rank": 10,
+      "elo_rank": 11,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -4014,7 +4014,7 @@
       "recent_goals_against": 0.625,
       "source_name": "Switzerland",
       "elo_code": "CH",
-      "elo_rank": 11,
+      "elo_rank": 10,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings"
