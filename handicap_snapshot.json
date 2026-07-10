@@ -1,15 +1,8 @@
 {
-  "updated_at": "2026-07-10 05:01 北京时间",
+  "updated_at": "2026-07-10 11:31 北京时间",
   "source": "the-odds-api spreads",
-  "count": 4,
+  "count": 3,
   "handicap": {
-    "france|morocco": {
-      "home_team": "France",
-      "away_team": "Morocco",
-      "home_point": -0.75,
-      "away_point": 0.75,
-      "book": "Pinnacle"
-    },
     "spain|belgium": {
       "home_team": "Spain",
       "away_team": "Belgium",

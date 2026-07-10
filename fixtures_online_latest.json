@@ -12,7 +12,7 @@
       "recent_goals_against": 0.25,
       "source_name": "Mexico",
       "elo_code": "MX",
-      "elo_rank": 13,
+      "elo_rank": 12,
       "form_note": "近8场"
     },
     "away": {
@@ -217,14 +217,14 @@
     },
     "away": {
       "name": "摩洛哥",
-      "rating": 1921.0,
+      "rating": 1901.0,
       "attack": 1.067,
       "defense": 0.868,
       "recent_goals_for": 1.75,
       "recent_goals_against": 0.625,
       "source_name": "Morocco",
       "elo_code": "MA",
-      "elo_rank": 12,
+      "elo_rank": 14,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -332,7 +332,7 @@
       "recent_goals_against": 0.75,
       "source_name": "Germany",
       "elo_code": "DE",
-      "elo_rank": 14,
+      "elo_rank": 13,
       "form_note": "近8场"
     },
     "away": {
@@ -645,14 +645,14 @@
     "venue": "New York/New Jersey (East Rutherford)",
     "home": {
       "name": "法国",
-      "rating": 2143.0,
+      "rating": 2163.0,
       "attack": 1.181,
       "defense": 1.006,
       "recent_goals_for": 2.625,
       "recent_goals_against": 1.125,
       "source_name": "France",
       "elo_code": "FR",
-      "elo_rank": 3,
+      "elo_rank": 2,
       "form_note": "近8场"
     },
     "away": {
@@ -732,7 +732,7 @@
       "recent_goals_against": 0.125,
       "source_name": "Argentina",
       "elo_code": "AR",
-      "elo_rank": 2,
+      "elo_rank": 3,
       "form_note": "近8场"
     },
     "away": {
@@ -1092,7 +1092,7 @@
       "recent_goals_against": 0.25,
       "source_name": "Mexico",
       "elo_code": "MX",
-      "elo_rank": 13,
+      "elo_rank": 12,
       "form_note": "近8场"
     },
     "away": {
@@ -1177,14 +1177,14 @@
     },
     "away": {
       "name": "摩洛哥",
-      "rating": 1921.0,
+      "rating": 1901.0,
       "attack": 1.086,
       "defense": 0.868,
       "recent_goals_for": 1.875,
       "recent_goals_against": 0.625,
       "source_name": "Morocco",
       "elo_code": "MA",
-      "elo_rank": 12,
+      "elo_rank": 14,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -1332,7 +1332,7 @@
       "recent_goals_against": 0.875,
       "source_name": "Germany",
       "elo_code": "DE",
-      "elo_rank": 14,
+      "elo_rank": 13,
       "form_note": "近8场"
     },
     "away": {
@@ -1612,7 +1612,7 @@
       "recent_goals_against": 0.125,
       "source_name": "Argentina",
       "elo_code": "AR",
-      "elo_rank": 2,
+      "elo_rank": 3,
       "form_note": "近8场"
     },
     "away": {
@@ -1645,14 +1645,14 @@
     "venue": "Philadelphia",
     "home": {
       "name": "法国",
-      "rating": 2143.0,
+      "rating": 2163.0,
       "attack": 1.195,
       "defense": 0.944,
       "recent_goals_for": 2.75,
       "recent_goals_against": 0.875,
       "source_name": "France",
       "elo_code": "FR",
-      "elo_rank": 3,
+      "elo_rank": 2,
       "form_note": "近8场"
     },
     "away": {
@@ -2045,14 +2045,14 @@
     "venue": "Atlanta",
     "home": {
       "name": "摩洛哥",
-      "rating": 1921.0,
+      "rating": 1901.0,
       "attack": 1.152,
       "defense": 0.909,
       "recent_goals_for": 2.375,
       "recent_goals_against": 0.75,
       "source_name": "Morocco",
       "elo_code": "MA",
-      "elo_rank": 12,
+      "elo_rank": 14,
       "form_note": "近8场"
     },
     "away": {
@@ -2104,7 +2104,7 @@
       "recent_goals_against": 0.25,
       "source_name": "Mexico",
       "elo_code": "MX",
-      "elo_rank": 13,
+      "elo_rank": 12,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -2224,7 +2224,7 @@
       "recent_goals_against": 1.125,
       "source_name": "Germany",
       "elo_code": "DE",
-      "elo_rank": 14,
+      "elo_rank": 13,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -2417,14 +2417,14 @@
     },
     "away": {
       "name": "法国",
-      "rating": 2143.0,
+      "rating": 2163.0,
       "attack": 1.195,
       "defense": 0.976,
       "recent_goals_for": 2.75,
       "recent_goals_against": 1.0,
       "source_name": "France",
       "elo_code": "FR",
-      "elo_rank": 3,
+      "elo_rank": 2,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -2864,7 +2864,7 @@
       "recent_goals_against": 0.25,
       "source_name": "Argentina",
       "elo_code": "AR",
-      "elo_rank": 2,
+      "elo_rank": 3,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -2972,7 +2972,7 @@
       "recent_goals_against": 1.25,
       "source_name": "Germany",
       "elo_code": "DE",
-      "elo_rank": 14,
+      "elo_rank": 13,
       "form_note": "近8场"
     },
     "away": {
@@ -3025,14 +3025,14 @@
     },
     "away": {
       "name": "摩洛哥",
-      "rating": 1921.0,
+      "rating": 1901.0,
       "attack": 1.152,
       "defense": 0.909,
       "recent_goals_for": 2.375,
       "recent_goals_against": 0.75,
       "source_name": "Morocco",
       "elo_code": "MA",
-      "elo_rank": 12,
+      "elo_rank": 14,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -3101,14 +3101,14 @@
     "venue": "New York/New Jersey (East Rutherford)",
     "home": {
       "name": "法国",
-      "rating": 2143.0,
+      "rating": 2163.0,
       "attack": 1.195,
       "defense": 0.944,
       "recent_goals_for": 2.75,
       "recent_goals_against": 0.875,
       "source_name": "France",
       "elo_code": "FR",
-      "elo_rank": 3,
+      "elo_rank": 2,
       "form_note": "近8场"
     },
     "away": {
@@ -3148,7 +3148,7 @@
       "recent_goals_against": 0.25,
       "source_name": "Mexico",
       "elo_code": "MX",
-      "elo_rank": 13,
+      "elo_rank": 12,
       "form_note": "近8场"
     },
     "away": {
@@ -3480,7 +3480,7 @@
       "recent_goals_against": 0.5,
       "source_name": "Argentina",
       "elo_code": "AR",
-      "elo_rank": 2,
+      "elo_rank": 3,
       "form_note": "近8场"
     },
     "away": {
@@ -3569,14 +3569,14 @@
     },
     "away": {
       "name": "摩洛哥",
-      "rating": 1921.0,
+      "rating": 1901.0,
       "attack": 1.167,
       "defense": 0.868,
       "recent_goals_for": 2.5,
       "recent_goals_against": 0.625,
       "source_name": "Morocco",
       "elo_code": "MA",
-      "elo_rank": 12,
+      "elo_rank": 14,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -3609,14 +3609,14 @@
     },
     "away": {
       "name": "法国",
-      "rating": 2143.0,
+      "rating": 2163.0,
       "attack": 1.181,
       "defense": 0.909,
       "recent_goals_for": 2.625,
       "recent_goals_against": 0.75,
       "source_name": "France",
       "elo_code": "FR",
-      "elo_rank": 3,
+      "elo_rank": 2,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -3684,7 +3684,7 @@
       "recent_goals_against": 0.5,
       "source_name": "Mexico",
       "elo_code": "MX",
-      "elo_rank": 13,
+      "elo_rank": 12,
       "form_note": "近8场"
     },
     "away": {
@@ -3804,7 +3804,7 @@
       "recent_goals_against": 0.625,
       "source_name": "Argentina",
       "elo_code": "AR",
-      "elo_rank": 2,
+      "elo_rank": 3,
       "form_note": "近8场"
     },
     "away": {
@@ -3885,26 +3885,26 @@
     "venue": "Boston (Foxborough)",
     "home": {
       "name": "法国",
-      "rating": 2143.0,
-      "attack": 1.181,
-      "defense": 0.909,
-      "recent_goals_for": 2.625,
-      "recent_goals_against": 0.75,
-      "source_name": "France",
-      "elo_code": "FR",
-      "elo_rank": 3,
-      "form_note": "近8场"
-    },
-    "away": {
-      "name": "摩洛哥",
-      "rating": 1921.0,
+      "rating": 2163.0,
       "attack": 1.167,
       "defense": 0.868,
       "recent_goals_for": 2.5,
       "recent_goals_against": 0.625,
+      "source_name": "France",
+      "elo_code": "FR",
+      "elo_rank": 2,
+      "form_note": "近8场"
+    },
+    "away": {
+      "name": "摩洛哥",
+      "rating": 1901.0,
+      "attack": 1.086,
+      "defense": 0.944,
+      "recent_goals_for": 1.875,
+      "recent_goals_against": 0.875,
       "source_name": "Morocco",
       "elo_code": "MA",
-      "elo_rank": 12,
+      "elo_rank": 14,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -3992,7 +3992,7 @@
       "recent_goals_against": 0.625,
       "source_name": "Argentina",
       "elo_code": "AR",
-      "elo_rank": 2,
+      "elo_rank": 3,
       "form_note": "近8场"
     },
     "away": {
