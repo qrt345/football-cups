@@ -17,7 +17,7 @@
     },
     "away": {
       "name": "南非",
-      "rating": 1560.0,
+      "rating": 1559.0,
       "attack": 0.897,
       "defense": 1.057,
       "recent_goals_for": 0.875,
@@ -325,7 +325,7 @@
     "venue": "Houston",
     "home": {
       "name": "德国",
-      "rating": 1907.0,
+      "rating": 1908.0,
       "attack": 1.269,
       "defense": 0.909,
       "recent_goals_for": 3.5,
@@ -857,7 +857,7 @@
     },
     "away": {
       "name": "克罗地亚",
-      "rating": 1881.0,
+      "rating": 1882.0,
       "attack": 1.103,
       "defense": 1.123,
       "recent_goals_for": 2.0,
@@ -977,7 +977,7 @@
     },
     "away": {
       "name": "南非",
-      "rating": 1560.0,
+      "rating": 1559.0,
       "attack": 0.928,
       "defense": 1.057,
       "recent_goals_for": 1.0,
@@ -1325,7 +1325,7 @@
     "venue": "Toronto",
     "home": {
       "name": "德国",
-      "rating": 1907.0,
+      "rating": 1908.0,
       "attack": 1.28,
       "defense": 0.944,
       "recent_goals_for": 3.625,
@@ -1857,7 +1857,7 @@
     },
     "away": {
       "name": "克罗地亚",
-      "rating": 1881.0,
+      "rating": 1882.0,
       "attack": 1.067,
       "defense": 1.123,
       "recent_goals_for": 1.75,
@@ -2125,7 +2125,7 @@
     "venue": "Monterrey (Guadalupe)",
     "home": {
       "name": "南非",
-      "rating": 1560.0,
+      "rating": 1559.0,
       "attack": 0.863,
       "defense": 1.006,
       "recent_goals_for": 0.75,
@@ -2217,7 +2217,7 @@
     },
     "away": {
       "name": "德国",
-      "rating": 1907.0,
+      "rating": 1908.0,
       "attack": 1.269,
       "defense": 1.006,
       "recent_goals_for": 3.5,
@@ -2685,7 +2685,7 @@
     "venue": "Philadelphia",
     "home": {
       "name": "克罗地亚",
-      "rating": 1881.0,
+      "rating": 1882.0,
       "attack": 1.047,
       "defense": 1.123,
       "recent_goals_for": 1.625,
@@ -2885,7 +2885,7 @@
     "venue": "Los Angeles (Inglewood)",
     "home": {
       "name": "南非",
-      "rating": 1560.0,
+      "rating": 1559.0,
       "attack": 0.825,
       "defense": 0.976,
       "recent_goals_for": 0.625,
@@ -2965,7 +2965,7 @@
     "venue": "Boston (Foxborough)",
     "home": {
       "name": "德国",
-      "rating": 1907.0,
+      "rating": 1908.0,
       "attack": 1.208,
       "defense": 1.032,
       "recent_goals_for": 2.875,
@@ -3357,7 +3357,7 @@
     },
     "away": {
       "name": "克罗地亚",
-      "rating": 1881.0,
+      "rating": 1882.0,
       "attack": 1.005,
       "defense": 1.123,
       "recent_goals_for": 1.375,
@@ -4024,28 +4024,28 @@
     "competition": "世界杯 2026 Semi-final",
     "venue": "Dallas (Arlington)",
     "home": {
-      "name": "W97",
-      "rating": 1500.0,
-      "attack": 0.963,
-      "defense": 1.054,
-      "recent_goals_for": 1.161,
-      "recent_goals_against": 1.357,
-      "source_name": "W97",
-      "elo_code": "",
-      "elo_rank": 0,
-      "form_note": "历史均值估计（Elo 未匹配到球队：W97）"
+      "name": "法国",
+      "rating": 2163.0,
+      "attack": 1.167,
+      "defense": 0.868,
+      "recent_goals_for": 2.5,
+      "recent_goals_against": 0.625,
+      "source_name": "France",
+      "elo_code": "FR",
+      "elo_rank": 2,
+      "form_note": "近8场"
     },
     "away": {
-      "name": "W98",
-      "rating": 1500.0,
-      "attack": 0.963,
-      "defense": 1.054,
-      "recent_goals_for": 1.161,
-      "recent_goals_against": 1.357,
-      "source_name": "W98",
-      "elo_code": "",
-      "elo_rank": 0,
-      "form_note": "历史均值估计（Elo 未匹配到球队：W98）"
+      "name": "西班牙",
+      "rating": 2190.0,
+      "attack": 1.086,
+      "defense": 0.764,
+      "recent_goals_for": 1.875,
+      "recent_goals_against": 0.375,
+      "source_name": "Spain",
+      "elo_code": "ES",
+      "elo_rank": 1,
+      "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings"
   },
