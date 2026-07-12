@@ -4031,7 +4031,21 @@
       "elo_rank": 0,
       "form_note": "历史均值估计（Elo 未匹配到球队：Switzerland）"
     },
-    "source": "openfootball/worldcup.json + World Football Elo Ratings"
+    "source": "openfootball/worldcup.json + World Football Elo Ratings",
+    "score": {
+      "et": [
+        3,
+        1
+      ],
+      "ft": [
+        1,
+        1
+      ],
+      "ht": [
+        1,
+        0
+      ]
+    }
   },
   {
     "kickoff": "2026-07-15T03:00:00+08:00",
