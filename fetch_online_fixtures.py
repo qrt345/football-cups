@@ -272,11 +272,54 @@ def build_team(name: str, kickoff: dt.datetime, alias_to_code: Dict[str, str], c
     }
 
 
+def resolve_placeholders(matches: List[Dict[str, Any]]) -> int:
+    """解析淘汰赛占位符（W<num>=第num场胜者 / L<num>=败者）。
+    上游openfootball更新滞后时，用已完赛结果自行填充对阵。
+    胜负判定优先级：点球p > 加时et > 90分钟ft；平分或队名本身未解析则跳过。
+    返回替换的队名数量。"""
+    def winner_loser(m):
+        sc = m.get("score") or {}
+        t1, t2 = str(m.get("team1", "")).strip(), str(m.get("team2", "")).strip()
+        if re.match(r"^[WL]\d+$", t1) or re.match(r"^[WL]\d+$", t2):
+            return None, None
+        for key in ("p", "et", "ft"):
+            pair = sc.get(key)
+            if pair and pair[0] != pair[1]:
+                return (t1, t2) if pair[0] > pair[1] else (t2, t1)
+        return None, None
+
+    replaced = 0
+    for _ in range(3):  # 多轮，让后置场次能吃到前一轮刚解析出的结果
+        resolved: Dict[str, str] = {}
+        for m in matches:
+            num = m.get("num")
+            if num is None:
+                continue
+            w, l = winner_loser(m)
+            if w:
+                resolved[f"W{num}"] = w
+                resolved[f"L{num}"] = l
+        changed = False
+        for m in matches:
+            for k in ("team1", "team2"):
+                v = str(m.get(k, "")).strip()
+                if v in resolved and resolved[v] != v:
+                    m[k] = resolved[v]
+                    replaced += 1
+                    changed = True
+        if not changed:
+            break
+    return replaced
+
+
 def build_fixtures(worldcup_url: str, recent_matches: int) -> List[Dict[str, Any]]:
     schedule = fetch_json(worldcup_url)
     matches = schedule.get("matches", []) if isinstance(schedule, dict) else []
     if not matches:
         raise RuntimeError("赛程数据为空或格式不正确")
+    n = resolve_placeholders(matches)
+    if n:
+        print(f"占位符解析：用已完赛结果替换 {n} 个 W/L 队名")
 
     teams_tsv = fetch_text(urllib.parse.urljoin(ELO_BASE_URL, "en.teams.tsv"))
     ratings_tsv = fetch_text(urllib.parse.urljoin(ELO_BASE_URL, "World.tsv"))
