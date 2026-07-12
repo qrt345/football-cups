@@ -177,14 +177,14 @@
     },
     "away": {
       "name": "瑞士",
-      "rating": 1949.0,
+      "rating": 1928.0,
       "attack": 1.067,
       "defense": 1.006,
       "recent_goals_for": 1.75,
       "recent_goals_against": 1.125,
       "source_name": "Switzerland",
       "elo_code": "CH",
-      "elo_rank": 10,
+      "elo_rank": 11,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -532,7 +532,7 @@
       "recent_goals_against": 0.875,
       "source_name": "Belgium",
       "elo_code": "BE",
-      "elo_rank": 11,
+      "elo_rank": 10,
       "form_note": "近8场"
     },
     "away": {
@@ -652,7 +652,7 @@
       "recent_goals_against": 1.125,
       "source_name": "France",
       "elo_code": "FR",
-      "elo_rank": 2,
+      "elo_rank": 3,
       "form_note": "近8场"
     },
     "away": {
@@ -725,14 +725,14 @@
     "venue": "Kansas City",
     "home": {
       "name": "阿根廷",
-      "rating": 2156.0,
+      "rating": 2177.0,
       "attack": 1.221,
       "defense": 0.76,
       "recent_goals_for": 3.0,
       "recent_goals_against": 0.125,
       "source_name": "Argentina",
       "elo_code": "AR",
-      "elo_rank": 3,
+      "elo_rank": 2,
       "form_note": "近8场"
     },
     "away": {
@@ -1005,14 +1005,14 @@
     "venue": "Los Angeles (Inglewood)",
     "home": {
       "name": "瑞士",
-      "rating": 1949.0,
+      "rating": 1928.0,
       "attack": 1.136,
       "defense": 1.032,
       "recent_goals_for": 2.25,
       "recent_goals_against": 1.25,
       "source_name": "Switzerland",
       "elo_code": "CH",
-      "elo_rank": 10,
+      "elo_rank": 11,
       "form_note": "近8场"
     },
     "away": {
@@ -1492,7 +1492,7 @@
       "recent_goals_against": 0.625,
       "source_name": "Belgium",
       "elo_code": "BE",
-      "elo_rank": 11,
+      "elo_rank": 10,
       "form_note": "近8场"
     },
     "away": {
@@ -1605,14 +1605,14 @@
     "venue": "Dallas (Arlington)",
     "home": {
       "name": "阿根廷",
-      "rating": 2156.0,
+      "rating": 2177.0,
       "attack": 1.233,
       "defense": 0.76,
       "recent_goals_for": 3.125,
       "recent_goals_against": 0.125,
       "source_name": "Argentina",
       "elo_code": "AR",
-      "elo_rank": 3,
+      "elo_rank": 2,
       "form_note": "近8场"
     },
     "away": {
@@ -1652,7 +1652,7 @@
       "recent_goals_against": 0.875,
       "source_name": "France",
       "elo_code": "FR",
-      "elo_rank": 2,
+      "elo_rank": 3,
       "form_note": "近8场"
     },
     "away": {
@@ -1925,14 +1925,14 @@
     "venue": "Vancouver",
     "home": {
       "name": "瑞士",
-      "rating": 1949.0,
+      "rating": 1928.0,
       "attack": 1.103,
       "defense": 1.032,
       "recent_goals_for": 2.0,
       "recent_goals_against": 1.25,
       "source_name": "Switzerland",
       "elo_code": "CH",
-      "elo_rank": 10,
+      "elo_rank": 11,
       "form_note": "近8场"
     },
     "away": {
@@ -2424,7 +2424,7 @@
       "recent_goals_against": 1.0,
       "source_name": "France",
       "elo_code": "FR",
-      "elo_rank": 2,
+      "elo_rank": 3,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -2624,7 +2624,7 @@
       "recent_goals_against": 0.625,
       "source_name": "Belgium",
       "elo_code": "BE",
-      "elo_rank": 11,
+      "elo_rank": 10,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -2857,14 +2857,14 @@
     },
     "away": {
       "name": "阿根廷",
-      "rating": 2156.0,
+      "rating": 2177.0,
       "attack": 1.195,
       "defense": 0.76,
       "recent_goals_for": 2.75,
       "recent_goals_against": 0.25,
       "source_name": "Argentina",
       "elo_code": "AR",
-      "elo_rank": 3,
+      "elo_rank": 2,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -3108,7 +3108,7 @@
       "recent_goals_against": 0.875,
       "source_name": "France",
       "elo_code": "FR",
-      "elo_rank": 2,
+      "elo_rank": 3,
       "form_note": "近8场"
     },
     "away": {
@@ -3228,7 +3228,7 @@
       "recent_goals_against": 0.875,
       "source_name": "Belgium",
       "elo_code": "BE",
-      "elo_rank": 11,
+      "elo_rank": 10,
       "form_note": "近8场"
     },
     "away": {
@@ -3385,14 +3385,14 @@
     "venue": "Vancouver",
     "home": {
       "name": "瑞士",
-      "rating": 1949.0,
+      "rating": 1928.0,
       "attack": 1.12,
       "defense": 1.006,
       "recent_goals_for": 2.125,
       "recent_goals_against": 1.125,
       "source_name": "Switzerland",
       "elo_code": "CH",
-      "elo_rank": 10,
+      "elo_rank": 11,
       "form_note": "近8场"
     },
     "away": {
@@ -3473,14 +3473,14 @@
     "venue": "Miami (Miami Gardens)",
     "home": {
       "name": "阿根廷",
-      "rating": 2156.0,
+      "rating": 2177.0,
       "attack": 1.208,
       "defense": 0.821,
       "recent_goals_for": 2.875,
       "recent_goals_against": 0.5,
       "source_name": "Argentina",
       "elo_code": "AR",
-      "elo_rank": 3,
+      "elo_rank": 2,
       "form_note": "近8场"
     },
     "away": {
@@ -3616,7 +3616,7 @@
       "recent_goals_against": 0.75,
       "source_name": "France",
       "elo_code": "FR",
-      "elo_rank": 2,
+      "elo_rank": 3,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -3776,7 +3776,7 @@
       "recent_goals_against": 0.75,
       "source_name": "Belgium",
       "elo_code": "BE",
-      "elo_rank": 11,
+      "elo_rank": 10,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -3797,14 +3797,14 @@
     "venue": "Atlanta",
     "home": {
       "name": "阿根廷",
-      "rating": 2156.0,
+      "rating": 2177.0,
       "attack": 1.221,
       "defense": 0.868,
       "recent_goals_for": 3.0,
       "recent_goals_against": 0.625,
       "source_name": "Argentina",
       "elo_code": "AR",
-      "elo_rank": 3,
+      "elo_rank": 2,
       "form_note": "近8场"
     },
     "away": {
@@ -3837,14 +3837,14 @@
     "venue": "Vancouver",
     "home": {
       "name": "瑞士",
-      "rating": 1949.0,
+      "rating": 1928.0,
       "attack": 1.067,
       "defense": 0.868,
       "recent_goals_for": 1.75,
       "recent_goals_against": 0.625,
       "source_name": "Switzerland",
       "elo_code": "CH",
-      "elo_rank": 10,
+      "elo_rank": 11,
       "form_note": "近8场"
     },
     "away": {
@@ -3892,7 +3892,7 @@
       "recent_goals_against": 0.625,
       "source_name": "France",
       "elo_code": "FR",
-      "elo_rank": 2,
+      "elo_rank": 3,
       "form_note": "近8场"
     },
     "away": {
@@ -3944,7 +3944,7 @@
       "recent_goals_against": 0.875,
       "source_name": "Belgium",
       "elo_code": "BE",
-      "elo_rank": 11,
+      "elo_rank": 10,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -4009,26 +4009,26 @@
     "venue": "Kansas City",
     "home": {
       "name": "阿根廷",
-      "rating": 2156.0,
-      "attack": 1.221,
-      "defense": 0.868,
-      "recent_goals_for": 3.0,
-      "recent_goals_against": 0.625,
+      "rating": 2177.0,
+      "attack": 1.195,
+      "defense": 0.909,
+      "recent_goals_for": 2.75,
+      "recent_goals_against": 0.75,
       "source_name": "Argentina",
       "elo_code": "AR",
-      "elo_rank": 3,
+      "elo_rank": 2,
       "form_note": "近8场"
     },
     "away": {
       "name": "瑞士",
-      "rating": 1949.0,
-      "attack": 1.067,
-      "defense": 0.868,
-      "recent_goals_for": 1.75,
-      "recent_goals_against": 0.625,
+      "rating": 1928.0,
+      "attack": 1.086,
+      "defense": 0.976,
+      "recent_goals_for": 1.875,
+      "recent_goals_against": 1.0,
       "source_name": "Switzerland",
       "elo_code": "CH",
-      "elo_rank": 10,
+      "elo_rank": 11,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -4060,7 +4060,7 @@
       "recent_goals_against": 0.625,
       "source_name": "France",
       "elo_code": "FR",
-      "elo_rank": 2,
+      "elo_rank": 3,
       "form_note": "近8场"
     },
     "away": {
