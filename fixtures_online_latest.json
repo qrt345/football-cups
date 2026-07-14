@@ -17,7 +17,7 @@
     },
     "away": {
       "name": "南非",
-      "rating": 1559.0,
+      "rating": 1560.0,
       "attack": 0.897,
       "defense": 1.057,
       "recent_goals_for": 0.875,
@@ -104,7 +104,7 @@
       "recent_goals_against": 0.875,
       "source_name": "Bosnia & Herzegovina",
       "elo_code": "BA",
-      "elo_rank": 63,
+      "elo_rank": 64,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -285,7 +285,7 @@
     "venue": "Vancouver",
     "home": {
       "name": "澳大利亚",
-      "rating": 1795.0,
+      "rating": 1794.0,
       "attack": 0.981,
       "defense": 1.006,
       "recent_goals_for": 1.25,
@@ -325,7 +325,7 @@
     "venue": "Houston",
     "home": {
       "name": "德国",
-      "rating": 1908.0,
+      "rating": 1907.0,
       "attack": 1.269,
       "defense": 0.909,
       "recent_goals_for": 3.5,
@@ -977,7 +977,7 @@
     },
     "away": {
       "name": "南非",
-      "rating": 1559.0,
+      "rating": 1560.0,
       "attack": 0.928,
       "defense": 1.057,
       "recent_goals_for": 1.0,
@@ -1024,7 +1024,7 @@
       "recent_goals_against": 1.25,
       "source_name": "Bosnia & Herzegovina",
       "elo_code": "BA",
-      "elo_rank": 63,
+      "elo_rank": 64,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -1137,7 +1137,7 @@
     },
     "away": {
       "name": "澳大利亚",
-      "rating": 1795.0,
+      "rating": 1794.0,
       "attack": 0.955,
       "defense": 1.006,
       "recent_goals_for": 1.125,
@@ -1325,7 +1325,7 @@
     "venue": "Toronto",
     "home": {
       "name": "德国",
-      "rating": 1908.0,
+      "rating": 1907.0,
       "attack": 1.28,
       "defense": 0.944,
       "recent_goals_for": 3.625,
@@ -1972,7 +1972,7 @@
       "recent_goals_against": 1.25,
       "source_name": "Bosnia & Herzegovina",
       "elo_code": "BA",
-      "elo_rank": 63,
+      "elo_rank": 64,
       "form_note": "近8场"
     },
     "away": {
@@ -2125,7 +2125,7 @@
     "venue": "Monterrey (Guadalupe)",
     "home": {
       "name": "南非",
-      "rating": 1559.0,
+      "rating": 1560.0,
       "attack": 0.863,
       "defense": 1.006,
       "recent_goals_for": 0.75,
@@ -2217,7 +2217,7 @@
     },
     "away": {
       "name": "德国",
-      "rating": 1908.0,
+      "rating": 1907.0,
       "attack": 1.269,
       "defense": 1.006,
       "recent_goals_for": 3.5,
@@ -2377,7 +2377,7 @@
     },
     "away": {
       "name": "澳大利亚",
-      "rating": 1795.0,
+      "rating": 1794.0,
       "attack": 0.955,
       "defense": 0.976,
       "recent_goals_for": 1.125,
@@ -2885,7 +2885,7 @@
     "venue": "Los Angeles (Inglewood)",
     "home": {
       "name": "南非",
-      "rating": 1559.0,
+      "rating": 1560.0,
       "attack": 0.825,
       "defense": 0.976,
       "recent_goals_for": 0.625,
@@ -2965,7 +2965,7 @@
     "venue": "Boston (Foxborough)",
     "home": {
       "name": "德国",
-      "rating": 1908.0,
+      "rating": 1907.0,
       "attack": 1.208,
       "defense": 1.032,
       "recent_goals_for": 2.875,
@@ -3284,7 +3284,7 @@
       "recent_goals_against": 1.375,
       "source_name": "Bosnia & Herzegovina",
       "elo_code": "BA",
-      "elo_rank": 63,
+      "elo_rank": 64,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -3425,7 +3425,7 @@
     "venue": "Dallas (Arlington)",
     "home": {
       "name": "澳大利亚",
-      "rating": 1795.0,
+      "rating": 1794.0,
       "attack": 0.981,
       "defense": 0.909,
       "recent_goals_for": 1.25,
