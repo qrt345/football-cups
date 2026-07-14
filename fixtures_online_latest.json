@@ -104,7 +104,7 @@
       "recent_goals_against": 0.875,
       "source_name": "Bosnia & Herzegovina",
       "elo_code": "BA",
-      "elo_rank": 64,
+      "elo_rank": 63,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -285,7 +285,7 @@
     "venue": "Vancouver",
     "home": {
       "name": "澳大利亚",
-      "rating": 1794.0,
+      "rating": 1795.0,
       "attack": 0.981,
       "defense": 1.006,
       "recent_goals_for": 1.25,
@@ -325,7 +325,7 @@
     "venue": "Houston",
     "home": {
       "name": "德国",
-      "rating": 1907.0,
+      "rating": 1908.0,
       "attack": 1.269,
       "defense": 0.909,
       "recent_goals_for": 3.5,
@@ -485,7 +485,7 @@
     "venue": "Atlanta",
     "home": {
       "name": "西班牙",
-      "rating": 2190.0,
+      "rating": 2232.0,
       "attack": 1.12,
       "defense": 0.821,
       "recent_goals_for": 2.125,
@@ -645,7 +645,7 @@
     "venue": "New York/New Jersey (East Rutherford)",
     "home": {
       "name": "法国",
-      "rating": 2163.0,
+      "rating": 2121.0,
       "attack": 1.181,
       "defense": 1.006,
       "recent_goals_for": 2.625,
@@ -857,7 +857,7 @@
     },
     "away": {
       "name": "克罗地亚",
-      "rating": 1881.0,
+      "rating": 1882.0,
       "attack": 1.103,
       "defense": 1.123,
       "recent_goals_for": 2.0,
@@ -1024,7 +1024,7 @@
       "recent_goals_against": 1.25,
       "source_name": "Bosnia & Herzegovina",
       "elo_code": "BA",
-      "elo_rank": 64,
+      "elo_rank": 63,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -1137,7 +1137,7 @@
     },
     "away": {
       "name": "澳大利亚",
-      "rating": 1794.0,
+      "rating": 1795.0,
       "attack": 0.955,
       "defense": 1.006,
       "recent_goals_for": 1.125,
@@ -1325,7 +1325,7 @@
     "venue": "Toronto",
     "home": {
       "name": "德国",
-      "rating": 1907.0,
+      "rating": 1908.0,
       "attack": 1.28,
       "defense": 0.944,
       "recent_goals_for": 3.625,
@@ -1445,7 +1445,7 @@
     "venue": "Atlanta",
     "home": {
       "name": "西班牙",
-      "rating": 2190.0,
+      "rating": 2232.0,
       "attack": 1.12,
       "defense": 0.821,
       "recent_goals_for": 2.125,
@@ -1645,7 +1645,7 @@
     "venue": "Philadelphia",
     "home": {
       "name": "法国",
-      "rating": 2163.0,
+      "rating": 2121.0,
       "attack": 1.195,
       "defense": 0.944,
       "recent_goals_for": 2.75,
@@ -1857,7 +1857,7 @@
     },
     "away": {
       "name": "克罗地亚",
-      "rating": 1881.0,
+      "rating": 1882.0,
       "attack": 1.067,
       "defense": 1.123,
       "recent_goals_for": 1.75,
@@ -1972,7 +1972,7 @@
       "recent_goals_against": 1.25,
       "source_name": "Bosnia & Herzegovina",
       "elo_code": "BA",
-      "elo_rank": 64,
+      "elo_rank": 63,
       "form_note": "近8场"
     },
     "away": {
@@ -2217,7 +2217,7 @@
     },
     "away": {
       "name": "德国",
-      "rating": 1907.0,
+      "rating": 1908.0,
       "attack": 1.269,
       "defense": 1.006,
       "recent_goals_for": 3.5,
@@ -2377,7 +2377,7 @@
     },
     "away": {
       "name": "澳大利亚",
-      "rating": 1794.0,
+      "rating": 1795.0,
       "attack": 0.955,
       "defense": 0.976,
       "recent_goals_for": 1.125,
@@ -2417,7 +2417,7 @@
     },
     "away": {
       "name": "法国",
-      "rating": 2163.0,
+      "rating": 2121.0,
       "attack": 1.195,
       "defense": 0.976,
       "recent_goals_for": 2.75,
@@ -2537,7 +2537,7 @@
     },
     "away": {
       "name": "西班牙",
-      "rating": 2190.0,
+      "rating": 2232.0,
       "attack": 1.067,
       "defense": 0.821,
       "recent_goals_for": 1.75,
@@ -2685,7 +2685,7 @@
     "venue": "Philadelphia",
     "home": {
       "name": "克罗地亚",
-      "rating": 1881.0,
+      "rating": 1882.0,
       "attack": 1.047,
       "defense": 1.123,
       "recent_goals_for": 1.625,
@@ -2965,7 +2965,7 @@
     "venue": "Boston (Foxborough)",
     "home": {
       "name": "德国",
-      "rating": 1907.0,
+      "rating": 1908.0,
       "attack": 1.208,
       "defense": 1.032,
       "recent_goals_for": 2.875,
@@ -3101,7 +3101,7 @@
     "venue": "New York/New Jersey (East Rutherford)",
     "home": {
       "name": "法国",
-      "rating": 2163.0,
+      "rating": 2121.0,
       "attack": 1.195,
       "defense": 0.944,
       "recent_goals_for": 2.75,
@@ -3284,7 +3284,7 @@
       "recent_goals_against": 1.375,
       "source_name": "Bosnia & Herzegovina",
       "elo_code": "BA",
-      "elo_rank": 64,
+      "elo_rank": 63,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -3305,7 +3305,7 @@
     "venue": "Los Angeles (Inglewood)",
     "home": {
       "name": "西班牙",
-      "rating": 2190.0,
+      "rating": 2232.0,
       "attack": 1.086,
       "defense": 0.76,
       "recent_goals_for": 1.875,
@@ -3357,7 +3357,7 @@
     },
     "away": {
       "name": "克罗地亚",
-      "rating": 1881.0,
+      "rating": 1882.0,
       "attack": 1.005,
       "defense": 1.123,
       "recent_goals_for": 1.375,
@@ -3425,7 +3425,7 @@
     "venue": "Dallas (Arlington)",
     "home": {
       "name": "澳大利亚",
-      "rating": 1794.0,
+      "rating": 1795.0,
       "attack": 0.981,
       "defense": 0.909,
       "recent_goals_for": 1.25,
@@ -3609,7 +3609,7 @@
     },
     "away": {
       "name": "法国",
-      "rating": 2163.0,
+      "rating": 2121.0,
       "attack": 1.181,
       "defense": 0.909,
       "recent_goals_for": 2.625,
@@ -3729,7 +3729,7 @@
     },
     "away": {
       "name": "西班牙",
-      "rating": 2190.0,
+      "rating": 2232.0,
       "attack": 1.047,
       "defense": 0.76,
       "recent_goals_for": 1.625,
@@ -3885,7 +3885,7 @@
     "venue": "Boston (Foxborough)",
     "home": {
       "name": "法国",
-      "rating": 2163.0,
+      "rating": 2121.0,
       "attack": 1.167,
       "defense": 0.868,
       "recent_goals_for": 2.5,
@@ -3925,7 +3925,7 @@
     "venue": "Los Angeles (Inglewood)",
     "home": {
       "name": "西班牙",
-      "rating": 2190.0,
+      "rating": 2232.0,
       "attack": 1.086,
       "defense": 0.764,
       "recent_goals_for": 1.875,
@@ -4053,10 +4053,10 @@
     "venue": "Dallas (Arlington)",
     "home": {
       "name": "法国",
-      "rating": 2163.0,
-      "attack": 1.167,
+      "rating": 2121.0,
+      "attack": 1.152,
       "defense": 0.868,
-      "recent_goals_for": 2.5,
+      "recent_goals_for": 2.375,
       "recent_goals_against": 0.625,
       "source_name": "France",
       "elo_code": "FR",
@@ -4065,11 +4065,11 @@
     },
     "away": {
       "name": "西班牙",
-      "rating": 2190.0,
-      "attack": 1.086,
-      "defense": 0.764,
-      "recent_goals_for": 1.875,
-      "recent_goals_against": 0.375,
+      "rating": 2232.0,
+      "attack": 1.103,
+      "defense": 0.76,
+      "recent_goals_for": 2.0,
+      "recent_goals_against": 0.25,
       "source_name": "Spain",
       "elo_code": "ES",
       "elo_rank": 1,
@@ -4122,16 +4122,16 @@
     "competition": "世界杯 2026 Match for third place",
     "venue": "Miami (Miami Gardens)",
     "home": {
-      "name": "L101",
-      "rating": 1500.0,
-      "attack": 0.963,
-      "defense": 1.054,
-      "recent_goals_for": 1.161,
-      "recent_goals_against": 1.357,
-      "source_name": "L101",
-      "elo_code": "",
-      "elo_rank": 0,
-      "form_note": "历史均值估计（Elo 未匹配到球队：L101）"
+      "name": "法国",
+      "rating": 2121.0,
+      "attack": 1.152,
+      "defense": 0.868,
+      "recent_goals_for": 2.375,
+      "recent_goals_against": 0.625,
+      "source_name": "France",
+      "elo_code": "FR",
+      "elo_rank": 3,
+      "form_note": "近8场"
     },
     "away": {
       "name": "L102",
@@ -4152,16 +4152,16 @@
     "competition": "世界杯 2026 Final",
     "venue": "New York/New Jersey (East Rutherford)",
     "home": {
-      "name": "W101",
-      "rating": 1500.0,
-      "attack": 0.963,
-      "defense": 1.054,
-      "recent_goals_for": 1.161,
-      "recent_goals_against": 1.357,
-      "source_name": "W101",
-      "elo_code": "",
-      "elo_rank": 0,
-      "form_note": "历史均值估计（Elo 未匹配到球队：W101）"
+      "name": "西班牙",
+      "rating": 2232.0,
+      "attack": 1.103,
+      "defense": 0.76,
+      "recent_goals_for": 2.0,
+      "recent_goals_against": 0.25,
+      "source_name": "Spain",
+      "elo_code": "ES",
+      "elo_rank": 1,
+      "form_note": "近8场"
     },
     "away": {
       "name": "W102",
