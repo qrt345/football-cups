@@ -725,7 +725,7 @@
     "venue": "Kansas City",
     "home": {
       "name": "阿根廷",
-      "rating": 2177.0,
+      "rating": 2200.0,
       "attack": 1.221,
       "defense": 0.76,
       "recent_goals_for": 3.0,
@@ -845,7 +845,7 @@
     "venue": "Dallas (Arlington)",
     "home": {
       "name": "英格兰",
-      "rating": 2097.0,
+      "rating": 2074.0,
       "attack": 1.136,
       "defense": 0.821,
       "recent_goals_for": 2.25,
@@ -1605,7 +1605,7 @@
     "venue": "Dallas (Arlington)",
     "home": {
       "name": "阿根廷",
-      "rating": 2177.0,
+      "rating": 2200.0,
       "attack": 1.233,
       "defense": 0.76,
       "recent_goals_for": 3.125,
@@ -1805,7 +1805,7 @@
     "venue": "Boston (Foxborough)",
     "home": {
       "name": "英格兰",
-      "rating": 2097.0,
+      "rating": 2074.0,
       "attack": 1.047,
       "defense": 0.821,
       "recent_goals_for": 1.625,
@@ -2657,7 +2657,7 @@
     },
     "away": {
       "name": "英格兰",
-      "rating": 2097.0,
+      "rating": 2074.0,
       "attack": 1.047,
       "defense": 0.821,
       "recent_goals_for": 1.625,
@@ -2857,7 +2857,7 @@
     },
     "away": {
       "name": "阿根廷",
-      "rating": 2177.0,
+      "rating": 2200.0,
       "attack": 1.195,
       "defense": 0.76,
       "recent_goals_for": 2.75,
@@ -3181,7 +3181,7 @@
     "venue": "Atlanta",
     "home": {
       "name": "英格兰",
-      "rating": 2097.0,
+      "rating": 2074.0,
       "attack": 1.047,
       "defense": 0.868,
       "recent_goals_for": 1.625,
@@ -3473,7 +3473,7 @@
     "venue": "Miami (Miami Gardens)",
     "home": {
       "name": "阿根廷",
-      "rating": 2177.0,
+      "rating": 2200.0,
       "attack": 1.208,
       "defense": 0.821,
       "recent_goals_for": 2.875,
@@ -3689,7 +3689,7 @@
     },
     "away": {
       "name": "英格兰",
-      "rating": 2097.0,
+      "rating": 2074.0,
       "attack": 1.086,
       "defense": 0.909,
       "recent_goals_for": 1.875,
@@ -3797,7 +3797,7 @@
     "venue": "Atlanta",
     "home": {
       "name": "阿根廷",
-      "rating": 2177.0,
+      "rating": 2200.0,
       "attack": 1.221,
       "defense": 0.868,
       "recent_goals_for": 3.0,
@@ -3977,7 +3977,7 @@
     },
     "away": {
       "name": "英格兰",
-      "rating": 2097.0,
+      "rating": 2074.0,
       "attack": 1.12,
       "defense": 0.909,
       "recent_goals_for": 2.125,
@@ -4009,7 +4009,7 @@
     "venue": "Kansas City",
     "home": {
       "name": "阿根廷",
-      "rating": 2177.0,
+      "rating": 2200.0,
       "attack": 1.195,
       "defense": 0.909,
       "recent_goals_for": 2.75,
@@ -4093,11 +4093,11 @@
     "venue": "Atlanta",
     "home": {
       "name": "英格兰",
-      "rating": 2097.0,
+      "rating": 2074.0,
       "attack": 1.12,
-      "defense": 0.909,
+      "defense": 0.976,
       "recent_goals_for": 2.125,
-      "recent_goals_against": 0.75,
+      "recent_goals_against": 1.0,
       "source_name": "England",
       "elo_code": "EN",
       "elo_rank": 4,
@@ -4105,11 +4105,11 @@
     },
     "away": {
       "name": "阿根廷",
-      "rating": 2177.0,
+      "rating": 2200.0,
       "attack": 1.195,
-      "defense": 0.909,
+      "defense": 0.944,
       "recent_goals_for": 2.75,
-      "recent_goals_against": 0.75,
+      "recent_goals_against": 0.875,
       "source_name": "Argentina",
       "elo_code": "AR",
       "elo_rank": 2,
@@ -4144,16 +4144,16 @@
       "form_note": "近8场"
     },
     "away": {
-      "name": "L102",
-      "rating": 1500.0,
-      "attack": 0.963,
-      "defense": 1.054,
-      "recent_goals_for": 1.161,
-      "recent_goals_against": 1.357,
-      "source_name": "L102",
-      "elo_code": "",
-      "elo_rank": 0,
-      "form_note": "历史均值估计（Elo 未匹配到球队：L102）"
+      "name": "英格兰",
+      "rating": 2074.0,
+      "attack": 1.12,
+      "defense": 0.976,
+      "recent_goals_for": 2.125,
+      "recent_goals_against": 1.0,
+      "source_name": "England",
+      "elo_code": "EN",
+      "elo_rank": 4,
+      "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings"
   },
@@ -4174,16 +4174,16 @@
       "form_note": "近8场"
     },
     "away": {
-      "name": "W102",
-      "rating": 1500.0,
-      "attack": 0.963,
-      "defense": 1.054,
-      "recent_goals_for": 1.161,
-      "recent_goals_against": 1.357,
-      "source_name": "W102",
-      "elo_code": "",
-      "elo_rank": 0,
-      "form_note": "历史均值估计（Elo 未匹配到球队：W102）"
+      "name": "阿根廷",
+      "rating": 2200.0,
+      "attack": 1.195,
+      "defense": 0.944,
+      "recent_goals_for": 2.75,
+      "recent_goals_against": 0.875,
+      "source_name": "Argentina",
+      "elo_code": "AR",
+      "elo_rank": 2,
+      "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings"
   }
