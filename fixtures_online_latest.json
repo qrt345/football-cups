@@ -17,7 +17,7 @@
     },
     "away": {
       "name": "南非",
-      "rating": 1560.0,
+      "rating": 1559.0,
       "attack": 0.897,
       "defense": 1.057,
       "recent_goals_for": 0.875,
@@ -977,7 +977,7 @@
     },
     "away": {
       "name": "南非",
-      "rating": 1560.0,
+      "rating": 1559.0,
       "attack": 0.928,
       "defense": 1.057,
       "recent_goals_for": 1.0,
@@ -2125,7 +2125,7 @@
     "venue": "Monterrey (Guadalupe)",
     "home": {
       "name": "南非",
-      "rating": 1560.0,
+      "rating": 1559.0,
       "attack": 0.863,
       "defense": 1.006,
       "recent_goals_for": 0.75,
@@ -2885,7 +2885,7 @@
     "venue": "Los Angeles (Inglewood)",
     "home": {
       "name": "南非",
-      "rating": 1560.0,
+      "rating": 1559.0,
       "attack": 0.825,
       "defense": 0.976,
       "recent_goals_for": 0.625,
