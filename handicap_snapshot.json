@@ -1,15 +1,8 @@
 {
-  "updated_at": "2026-07-19 01:32 北京时间",
+  "updated_at": "2026-07-19 07:35 北京时间",
   "source": "the-odds-api spreads",
-  "count": 2,
+  "count": 1,
   "handicap": {
-    "france|england": {
-      "home_team": "France",
-      "away_team": "England",
-      "home_point": -0.5,
-      "away_point": 0.5,
-      "book": "Pinnacle"
-    },
     "spain|argentina": {
       "home_team": "Spain",
       "away_team": "Argentina",
