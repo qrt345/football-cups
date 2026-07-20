@@ -485,7 +485,7 @@
     "venue": "Atlanta",
     "home": {
       "name": "西班牙",
-      "rating": 2232.0,
+      "rating": 2259.0,
       "attack": 1.12,
       "defense": 0.821,
       "recent_goals_for": 2.125,
@@ -725,7 +725,7 @@
     "venue": "Kansas City",
     "home": {
       "name": "阿根廷",
-      "rating": 2200.0,
+      "rating": 2173.0,
       "attack": 1.221,
       "defense": 0.76,
       "recent_goals_for": 3.0,
@@ -1445,7 +1445,7 @@
     "venue": "Atlanta",
     "home": {
       "name": "西班牙",
-      "rating": 2232.0,
+      "rating": 2259.0,
       "attack": 1.12,
       "defense": 0.821,
       "recent_goals_for": 2.125,
@@ -1605,7 +1605,7 @@
     "venue": "Dallas (Arlington)",
     "home": {
       "name": "阿根廷",
-      "rating": 2200.0,
+      "rating": 2173.0,
       "attack": 1.233,
       "defense": 0.76,
       "recent_goals_for": 3.125,
@@ -2537,7 +2537,7 @@
     },
     "away": {
       "name": "西班牙",
-      "rating": 2232.0,
+      "rating": 2259.0,
       "attack": 1.067,
       "defense": 0.821,
       "recent_goals_for": 1.75,
@@ -2857,7 +2857,7 @@
     },
     "away": {
       "name": "阿根廷",
-      "rating": 2200.0,
+      "rating": 2173.0,
       "attack": 1.195,
       "defense": 0.76,
       "recent_goals_for": 2.75,
@@ -3305,7 +3305,7 @@
     "venue": "Los Angeles (Inglewood)",
     "home": {
       "name": "西班牙",
-      "rating": 2232.0,
+      "rating": 2259.0,
       "attack": 1.086,
       "defense": 0.76,
       "recent_goals_for": 1.875,
@@ -3473,7 +3473,7 @@
     "venue": "Miami (Miami Gardens)",
     "home": {
       "name": "阿根廷",
-      "rating": 2200.0,
+      "rating": 2173.0,
       "attack": 1.208,
       "defense": 0.821,
       "recent_goals_for": 2.875,
@@ -3729,7 +3729,7 @@
     },
     "away": {
       "name": "西班牙",
-      "rating": 2232.0,
+      "rating": 2259.0,
       "attack": 1.047,
       "defense": 0.76,
       "recent_goals_for": 1.625,
@@ -3797,7 +3797,7 @@
     "venue": "Atlanta",
     "home": {
       "name": "阿根廷",
-      "rating": 2200.0,
+      "rating": 2173.0,
       "attack": 1.221,
       "defense": 0.868,
       "recent_goals_for": 3.0,
@@ -3925,7 +3925,7 @@
     "venue": "Los Angeles (Inglewood)",
     "home": {
       "name": "西班牙",
-      "rating": 2232.0,
+      "rating": 2259.0,
       "attack": 1.086,
       "defense": 0.764,
       "recent_goals_for": 1.875,
@@ -4009,7 +4009,7 @@
     "venue": "Kansas City",
     "home": {
       "name": "阿根廷",
-      "rating": 2200.0,
+      "rating": 2173.0,
       "attack": 1.195,
       "defense": 0.909,
       "recent_goals_for": 2.75,
@@ -4065,7 +4065,7 @@
     },
     "away": {
       "name": "西班牙",
-      "rating": 2232.0,
+      "rating": 2259.0,
       "attack": 1.103,
       "defense": 0.76,
       "recent_goals_for": 2.0,
@@ -4105,7 +4105,7 @@
     },
     "away": {
       "name": "阿根廷",
-      "rating": 2200.0,
+      "rating": 2173.0,
       "attack": 1.195,
       "defense": 0.944,
       "recent_goals_for": 2.75,
@@ -4173,11 +4173,11 @@
     "venue": "New York/New Jersey (East Rutherford)",
     "home": {
       "name": "西班牙",
-      "rating": 2232.0,
-      "attack": 1.103,
+      "rating": 2259.0,
+      "attack": 1.067,
       "defense": 0.76,
-      "recent_goals_for": 2.0,
-      "recent_goals_against": 0.25,
+      "recent_goals_for": 1.75,
+      "recent_goals_against": 0.125,
       "source_name": "Spain",
       "elo_code": "ES",
       "elo_rank": 1,
@@ -4185,11 +4185,11 @@
     },
     "away": {
       "name": "阿根廷",
-      "rating": 2200.0,
-      "attack": 1.195,
-      "defense": 0.944,
-      "recent_goals_for": 2.75,
-      "recent_goals_against": 0.875,
+      "rating": 2173.0,
+      "attack": 1.152,
+      "defense": 0.976,
+      "recent_goals_for": 2.375,
+      "recent_goals_against": 1.0,
       "source_name": "Argentina",
       "elo_code": "AR",
       "elo_rank": 2,
