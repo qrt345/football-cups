@@ -17,7 +17,7 @@
     },
     "away": {
       "name": "南非",
-      "rating": 1559.0,
+      "rating": 1560.0,
       "attack": 0.897,
       "defense": 1.057,
       "recent_goals_for": 0.875,
@@ -405,7 +405,7 @@
     "venue": "Philadelphia",
     "home": {
       "name": "科特迪瓦",
-      "rating": 1727.0,
+      "rating": 1728.0,
       "attack": 1.12,
       "defense": 0.944,
       "recent_goals_for": 2.125,
@@ -525,7 +525,7 @@
     "venue": "Seattle",
     "home": {
       "name": "比利时",
-      "rating": 1948.0,
+      "rating": 1947.0,
       "attack": 1.246,
       "defense": 0.944,
       "recent_goals_for": 3.25,
@@ -857,7 +857,7 @@
     },
     "away": {
       "name": "克罗地亚",
-      "rating": 1882.0,
+      "rating": 1881.0,
       "attack": 1.103,
       "defense": 1.123,
       "recent_goals_for": 2.0,
@@ -885,7 +885,7 @@
     "venue": "Toronto",
     "home": {
       "name": "加纳",
-      "rating": 1570.0,
+      "rating": 1571.0,
       "attack": 0.825,
       "defense": 1.102,
       "recent_goals_for": 0.625,
@@ -925,7 +925,7 @@
     "venue": "Mexico City",
     "home": {
       "name": "Uzbekistan",
-      "rating": 1631.0,
+      "rating": 1630.0,
       "attack": 0.955,
       "defense": 1.032,
       "recent_goals_for": 1.125,
@@ -977,7 +977,7 @@
     },
     "away": {
       "name": "南非",
-      "rating": 1559.0,
+      "rating": 1560.0,
       "attack": 0.928,
       "defense": 1.057,
       "recent_goals_for": 1.0,
@@ -1337,7 +1337,7 @@
     },
     "away": {
       "name": "科特迪瓦",
-      "rating": 1727.0,
+      "rating": 1728.0,
       "attack": 1.12,
       "defense": 0.976,
       "recent_goals_for": 2.125,
@@ -1485,7 +1485,7 @@
     "venue": "Los Angeles (Inglewood)",
     "home": {
       "name": "比利时",
-      "rating": 1948.0,
+      "rating": 1947.0,
       "attack": 1.195,
       "defense": 0.868,
       "recent_goals_for": 2.75,
@@ -1777,7 +1777,7 @@
     },
     "away": {
       "name": "Uzbekistan",
-      "rating": 1631.0,
+      "rating": 1630.0,
       "attack": 0.897,
       "defense": 1.143,
       "recent_goals_for": 0.875,
@@ -1817,7 +1817,7 @@
     },
     "away": {
       "name": "加纳",
-      "rating": 1570.0,
+      "rating": 1571.0,
       "attack": 0.78,
       "defense": 1.102,
       "recent_goals_for": 0.5,
@@ -1857,7 +1857,7 @@
     },
     "away": {
       "name": "克罗地亚",
-      "rating": 1882.0,
+      "rating": 1881.0,
       "attack": 1.067,
       "defense": 1.123,
       "recent_goals_for": 1.75,
@@ -2125,7 +2125,7 @@
     "venue": "Monterrey (Guadalupe)",
     "home": {
       "name": "南非",
-      "rating": 1559.0,
+      "rating": 1560.0,
       "attack": 0.863,
       "defense": 1.006,
       "recent_goals_for": 0.75,
@@ -2177,7 +2177,7 @@
     },
     "away": {
       "name": "科特迪瓦",
-      "rating": 1727.0,
+      "rating": 1728.0,
       "attack": 1.103,
       "defense": 0.909,
       "recent_goals_for": 2.0,
@@ -2617,7 +2617,7 @@
     },
     "away": {
       "name": "比利时",
-      "rating": 1948.0,
+      "rating": 1947.0,
       "attack": 1.246,
       "defense": 0.868,
       "recent_goals_for": 3.25,
@@ -2685,7 +2685,7 @@
     "venue": "Philadelphia",
     "home": {
       "name": "克罗地亚",
-      "rating": 1882.0,
+      "rating": 1881.0,
       "attack": 1.047,
       "defense": 1.123,
       "recent_goals_for": 1.625,
@@ -2697,7 +2697,7 @@
     },
     "away": {
       "name": "加纳",
-      "rating": 1570.0,
+      "rating": 1571.0,
       "attack": 0.825,
       "defense": 1.102,
       "recent_goals_for": 0.625,
@@ -2777,7 +2777,7 @@
     },
     "away": {
       "name": "Uzbekistan",
-      "rating": 1631.0,
+      "rating": 1630.0,
       "attack": 0.928,
       "defense": 1.196,
       "recent_goals_for": 1.0,
@@ -2885,7 +2885,7 @@
     "venue": "Los Angeles (Inglewood)",
     "home": {
       "name": "南非",
-      "rating": 1559.0,
+      "rating": 1560.0,
       "attack": 0.825,
       "defense": 0.976,
       "recent_goals_for": 0.625,
@@ -3061,7 +3061,7 @@
     "venue": "Dallas (Arlington)",
     "home": {
       "name": "科特迪瓦",
-      "rating": 1727.0,
+      "rating": 1728.0,
       "attack": 1.067,
       "defense": 0.976,
       "recent_goals_for": 1.75,
@@ -3221,7 +3221,7 @@
     "venue": "Seattle",
     "home": {
       "name": "比利时",
-      "rating": 1948.0,
+      "rating": 1947.0,
       "attack": 1.195,
       "defense": 0.944,
       "recent_goals_for": 2.75,
@@ -3357,7 +3357,7 @@
     },
     "away": {
       "name": "克罗地亚",
-      "rating": 1882.0,
+      "rating": 1881.0,
       "attack": 1.005,
       "defense": 1.123,
       "recent_goals_for": 1.375,
@@ -3529,7 +3529,7 @@
     },
     "away": {
       "name": "加纳",
-      "rating": 1570.0,
+      "rating": 1571.0,
       "attack": 0.825,
       "defense": 1.102,
       "recent_goals_for": 0.625,
@@ -3769,7 +3769,7 @@
     },
     "away": {
       "name": "比利时",
-      "rating": 1948.0,
+      "rating": 1947.0,
       "attack": 1.181,
       "defense": 0.909,
       "recent_goals_for": 2.625,
@@ -3937,7 +3937,7 @@
     },
     "away": {
       "name": "比利时",
-      "rating": 1948.0,
+      "rating": 1947.0,
       "attack": 1.181,
       "defense": 0.944,
       "recent_goals_for": 2.625,
