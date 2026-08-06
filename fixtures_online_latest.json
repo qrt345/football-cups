@@ -925,7 +925,7 @@
     "venue": "Mexico City",
     "home": {
       "name": "Uzbekistan",
-      "rating": 1630.0,
+      "rating": 1631.0,
       "attack": 0.955,
       "defense": 1.032,
       "recent_goals_for": 1.125,
@@ -1777,7 +1777,7 @@
     },
     "away": {
       "name": "Uzbekistan",
-      "rating": 1630.0,
+      "rating": 1631.0,
       "attack": 0.897,
       "defense": 1.143,
       "recent_goals_for": 0.875,
@@ -2777,7 +2777,7 @@
     },
     "away": {
       "name": "Uzbekistan",
-      "rating": 1630.0,
+      "rating": 1631.0,
       "attack": 0.928,
       "defense": 1.196,
       "recent_goals_for": 1.0,
