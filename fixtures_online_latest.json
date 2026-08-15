@@ -172,7 +172,7 @@
       "recent_goals_against": 1.25,
       "source_name": "Qatar",
       "elo_code": "QA",
-      "elo_rank": 99,
+      "elo_rank": 100,
       "form_note": "近8场"
     },
     "away": {
@@ -1064,7 +1064,7 @@
       "recent_goals_against": 1.875,
       "source_name": "Qatar",
       "elo_code": "QA",
-      "elo_rank": 99,
+      "elo_rank": 100,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -1984,7 +1984,7 @@
       "recent_goals_against": 2.0,
       "source_name": "Qatar",
       "elo_code": "QA",
-      "elo_rank": 99,
+      "elo_rank": 100,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
