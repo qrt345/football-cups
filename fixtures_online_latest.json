@@ -5,7 +5,7 @@
     "venue": "Mexico City",
     "home": {
       "name": "墨西哥",
-      "rating": 1913.0,
+      "rating": 1914.0,
       "attack": 1.103,
       "defense": 0.76,
       "recent_goals_for": 2.0,
@@ -24,7 +24,7 @@
       "recent_goals_against": 1.375,
       "source_name": "South Africa",
       "elo_code": "ZA",
-      "elo_rank": 72,
+      "elo_rank": 73,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -172,7 +172,7 @@
       "recent_goals_against": 1.25,
       "source_name": "Qatar",
       "elo_code": "QA",
-      "elo_rank": 100,
+      "elo_rank": 101,
       "form_note": "近8场"
     },
     "away": {
@@ -685,7 +685,7 @@
     "venue": "Boston (Foxborough)",
     "home": {
       "name": "伊拉克",
-      "rating": 1560.0,
+      "rating": 1561.0,
       "attack": 0.897,
       "defense": 1.057,
       "recent_goals_for": 0.875,
@@ -697,7 +697,7 @@
     },
     "away": {
       "name": "挪威",
-      "rating": 1952.0,
+      "rating": 1951.0,
       "attack": 1.136,
       "defense": 0.976,
       "recent_goals_for": 2.25,
@@ -984,7 +984,7 @@
       "recent_goals_against": 1.375,
       "source_name": "South Africa",
       "elo_code": "ZA",
-      "elo_rank": 72,
+      "elo_rank": 73,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -1064,7 +1064,7 @@
       "recent_goals_against": 1.875,
       "source_name": "Qatar",
       "elo_code": "QA",
-      "elo_rank": 100,
+      "elo_rank": 101,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -1085,7 +1085,7 @@
     "venue": "Guadalajara (Zapopan)",
     "home": {
       "name": "墨西哥",
-      "rating": 1913.0,
+      "rating": 1914.0,
       "attack": 1.103,
       "defense": 0.76,
       "recent_goals_for": 2.0,
@@ -1657,7 +1657,7 @@
     },
     "away": {
       "name": "伊拉克",
-      "rating": 1560.0,
+      "rating": 1561.0,
       "attack": 0.825,
       "defense": 1.123,
       "recent_goals_for": 0.625,
@@ -1685,7 +1685,7 @@
     "venue": "New York/New Jersey (East Rutherford)",
     "home": {
       "name": "挪威",
-      "rating": 1952.0,
+      "rating": 1951.0,
       "attack": 1.167,
       "defense": 1.006,
       "recent_goals_for": 2.5,
@@ -1984,7 +1984,7 @@
       "recent_goals_against": 2.0,
       "source_name": "Qatar",
       "elo_code": "QA",
-      "elo_rank": 100,
+      "elo_rank": 101,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -2097,7 +2097,7 @@
     },
     "away": {
       "name": "墨西哥",
-      "rating": 1913.0,
+      "rating": 1914.0,
       "attack": 1.086,
       "defense": 0.76,
       "recent_goals_for": 1.875,
@@ -2132,7 +2132,7 @@
       "recent_goals_against": 1.125,
       "source_name": "South Africa",
       "elo_code": "ZA",
-      "elo_rank": 72,
+      "elo_rank": 73,
       "form_note": "近8场"
     },
     "away": {
@@ -2405,7 +2405,7 @@
     "venue": "Boston (Foxborough)",
     "home": {
       "name": "挪威",
-      "rating": 1952.0,
+      "rating": 1951.0,
       "attack": 1.12,
       "defense": 1.081,
       "recent_goals_for": 2.125,
@@ -2457,7 +2457,7 @@
     },
     "away": {
       "name": "伊拉克",
-      "rating": 1560.0,
+      "rating": 1561.0,
       "attack": 0.825,
       "defense": 1.179,
       "recent_goals_for": 0.625,
@@ -2892,7 +2892,7 @@
       "recent_goals_against": 1.0,
       "source_name": "South Africa",
       "elo_code": "ZA",
-      "elo_rank": 72,
+      "elo_rank": 73,
       "form_note": "近8场"
     },
     "away": {
@@ -3073,7 +3073,7 @@
     },
     "away": {
       "name": "挪威",
-      "rating": 1952.0,
+      "rating": 1951.0,
       "attack": 1.086,
       "defense": 1.081,
       "recent_goals_for": 1.875,
@@ -3141,7 +3141,7 @@
     "venue": "Mexico City",
     "home": {
       "name": "墨西哥",
-      "rating": 1913.0,
+      "rating": 1914.0,
       "attack": 1.12,
       "defense": 0.76,
       "recent_goals_for": 2.125,
@@ -3649,7 +3649,7 @@
     },
     "away": {
       "name": "挪威",
-      "rating": 1952.0,
+      "rating": 1951.0,
       "attack": 1.103,
       "defense": 1.057,
       "recent_goals_for": 2.0,
@@ -3677,7 +3677,7 @@
     "venue": "Mexico City",
     "home": {
       "name": "墨西哥",
-      "rating": 1913.0,
+      "rating": 1914.0,
       "attack": 1.136,
       "defense": 0.821,
       "recent_goals_for": 2.25,
@@ -3965,7 +3965,7 @@
     "venue": "Miami (Miami Gardens)",
     "home": {
       "name": "挪威",
-      "rating": 1952.0,
+      "rating": 1951.0,
       "attack": 1.12,
       "defense": 1.102,
       "recent_goals_for": 2.125,
