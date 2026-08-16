@@ -257,7 +257,7 @@
     },
     "away": {
       "name": "苏格兰",
-      "rating": 1745.0,
+      "rating": 1746.0,
       "attack": 1.12,
       "defense": 1.006,
       "recent_goals_for": 2.125,
@@ -325,7 +325,7 @@
     "venue": "Houston",
     "home": {
       "name": "德国",
-      "rating": 1908.0,
+      "rating": 1907.0,
       "attack": 1.269,
       "defense": 0.909,
       "recent_goals_for": 3.5,
@@ -1165,7 +1165,7 @@
     "venue": "Boston (Foxborough)",
     "home": {
       "name": "苏格兰",
-      "rating": 1745.0,
+      "rating": 1746.0,
       "attack": 1.086,
       "defense": 1.006,
       "recent_goals_for": 1.875,
@@ -1325,7 +1325,7 @@
     "venue": "Toronto",
     "home": {
       "name": "德国",
-      "rating": 1908.0,
+      "rating": 1907.0,
       "attack": 1.28,
       "defense": 0.944,
       "recent_goals_for": 3.625,
@@ -2005,7 +2005,7 @@
     "venue": "Miami (Miami Gardens)",
     "home": {
       "name": "苏格兰",
-      "rating": 1745.0,
+      "rating": 1746.0,
       "attack": 1.047,
       "defense": 1.006,
       "recent_goals_for": 1.625,
@@ -2217,7 +2217,7 @@
     },
     "away": {
       "name": "德国",
-      "rating": 1908.0,
+      "rating": 1907.0,
       "attack": 1.269,
       "defense": 1.006,
       "recent_goals_for": 3.5,
@@ -2965,7 +2965,7 @@
     "venue": "Boston (Foxborough)",
     "home": {
       "name": "德国",
-      "rating": 1908.0,
+      "rating": 1907.0,
       "attack": 1.208,
       "defense": 1.032,
       "recent_goals_for": 2.875,
