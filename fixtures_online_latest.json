@@ -85,7 +85,7 @@
     "venue": "Toronto",
     "home": {
       "name": "加拿大",
-      "rating": 1729.0,
+      "rating": 1730.0,
       "attack": 0.955,
       "defense": 0.821,
       "recent_goals_for": 1.125,
@@ -172,7 +172,7 @@
       "recent_goals_against": 1.25,
       "source_name": "Qatar",
       "elo_code": "QA",
-      "elo_rank": 101,
+      "elo_rank": 100,
       "form_note": "近8场"
     },
     "away": {
@@ -1045,7 +1045,7 @@
     "venue": "Vancouver",
     "home": {
       "name": "加拿大",
-      "rating": 1729.0,
+      "rating": 1730.0,
       "attack": 1.086,
       "defense": 0.821,
       "recent_goals_for": 1.875,
@@ -1064,7 +1064,7 @@
       "recent_goals_against": 1.875,
       "source_name": "Qatar",
       "elo_code": "QA",
-      "elo_rank": 101,
+      "elo_rank": 100,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -1937,7 +1937,7 @@
     },
     "away": {
       "name": "加拿大",
-      "rating": 1729.0,
+      "rating": 1730.0,
       "attack": 1.067,
       "defense": 0.909,
       "recent_goals_for": 1.75,
@@ -1984,7 +1984,7 @@
       "recent_goals_against": 2.0,
       "source_name": "Qatar",
       "elo_code": "QA",
-      "elo_rank": 101,
+      "elo_rank": 100,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -2897,7 +2897,7 @@
     },
     "away": {
       "name": "加拿大",
-      "rating": 1729.0,
+      "rating": 1730.0,
       "attack": 1.067,
       "defense": 0.909,
       "recent_goals_for": 1.75,
@@ -3557,7 +3557,7 @@
     "venue": "Houston",
     "home": {
       "name": "加拿大",
-      "rating": 1729.0,
+      "rating": 1730.0,
       "attack": 1.027,
       "defense": 0.944,
       "recent_goals_for": 1.5,
