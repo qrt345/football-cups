@@ -257,7 +257,7 @@
     },
     "away": {
       "name": "苏格兰",
-      "rating": 1746.0,
+      "rating": 1745.0,
       "attack": 1.12,
       "defense": 1.006,
       "recent_goals_for": 2.125,
@@ -1165,7 +1165,7 @@
     "venue": "Boston (Foxborough)",
     "home": {
       "name": "苏格兰",
-      "rating": 1746.0,
+      "rating": 1745.0,
       "attack": 1.086,
       "defense": 1.006,
       "recent_goals_for": 1.875,
@@ -2005,7 +2005,7 @@
     "venue": "Miami (Miami Gardens)",
     "home": {
       "name": "苏格兰",
-      "rating": 1746.0,
+      "rating": 1745.0,
       "attack": 1.047,
       "defense": 1.006,
       "recent_goals_for": 1.625,
