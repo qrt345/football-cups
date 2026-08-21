@@ -125,7 +125,7 @@
     "venue": "Los Angeles (Inglewood)",
     "home": {
       "name": "美国",
-      "rating": 1747.0,
+      "rating": 1746.0,
       "attack": 1.152,
       "defense": 1.143,
       "recent_goals_for": 2.375,
@@ -264,7 +264,7 @@
       "recent_goals_against": 1.125,
       "source_name": "Scotland",
       "elo_code": "SQ",
-      "elo_rank": 32,
+      "elo_rank": 31,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -1125,7 +1125,7 @@
     "venue": "Seattle",
     "home": {
       "name": "美国",
-      "rating": 1747.0,
+      "rating": 1746.0,
       "attack": 1.152,
       "defense": 1.123,
       "recent_goals_for": 2.375,
@@ -1172,7 +1172,7 @@
       "recent_goals_against": 1.125,
       "source_name": "Scotland",
       "elo_code": "SQ",
-      "elo_rank": 32,
+      "elo_rank": 31,
       "form_note": "近8场"
     },
     "away": {
@@ -2012,7 +2012,7 @@
       "recent_goals_against": 1.125,
       "source_name": "Scotland",
       "elo_code": "SQ",
-      "elo_rank": 32,
+      "elo_rank": 31,
       "form_note": "近8场"
     },
     "away": {
@@ -2337,7 +2337,7 @@
     },
     "away": {
       "name": "美国",
-      "rating": 1747.0,
+      "rating": 1746.0,
       "attack": 1.152,
       "defense": 1.161,
       "recent_goals_for": 2.375,
@@ -3265,7 +3265,7 @@
     "venue": "San Francisco Bay Area (Santa Clara)",
     "home": {
       "name": "美国",
-      "rating": 1747.0,
+      "rating": 1746.0,
       "attack": 1.103,
       "defense": 1.143,
       "recent_goals_for": 2.0,
@@ -3757,7 +3757,7 @@
     "venue": "Seattle",
     "home": {
       "name": "美国",
-      "rating": 1747.0,
+      "rating": 1746.0,
       "attack": 1.086,
       "defense": 1.123,
       "recent_goals_for": 1.875,
