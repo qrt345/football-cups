@@ -344,7 +344,7 @@
       "recent_goals_against": 2.375,
       "source_name": "Curaçao",
       "elo_code": "CW",
-      "elo_rank": 91,
+      "elo_rank": 92,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -1384,7 +1384,7 @@
       "recent_goals_against": 2.25,
       "source_name": "Curaçao",
       "elo_code": "CW",
-      "elo_rank": 91,
+      "elo_rank": 92,
       "form_note": "近8场"
     },
     "source": "openfootball/worldcup.json + World Football Elo Ratings",
@@ -2172,7 +2172,7 @@
       "recent_goals_against": 2.5,
       "source_name": "Curaçao",
       "elo_code": "CW",
-      "elo_rank": 91,
+      "elo_rank": 92,
       "form_note": "近8场"
     },
     "away": {
